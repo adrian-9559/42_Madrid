@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:38:33 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/09 15:58:47 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:09:30 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -763,6 +763,82 @@ void test_ft_toupper(void)
     printf("\n");
 }
 
+void    test_ft_calloc(void)
+{
+    char test_cases[][20] = {
+        "Hello, World!",
+        "42 is the answer",
+        "Libft is awesome!",
+        "C programming",
+        "Test case with null\0 character",
+        "",
+        "\0"
+    };
+    char spinner[] = "|/-\\"; // Carácter giratorio
+    int spinner_index = 0;
+
+    printf("Testing ft_calloc:\n");
+    for (int i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); i++)
+    {
+        char *original_result = (char *)calloc(1, strlen(test_cases[i]) + 1);
+        char *my_result = (char *)ft_calloc(1, strlen(test_cases[i]) + 1);
+
+        // Mostrar el spinner
+        printf("\r%c Testing case '%s'...", spinner[spinner_index], test_cases[i]);
+        fflush(stdout); // Forzar la impresión inmediata
+        spinner_index = (spinner_index + 1) % 4; // Cambiar al siguiente carácter del spinner
+        usleep(200000); // Pausa de 200ms para simular carga
+
+        // Comparar resultados
+        if (strcmp(original_result, my_result) == 0)
+            putstr_true(" Los resultados son iguales.\n");
+        else {
+            putstr_false(" Los resultados son diferentes.\n");
+            printf("Original result: %d\n", original_result);
+            printf("My result: %d\n", my_result);
+        }
+    }
+    printf("\n");
+}
+
+void    test_ft_strdup(void)
+{
+    char test_cases[][20] = {
+        "Hello, World!",
+        "42 is the answer",
+        "Libft is awesome!",
+        "C programming",
+        "Test case with null\0 character",
+        "",
+        "\0"
+    };
+    char spinner[] = "|/-\\"; // Carácter giratorio
+    int spinner_index = 0;
+
+    printf("Testing ft_strdup:\n");
+    for (int i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); i++)
+    {
+        char *original_result = strdup(test_cases[i]);
+        char *my_result = ft_strdup(test_cases[i]);
+
+        // Mostrar el spinner
+        printf("\r%c Testing case '%s'...", spinner[spinner_index], test_cases[i]);
+        fflush(stdout); // Forzar la impresión inmediata
+        spinner_index = (spinner_index + 1) % 4; // Cambiar al siguiente carácter del spinner
+        usleep(200000); // Pausa de 200ms para simular carga
+
+        // Comparar resultados
+        if (strcmp(original_result, my_result) == 0)
+            putstr_true(" Los resultados son iguales.\n");
+        else {
+            putstr_false(" Los resultados son diferentes.\n");
+            printf("Original result: %d\n", original_result);
+            printf("My result: %d\n", my_result);
+        }
+    }
+    printf("\n");
+}
+
 int main(void)
 {
 	int i;
@@ -810,6 +886,10 @@ int main(void)
     test_ft_tolower();
     i++;
     test_ft_toupper();
+    i++;
+    test_ft_calloc();
+    i++;
+    test_ft_strdup();
     i++;
 
 	printf("\n");

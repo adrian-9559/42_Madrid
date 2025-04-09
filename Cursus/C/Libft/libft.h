@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:52:13 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/09 16:17:38 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:08:16 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,11 @@ char	*ft_strnstr(const char *str1, const char *str2, size_t len);
 char	*ft_strrchr(const char *s, size_t c);
 unsigned int	ft_tolower(unsigned int c);
 unsigned int	ft_toupper(unsigned int c);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
-//size_t	strlcat(char *dest, char *src, size_t size);
-//size_t strlcpy(char *dst, const char *src, size_t dstsize);
-//char *strnstr(const char *haystack, const char *needle, size_t len);
+size_t	strlcat(char *dest, char *src, size_t size);
+size_t strlcpy(char *dst, const char *src, size_t dstsize);
+char *strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif
