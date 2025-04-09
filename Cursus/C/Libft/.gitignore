@@ -1,0 +1,5 @@
+*.o
+*.a
+*.out
+main.c
+origin.c
