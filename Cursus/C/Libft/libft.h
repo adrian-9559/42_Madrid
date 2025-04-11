@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:52:13 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/09 17:08:16 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/11 11:26:15 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strchr(const char *s, size_t c);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-size_t	ft_strlen(char *s);
+size_t	ft_strlen(const char *s);
 size_t	ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *str1, const char *str2, size_t len);
 char	*ft_strrchr(const char *s, size_t c);
@@ -44,9 +44,19 @@ unsigned int	ft_tolower(unsigned int c);
 unsigned int	ft_toupper(unsigned int c);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 
+// funciones extra para comprobar los resutados
 size_t	strlcat(char *dest, char *src, size_t size);
 size_t strlcpy(char *dst, const char *src, size_t dstsize);
 char *strnstr(const char *haystack, const char *needle, size_t len);
+char	*substr(char const *s, unsigned int start, size_t len);
+char	*strjoin(char const *s1, char const *s2);
+char	*strtrim(char const *s1, char const *set);
+char	**split(char const *s, char c);
+void free_split(char **split_result);
 
 #endif

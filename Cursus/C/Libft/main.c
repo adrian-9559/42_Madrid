@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:38:33 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/09 17:09:30 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/11 11:29:10 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -839,6 +839,181 @@ void    test_ft_strdup(void)
     printf("\n");
 }
 
+void    test_ft_substr(void)
+{
+    char test_cases[][20] = {
+        "Hello, World!",
+        "42 is the answer",
+        "Libft is awesome!",
+        "C programming",
+        "Test case with null\0 character",
+        "",
+        "\0"
+    };
+    char spinner[] = "|/-\\"; // Carácter giratorio
+    int spinner_index = 0;
+
+    printf("Testing ft_substr:\n");
+    for (int i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); i++)
+    {
+        char *original_result = substr(test_cases[i], 0, 5);
+        char *my_result = ft_substr(test_cases[i], 0, 5);
+
+        // Mostrar el spinner
+        printf("\r%c Testing case '%s'...", spinner[spinner_index], test_cases[i]);
+        fflush(stdout); // Forzar la impresión inmediata
+        spinner_index = (spinner_index + 1) % 4; // Cambiar al siguiente carácter del spinner
+        usleep(200000); // Pausa de 200ms para simular carga
+
+        // Comparar resultados
+        if (strcmp(original_result, my_result) == 0)
+            putstr_true(" Los resultados son iguales.\n");
+        else {
+            putstr_false(" Los resultados son diferentes.\n");
+            printf("Original result: %d\n", original_result);
+            printf("My result: %d\n", my_result);
+        }
+    }
+    printf("\n");
+}
+
+void    test_ft_strjoin(void)
+{
+    char test_cases[][20] = {
+        "Hello, ",
+        "World!",
+        "42 is the answer",
+        "Libft is awesome!",
+        "C programming",
+        "Test case with null\0 character",
+        "",
+        "\0"
+    };
+    char spinner[] = "|/-\\"; // Carácter giratorio
+    int spinner_index = 0;
+
+    printf("Testing ft_strjoin:\n");
+    for (int i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); i++)
+    {
+        char *original_result = strjoin(test_cases[i], "World!");
+        char *my_result = ft_strjoin(test_cases[i], "World!");
+
+        // Mostrar el spinner
+        printf("\r%c Testing case '%s'...", spinner[spinner_index], test_cases[i]);
+        fflush(stdout); // Forzar la impresión inmediata
+        spinner_index = (spinner_index + 1) % 4; // Cambiar al siguiente carácter del spinner
+        usleep(200000); // Pausa de 200ms para simular carga
+
+        // Comparar resultados
+        if (strcmp(original_result, my_result) == 0)
+            putstr_true(" Los resultados son iguales.\n");
+        else {
+            putstr_false(" Los resultados son diferentes.\n");
+            printf("Original result: %d\n", original_result);
+            printf("My result: %d\n", my_result);
+        }
+    }
+    printf("\n");
+}
+
+void    test_ft_strtrim(void)
+{
+    char test_cases[][20] = {
+        "Hello, World!",
+        "42 is the answer",
+        "Libft is awesome!",
+        "C programming",
+        "Test case with null\0 character",
+        "",
+        "\0"
+    };
+    char spinner[] = "|/-\\"; // Carácter giratorio
+    int spinner_index = 0;
+
+    printf("Testing ft_strtrim:\n");
+    for (int i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); i++)
+    {
+        char *original_result = strtrim(test_cases[i], "o");
+        char *my_result = ft_strtrim(test_cases[i], "o");
+
+        // Mostrar el spinner
+        printf("\r%c Testing case '%s'...", spinner[spinner_index], test_cases[i]);
+        fflush(stdout); // Forzar la impresión inmediata
+        spinner_index = (spinner_index + 1) % 4; // Cambiar al siguiente carácter del spinner
+        usleep(200000); // Pausa de 200ms para simular carga
+
+        // Comparar resultados
+        if (strcmp(original_result, my_result) == 0)
+			putstr_true(" Los resultados son iguales.\n");
+		else {
+			putstr_false(" Los resultados son diferentes.\n");
+			printf("Original result: %d\n", original_result);
+			printf("My result: %d\n", my_result);
+		}
+    }
+    printf("\n");
+}
+
+void test_ft_split(void)
+{
+    char *test_cases[][2] = {
+        {"Hello World", " "},
+        {"42,is,the,answer", ","},
+        {"Libft:is:awesome", ":"},
+        {"C programming", " "},
+        {"Test case with null\0 character", " "},
+        {"", " "},
+        {"\0", " "}
+    };
+    char spinner[] = "|/-\\"; // Carácter giratorio
+    int spinner_index = 0;
+
+    printf("Testing ft_split:\n");
+    for (int i = 0; i < sizeof(test_cases) / sizeof(test_cases[0]); i++)
+    {
+        char **my_result = ft_split(test_cases[i][0], test_cases[i][1][0]);
+        char **expected_result = split(test_cases[i][0], test_cases[i][1][0]); // Implementa una función de referencia si es necesario
+
+        // Mostrar el spinner
+        printf("\r%c Testing case '%s' with delimiter '%s'...", spinner[spinner_index], test_cases[i][0], test_cases[i][1]);
+        fflush(stdout); // Forzar la impresión inmediata
+        spinner_index = (spinner_index + 1) % 4; // Cambiar al siguiente carácter del spinner
+        usleep(200000); // Pausa de 200ms para simular carga
+
+        // Comparar resultados
+        int is_equal = 1;
+        for (int j = 0; my_result[j] != NULL || expected_result[j] != NULL; j++)
+        {
+            if ((my_result[j] == NULL && expected_result[j] != NULL) ||
+                (my_result[j] != NULL && expected_result[j] == NULL) ||
+                strcmp(my_result[j], expected_result[j]) != 0)
+            {
+                is_equal = 0;
+                break;
+            }
+        }
+
+        if (is_equal)
+            putstr_true(" Los resultados son iguales.\n");
+        else
+        {
+            putstr_false(" Los resultados son diferentes.\n");
+            printf("Original result: ");
+            for (int j = 0; expected_result[j] != NULL; j++)
+                printf("'%s' ", expected_result[j]);
+            printf("\nMy result: ");
+            for (int j = 0; my_result[j] != NULL; j++)
+                printf("'%s' ", my_result[j]);
+            printf("\n");
+        }
+
+        // Liberar memoria
+        free_split(my_result);
+        free_split(expected_result);
+    }
+    printf("\n");
+}
+
 int main(void)
 {
 	int i;
@@ -890,6 +1065,14 @@ int main(void)
     test_ft_calloc();
     i++;
     test_ft_strdup();
+    i++;
+    test_ft_substr();
+    i++;
+    test_ft_strjoin();
+    i++;
+    test_ft_strtrim();
+    i++;
+    test_ft_split();
     i++;
 
 	printf("\n");
