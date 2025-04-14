@@ -49,6 +49,10 @@ Para ejecutar la Norminette en tu proyecto, puedes usar el siguiente comando en 
 norminette
 ```
 
+#### Documentación original
+
+Para más detalles sobre la herramienta Norminette, consulta la [documentación oficial](https://github.com/42school/norminette/tree/master#readme).
+
 ### Francinette
 
 La **Francinette** es una herramienta de evaluación automatizada diseñada para probar y validar los proyectos de 42. Permite a los estudiantes verificar el cumplimiento de los requisitos del proyecto y detectar errores antes de la evaluación oficial.
@@ -77,3 +81,7 @@ Para ejecutar la herramienta, primero asegúrate de estar en el directorio del p
 ```bash
 paco
 ```
+
+#### Documentación original
+
+Para más detalles sobre la herramienta Francinette, consulta la [documentación oficial](https://github.com/xicodomingues/francinette/tree/master#readme).
