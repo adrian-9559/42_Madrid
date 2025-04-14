@@ -1,46 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 18:15:30 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/14 22:02:57 by adriescr         ###   ########.fr       */
+/*   Created: 2025/04/14 21:56:13 by adriescr          #+#    #+#             */
+/*   Updated: 2025/04/14 22:01:07 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	const char	*last_occ;
+	unsigned int	i;
 
-	last_occ = NULL;
-	while (*s)
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		if (*s == (char)c)
-			last_occ = s;
-		s++;
+		f(i, &s[i]);
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return ((char *)last_occ);
 }
 
 /*
-#include <stdio.h>
-
-int	main(void)
+int main(void)
 {
-	char str[] = "Hello, World!";
-	char *result;
-
-	result = ft_strrchr(str, 'o');
-	if (result)
-		printf("Found: %s\n", result);
-	else
-		printf("Not found\n");
-	return (0);
+    char str[] = "hello";
+    ft_striteri(str, ft_toupper);
+    printf("%s\n", str);
+    return 0;
 }
 */

@@ -32,7 +32,9 @@ MY_SOURCES = \
 	ft_strjoin.c \
 	ft_strtrim.c \
 	ft_split.c \
-	origin.c
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_striteri.c \
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrian_9559 <adrian_9559@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 09:46:46 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/11 11:24:11 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:50:37 by adrian_9559      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,30 +35,30 @@ size_t	ft_count_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-    int		i;
-    int		j;
-    int		k;
-    char	**result;
+	size_t	i;
+	size_t	j;
+	size_t	start;
+	char	**result;
 
-    result = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-    if (!s || !result)
-        return (NULL);
-    i = 0;
-    j = 0;
-    while (s[i])
-        if (s[i] != c)
-        {
-            k = 0;
-            while (s[i + k] && s[i + k] != c)
-                k++;
-            result[j] = ft_substr(s, i, k);
-            j++;
-            i += k;
-        }
-        else
-            i++;
-    result[j] = NULL;
-    return (result);
+	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			result[j++] = ft_substr(s, start, i - start);
+		}
+		else
+			i++;
+	}
+	result[j] = NULL;
+	return (result);
 }
 
 /*
