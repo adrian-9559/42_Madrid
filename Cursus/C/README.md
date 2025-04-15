@@ -49,6 +49,51 @@ Para ejecutar la Norminette en tu proyecto, puedes usar el siguiente comando en 
 norminette
 ```
 
+#### Solución a problemas comunes
+
+Si al ejecutar el comando aparece el error:
+```bash
+zsh: command not found: norminette
+```
+
+Sigue estos pasos para solucionarlo:
+
+1. **Verifica la ruta del ejecutable de Norminette**  
+    Ejecuta el siguiente comando en tu terminal:
+    ```bash
+    python3 -m site --user-base
+    ```
+    Esto debería devolver la ruta base donde se encuentra el ejecutable de **Norminette**. Por ejemplo:
+    ```bash
+    /Users/adrian_9559/Library/Python/3.9
+    ```
+
+2. **Accede al directorio del ejecutable**  
+    Cambia al directorio correspondiente utilizando:
+    ```bash
+    cd /Users/adrian_9559/Library/Python/3.9/bin
+    ```
+
+3. **Añade la ruta al archivo PATH**  
+    Agrega la ruta del ejecutable al archivo de configuración de tu terminal (`~/.zshrc`):
+    ```bash
+    echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zshrc
+    ```
+
+4. **Aplica los cambios**  
+    Recarga la configuración de tu terminal para que los cambios surtan efecto:
+    ```bash
+    source ~/.zshrc
+    ```
+
+5. **Verifica la instalación**  
+    Comprueba que **Norminette** está correctamente instalado ejecutando:
+    ```bash
+    norminette --version
+    ```
+
+Si todo está configurado correctamente, deberías ver la versión instalada de **Norminette**.
+
 #### Documentación original
 
 Para más detalles sobre la herramienta Norminette, consulta la [documentación oficial](https://github.com/42school/norminette/tree/master#readme).
