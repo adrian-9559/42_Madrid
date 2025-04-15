@@ -11,13 +11,13 @@ Cada proyecto incluye su propia documentación, explicando los objetivos, las he
 1. 📥 **Descarga el directorio:**  
     Utiliza el siguiente comando en tu terminal para clonar este repositorio:  
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone https://github.com/adrian-9559/42_Madrid.git 42_Madrid
     ```
 
 2. 📂 **Accede al directorio clonado:**  
     Navega al directorio recién clonado con:  
     ```bash
-    cd <NOMBRE_DEL_DIRECTORIO>
+    cd 42_Madrid
     ```
 
 3. 🚀 **¡Listo para comenzar!**  
