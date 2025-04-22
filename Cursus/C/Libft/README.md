@@ -50,3 +50,5 @@ make fclean
 | ft_isdigit      | [README](readmes_de_funciones/ft_isdigit.md)   |
 | ft_isalnum      | [README](readmes_de_funciones/ft_isalnum.md)   |
 | ft_isascii      | [README](readmes_de_funciones/ft_isascii.md)   |
+| ft_isprint      | [README](readmes_de_funciones/ft_isprint.md)   |
+| ft_strlen       | [README](readmes_de_funciones/ft_istrlen.md)   |
