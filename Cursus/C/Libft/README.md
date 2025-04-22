@@ -44,6 +44,7 @@ make fclean
 
 # READMES de cada función
 
+<section>
 	<h2>Funciones de la libreria Libc</h2>
 	<table>
 		<thead>
@@ -143,7 +144,8 @@ make fclean
 			</tr>
 		</tbody>
 	</table>
-
+</section>
+<section>
 	<h2>Funciones Adicionales</h2>
 	<table>
 		<thead>
@@ -199,6 +201,7 @@ make fclean
 			</tr>
 		</tbody>
 	</table>
+</section>
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
 
