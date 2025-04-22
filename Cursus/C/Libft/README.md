@@ -44,88 +44,163 @@ make fclean
 
 # READMES de cada función
 
-## Funciones de la libreria Libc
-| Función         | Enlace al README                               |
-|-----------------|------------------------------------------------|
-| ft_isalpha      | [README](readmes_de_funciones/ft_isalpha.md)   |
-| ft_isdigit      | [README](readmes_de_funciones/ft_isdigit.md)   |
-| ft_isalnum      | [README](readmes_de_funciones/ft_isalnum.md)   |
-| ft_isascii      | [README](readmes_de_funciones/ft_isascii.md)   |
-| ft_isprint      | [README](readmes_de_funciones/ft_isprint.md)   |
-| ft_strlen       | [README](readmes_de_funciones/ft_istrlen.md)   |
-| ft_memset       | [README](readmes_de_funciones/ft_memset.md)    |
-| ft_bzero        | [README](readmes_de_funciones/ft_bzero.md)     |
-| ft_memcpy       | [README](readmes_de_funciones/ft_memcpy.md)    |
-| ft_memmove      | [README](readmes_de_funciones/ft_memmove.md)   |
-| ft_strlcpy      | [README](readmes_de_funciones/ft_strlcpy.md)   |
-| ft_strlcat      | [README](readmes_de_funciones/ft_strlcat.md)   |
-| ft_tolower      | [README](readmes_de_funciones/ft_tolower.md)   |
-| ft_strchr       | [README](readmes_de_funciones/ft_strchr.md)    |
-| ft_strrchr      | [README](readmes_de_funciones/ft_strrchr.md)   |
-| ft_strncmp      | [README](readmes_de_funciones/ft_strncmp.md)   |
-| ft_memchr       | [README](readmes_de_funciones/ft_memchr.md)    |
-| ft_memcmp       | [README](readmes_de_funciones/ft_memcmp.md)    |
-| ft_strnstr      | [README](readmes_de_funciones/ft_strnstr.md)   |
-| ft_atoi         | [README](readmes_de_funciones/ft_atoi.md)      |
-| ft_calloc       | [README](readmes_de_funciones/ft_calloc.md)    |
-| ft_strdup       | [README](readmes_de_funciones/ft_strdup.md)    |
+<section style="display: flex; gap: 20px; flex-wrap: wrap;">
+	<h2>Funciones de la libreria Libc</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Función</th>
+				<th>Enlace al README</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>ft_isalpha</td>
+				<td><a href="readmes_de_funciones/ft_isalpha.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_isdigit</td>
+				<td><a href="readmes_de_funciones/ft_isdigit.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_isalnum</td>
+				<td><a href="readmes_de_funciones/ft_isalnum.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_isascii</td>
+				<td><a href="readmes_de_funciones/ft_isascii.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_isprint</td>
+				<td><a href="readmes_de_funciones/ft_isprint.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strlen</td>
+				<td><a href="readmes_de_funciones/ft_istrlen.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_memset</td>
+				<td><a href="readmes_de_funciones/ft_memset.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_bzero</td>
+				<td><a href="readmes_de_funciones/ft_bzero.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_memcpy</td>
+				<td><a href="readmes_de_funciones/ft_memcpy.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_memmove</td>
+				<td><a href="readmes_de_funciones/ft_memmove.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strlcpy</td>
+				<td><a href="readmes_de_funciones/ft_strlcpy.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strlcat</td>
+				<td><a href="readmes_de_funciones/ft_strlcat.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_tolower</td>
+				<td><a href="readmes_de_funciones/ft_tolower.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strchr</td>
+				<td><a href="readmes_de_funciones/ft_strchr.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strrchr</td>
+				<td><a href="readmes_de_funciones/ft_strrchr.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strncmp</td>
+				<td><a href="readmes_de_funciones/ft_strncmp.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_memchr</td>
+				<td><a href="readmes_de_funciones/ft_memchr.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_memcmp</td>
+				<td><a href="readmes_de_funciones/ft_memcmp.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strnstr</td>
+				<td><a href="readmes_de_funciones/ft_strnstr.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_atoi</td>
+				<td><a href="readmes_de_funciones/ft_atoi.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_calloc</td>
+				<td><a href="readmes_de_funciones/ft_calloc.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strdup</td>
+				<td><a href="readmes_de_funciones/ft_strdup.md">README</a></td>
+			</tr>
+		</tbody>
+	</table>
 
-<h2>Funciones Adicionales</h2>
-<table>
-	<thead>
-		<tr>
-			<th>Función</th>
-			<th>Enlace al README</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>ft_substr</td>
-			<td><a href="readmes_de_funciones/ft_substr.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_strjoin</td>
-			<td><a href="readmes_de_funciones/ft_strjoin.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_strtrim</td>
-			<td><a href="readmes_de_funciones/ft_strtrim.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_split</td>
-			<td><a href="readmes_de_funciones/ft_split.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_itoa</td>
-			<td><a href="readmes_de_funciones/ft_itoa.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_strmapi</td>
-			<td><a href="readmes_de_funciones/ft_strmapi.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_striteri</td>
-			<td><a href="readmes_de_funciones/ft_striteri.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_putchar_fd</td>
-			<td><a href="readmes_de_funciones/ft_putchar_fd.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_putstr_fd</td>
-			<td><a href="readmes_de_funciones/ft_putstr_fd.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_putendl_fd</td>
-			<td><a href="readmes_de_funciones/ft_putendl_fd.md">README</a></td>
-		</tr>
-		<tr>
-			<td>ft_putnbr_fd</td>
-			<td><a href="readmes_de_funciones/ft_putnbr_fd.md">README</a></td>
-		</tr>
-	</tbody>
-</table>
-
+	<h2>Funciones Adicionales</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Función</th>
+				<th>Enlace al README</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>ft_substr</td>
+				<td><a href="readmes_de_funciones/ft_substr.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strjoin</td>
+				<td><a href="readmes_de_funciones/ft_strjoin.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strtrim</td>
+				<td><a href="readmes_de_funciones/ft_strtrim.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_split</td>
+				<td><a href="readmes_de_funciones/ft_split.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_itoa</td>
+				<td><a href="readmes_de_funciones/ft_itoa.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_strmapi</td>
+				<td><a href="readmes_de_funciones/ft_strmapi.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_striteri</td>
+				<td><a href="readmes_de_funciones/ft_striteri.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_putchar_fd</td>
+				<td><a href="readmes_de_funciones/ft_putchar_fd.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_putstr_fd</td>
+				<td><a href="readmes_de_funciones/ft_putstr_fd.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_putendl_fd</td>
+				<td><a href="readmes_de_funciones/ft_putendl_fd.md">README</a></td>
+			</tr>
+			<tr>
+				<td>ft_putnbr_fd</td>
+				<td><a href="readmes_de_funciones/ft_putnbr_fd.md">README</a></td>
+			</tr>
+		</tbody>
+	</table>
+</section>
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
 
