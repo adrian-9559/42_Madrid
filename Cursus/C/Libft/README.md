@@ -63,3 +63,11 @@ make fclean
 | ft_strrchr      | [README](readmes_de_funciones/ft_strrchr.md)   |
 | ft_strncmp      | [README](readmes_de_funciones/ft_strncmp.md)   |
 | ft_memchr       | [README](readmes_de_funciones/ft_memchr.md)    |
+
+# Herramientas recomendadas
+En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
+
+## Lista de herramientas recomendadas
+
+- **Valgrind**: Para detectar fugas de memoria y errores relacionados con la gestión de memoria.
+- **Norminette**: Una herramienta para verificar que tu código cumple con la Norma de 42.
