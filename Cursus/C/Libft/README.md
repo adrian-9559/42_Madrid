@@ -42,7 +42,7 @@ make clean
 make fclean
 ```
 
-# Descripción de cada función
+# READMES de cada función
 
 | Función         | Enlace al README                               |
 |-----------------|------------------------------------------------|
