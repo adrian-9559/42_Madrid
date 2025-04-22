@@ -70,7 +70,6 @@ make fclean
 | ft_calloc       | [README](readmes_de_funciones/ft_calloc.md)    |
 | ft_strdup       | [README](readmes_de_funciones/ft_strdup.md)    |
 
-```html
 <h2>Funciones Adicionales</h2>
 <table>
 	<thead>
@@ -126,7 +125,6 @@ make fclean
 		</tr>
 	</tbody>
 </table>
-```
 
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
