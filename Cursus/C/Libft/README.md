@@ -44,10 +44,10 @@ make fclean
 
 # READMES de cada función
 
-## Funciones de la libreria Libc										## Funciones Adicionales
-| Función         | Enlace al README                               |    | Función         | Enlace al README                               |
-|-----------------|------------------------------------------------|    |-----------------|------------------------------------------------| 
-| ft_isalpha      | [README](readmes_de_funciones/ft_isalpha.md)   |    | Primera funcion | Enlace										   |
+## Funciones de la libreria Libc
+| Función         | Enlace al README                               |
+|-----------------|------------------------------------------------|
+| ft_isalpha      | [README](readmes_de_funciones/ft_isalpha.md)   |
 | ft_isdigit      | [README](readmes_de_funciones/ft_isdigit.md)   |
 | ft_isalnum      | [README](readmes_de_funciones/ft_isalnum.md)   |
 | ft_isascii      | [README](readmes_de_funciones/ft_isascii.md)   |
