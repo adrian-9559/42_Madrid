@@ -44,7 +44,7 @@ make fclean
 
 # Descripción de cada función
 
-## <span style="color:blue;">ft_isalpha</span>
+## <span style="color:purple;">ft_isalpha</span>
 `ft_isalpha` es una función que verifica si un carácter dado es una letra del alfabeto (ya sea mayúscula o minúscula). 
 
 ### Prototipo
