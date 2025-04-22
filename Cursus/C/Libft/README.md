@@ -43,7 +43,8 @@ make fclean
 ```
 
 # READMES de cada función
-
+|                   Funciones de Libc                              |
+|------------------------------------------------------------------|
 | Función         | Enlace al README                               |
 |-----------------|------------------------------------------------|
 | ft_isalpha      | [README](readmes_de_funciones/ft_isalpha.md)   |
@@ -63,6 +64,11 @@ make fclean
 | ft_strrchr      | [README](readmes_de_funciones/ft_strrchr.md)   |
 | ft_strncmp      | [README](readmes_de_funciones/ft_strncmp.md)   |
 | ft_memchr       | [README](readmes_de_funciones/ft_memchr.md)    |
+| ft_memcmp       | [README](readmes_de_funciones/ft_memcmp.md)    |
+| ft_strnstr      | [README](readmes_de_funciones/ft_strnstr.md)   |
+| ft_atoi         | [README](readmes_de_funciones/ft_atoi.md)      |
+| ft_calloc       | [README](readmes_de_funciones/ft_calloc.md)    |
+| ft_strdup       | [README](readmes_de_funciones/ft_strdup.md)    |
 
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
