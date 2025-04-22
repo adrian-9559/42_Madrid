@@ -52,3 +52,14 @@ make fclean
 | ft_isascii      | [README](readmes_de_funciones/ft_isascii.md)   |
 | ft_isprint      | [README](readmes_de_funciones/ft_isprint.md)   |
 | ft_strlen       | [README](readmes_de_funciones/ft_istrlen.md)   |
+| ft_memset       | [README](readmes_de_funciones/ft_memset.md)    |
+| ft_bzero        | [README](readmes_de_funciones/ft_bzero.md)     |
+| ft_memcpy       | [README](readmes_de_funciones/ft_memcpy.md)    |
+| ft_memmove      | [README](readmes_de_funciones/ft_memmove.md)   |
+| ft_strlcpy      | [README](readmes_de_funciones/ft_strlcpy.md)   |
+| ft_strlcat      | [README](readmes_de_funciones/ft_strlcat.md)   |
+| ft_tolower      | [README](readmes_de_funciones/ft_tolower.md)   |
+| ft_strchr       | [README](readmes_de_funciones/ft_strchr.md)    |
+| ft_strrchr      | [README](readmes_de_funciones/ft_strrchr.md)   |
+| ft_strncmp      | [README](readmes_de_funciones/ft_strncmp.md)   |
+| ft_memchr       | [README](readmes_de_funciones/ft_memchr.md)    |
