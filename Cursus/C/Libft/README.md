@@ -70,6 +70,64 @@ make fclean
 | ft_calloc       | [README](readmes_de_funciones/ft_calloc.md)    |
 | ft_strdup       | [README](readmes_de_funciones/ft_strdup.md)    |
 
+```html
+<h2>Funciones Adicionales</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Función</th>
+			<th>Enlace al README</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>ft_substr</td>
+			<td><a href="readmes_de_funciones/ft_substr.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_strjoin</td>
+			<td><a href="readmes_de_funciones/ft_strjoin.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_strtrim</td>
+			<td><a href="readmes_de_funciones/ft_strtrim.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_split</td>
+			<td><a href="readmes_de_funciones/ft_split.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_itoa</td>
+			<td><a href="readmes_de_funciones/ft_itoa.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_strmapi</td>
+			<td><a href="readmes_de_funciones/ft_strmapi.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_striteri</td>
+			<td><a href="readmes_de_funciones/ft_striteri.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_putchar_fd</td>
+			<td><a href="readmes_de_funciones/ft_putchar_fd.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_putstr_fd</td>
+			<td><a href="readmes_de_funciones/ft_putstr_fd.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_putendl_fd</td>
+			<td><a href="readmes_de_funciones/ft_putendl_fd.md">README</a></td>
+		</tr>
+		<tr>
+			<td>ft_putnbr_fd</td>
+			<td><a href="readmes_de_funciones/ft_putnbr_fd.md">README</a></td>
+		</tr>
+	</tbody>
+</table>
+```
+
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
 
