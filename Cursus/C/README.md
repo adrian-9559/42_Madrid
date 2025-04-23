@@ -137,7 +137,7 @@ El **LibftTester** es una herramienta automatizada diseñada para probar la bibl
 
 #### Instalación
 
-1. Clonar el repositorio de LibftTester:
+1. Clonar el repositorio de LibftTester dentro de la carpeta del proyecto de Libft:
 ```bash
 git clone https://github.com/Tripouille/libftTester.git
 ```
