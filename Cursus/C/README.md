@@ -59,38 +59,42 @@ zsh: command not found: norminette
 Sigue estos pasos para solucionarlo:
 
 1. **Verifica la ruta del ejecutable de Norminette**  
-    Ejecuta el siguiente comando en tu terminal:
-    ```bash
-    python3 -m site --user-base
-    ```
-    Esto debería devolver la ruta base donde se encuentra el ejecutable de **Norminette**. Por ejemplo:
-    ```bash
-    /Users/adrian_9559/Library/Python/3.9
-    ```
+Ejecuta el siguiente comando en tu terminal:
+```bash
+python3 -m site --user-base
+```
+Esto debería devolver la ruta base donde se encuentra el ejecutable de **Norminette**. Por ejemplo:
+```bash
+/Users/adrian_9559/Library/Python/3.9
+```
 
 2. **Accede al directorio del ejecutable**  
-    Cambia al directorio correspondiente utilizando:
-    ```bash
-    cd /Users/adrian_9559/Library/Python/3.9/bin
-    ```
+Cambia al directorio correspondiente utilizando:
+```bash
+cd /Users/adrian_9559/Library/Python/3.9/bin
+```
 
 3. **Añade la ruta al archivo PATH**  
-    Agrega la ruta del ejecutable al archivo de configuración de tu terminal (`~/.zshrc`):
-    ```bash
-    echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zshrc
-    ```
+Agrega la ruta del ejecutable al archivo de configuración de tu terminal (`~/.zshrc` o `~/.zprofile` si `~/.zshrc` no funciona):
+```bash
+echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zshrc
+```
+Si estás usando `~/.zprofile`, utiliza:
+```bash
+echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zprofile
+```
 
 4. **Aplica los cambios**  
-    Recarga la configuración de tu terminal para que los cambios surtan efecto:
-    ```bash
-    source ~/.zshrc
-    ```
+Recarga la configuración de tu terminal para que los cambios surtan efecto:
+```bash
+source ~/.zshrc
+```
 
 5. **Verifica la instalación**  
-    Comprueba que **Norminette** está correctamente instalado ejecutando:
-    ```bash
-    norminette --version
-    ```
+Comprueba que **Norminette** está correctamente instalado ejecutando:
+```bash
+norminette --version
+```
 
 Si todo está configurado correctamente, deberías ver la versión instalada de **Norminette**.
 
@@ -126,6 +130,54 @@ Para ejecutar la herramienta, primero asegúrate de estar en el directorio del p
 ```bash
 paco
 ```
+#### Solución a problemas comunes
+
+Si al ejecutar el comando aparece el error:
+```bash
+zsh: command not found: paco
+```
+
+Sigue estos pasos para solucionarlo:
+
+1. **Verifica la ruta del ejecutable de Francinette**  
+Ejecuta el siguiente comando en tu terminal:
+```bash
+python3 -m site --user-base
+```
+Esto debería devolver la ruta base donde se encuentra el ejecutable de **Francinette**. Por ejemplo:
+```bash
+/Users/adrian_9559/Library/Python/3.9
+```
+
+2. **Accede al directorio del ejecutable**  
+Cambia al directorio correspondiente utilizando:
+```bash
+cd /Users/adrian_9559/Library/Python/3.9/bin
+```
+
+3. **Añade la ruta al archivo PATH**  
+Agrega la ruta del ejecutable al archivo de configuración de tu terminal (`~/.zshrc` o `~/.zprofile` si `~/.zshrc` no funciona):
+```bash
+echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zshrc
+```
+Si estás usando `~/.zprofile`, utiliza:
+```bash
+echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zprofile
+```
+
+4. **Aplica los cambios**  
+Recarga la configuración de tu terminal para que los cambios surtan efecto:
+```bash
+source ~/.zshrc
+```
+
+5. **Verifica la instalación**  
+Comprueba que **Francinette** está correctamente instalado ejecutando:
+```bash
+paco --version
+```
+
+Si todo está configurado correctamente, deberías ver la versión instalada de **Francinette**.
 
 #### Documentación original
 
