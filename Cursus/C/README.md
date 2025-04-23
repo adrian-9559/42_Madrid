@@ -130,3 +130,31 @@ paco
 #### Documentación original
 
 Para más detalles sobre la herramienta Francinette, consulta la [documentación oficial](https://github.com/xicodomingues/francinette/tree/master#readme).
+
+### LibftTester
+
+El **LibftTester** es una herramienta automatizada diseñada para probar la biblioteca **Libft**, uno de los proyectos fundamentales en 42. Este tester verifica la funcionalidad y el cumplimiento de los requisitos de las funciones implementadas en el proyecto.
+
+#### Instalación
+
+1. Clonar el repositorio de LibftTester:
+```bash
+git clone https://github.com/Tripouille/libftTester.git
+```
+
+2. Entrar en el directorio del repositorio clonado:
+```bash
+cd libftTester
+```
+
+#### Ejecución
+
+Para ejecutar el tester, asegúrate de que el archivo `Makefile` de tu proyecto **Libft** esté en el mismo directorio que el tester. Luego, utiliza el siguiente comando:
+
+```bash
+make a
+```
+
+#### Documentación original
+
+Para más detalles sobre el uso de **LibftTester**, consulta la [documentación oficial](https://github.com/Tripouille/libftTester#readme).
