@@ -1,46 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 16:59:50 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/23 18:03:57 by adriescr         ###   ########.fr       */
+/*   Created: 2025/04/23 17:58:33 by adriescr          #+#    #+#             */
+/*   Updated: 2025/04/23 17:59:07 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	void	*ptr;
+	t_list	*temp;
 
-	if (size != 0 && count > SIZE_MAX / size)
-		return (NULL);
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = temp;
+	}
 }
 
 /*
-#include <stdio.h>
-
 int	main(void)
 {
-	int	*ptr;
-	int	i;
+	t_list	*list;
+	t_list	*node1;
+	t_list	*node2;
 
-	ptr = ft_calloc(5, sizeof(int));
-	if (!ptr)
-		return (1);
-	for (i = 0; i < 5; i++)
-	{
-		printf("%d ", ptr[i]);
-	}
-	free(ptr);
+	list = ft_lstnew("Hello");
+	node1 = ft_lstnew("World");
+	node2 = ft_lstnew("!");
+
+	ft_lstadd_front(&list, node1);
+	ft_lstadd_front(&list, node2);
+
+	ft_lstclear(&list, free);
 	return (0);
 }
 */
