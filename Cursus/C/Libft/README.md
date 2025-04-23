@@ -17,6 +17,9 @@ Asegúrate de ir enriqueciendo tu libft a lo largo de tu cursus. Sin embargo, cu
 - Entrega tu trabajo en tu repositorio Git asignado. Solo el trabajo de tu repositorio Git será evaluado. Si Deepthought evalúa tu trabajo, lo hará después de tus compañeros. Si se encuentra un error durante la evaluación de Deepthought, esta habrá
 terminado.
 
+# Enunciado original
+[Enunciado en Español](es.subject.pdf)
+
 # Instrucciones de uso de la librería
 ## Instrucciones de ejecución
 
