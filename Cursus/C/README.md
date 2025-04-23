@@ -207,6 +207,14 @@ Para ejecutar el tester, asegúrate de que el archivo `Makefile` de tu proyecto 
 make a
 ```
 
+Si solo deseas ejecutar las pruebas para las funciones obligatorias, utiliza el siguiente comando:
+
+```bash
+make m
+```
+
+Esto ejecutará únicamente las pruebas relacionadas con las funciones requeridas por el proyecto, permitiéndote enfocarte en los requisitos mínimos necesarios para la evaluación.
+
 #### Documentación original
 
 Para más detalles sobre el uso de **LibftTester**, consulta la [documentación oficial](https://github.com/Tripouille/libftTester#readme).
