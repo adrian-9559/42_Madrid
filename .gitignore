@@ -1,3 +1,4 @@
 *.git
 .git
 .DS_Store
+Cursus/C/Libft/libftTester

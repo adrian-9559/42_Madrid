@@ -49,8 +49,11 @@ make fclean
 		<tr>
 			<th colspan="2">Funciones de la libreria Libc</th>
 			<th colspan="2">Funciones Adicionales</th>
+			<th colspan="2">Funciones Bonus</th>
 		</tr>
 		<tr>
+			<th>Función</th>
+			<th>Enlace al README</th>
 			<th>Función</th>
 			<th>Enlace al README</th>
 			<th>Función</th>
@@ -63,70 +66,94 @@ make fclean
 			<td><a href="readmes_de_funciones/ft_isalpha.md">README</a></td>
 			<td>ft_substr</td>
 			<td><a href="readmes_de_funciones/ft_substr.md">README</a></td>
+			<td>ft_lstnew</td>
+			<td><a href="readmes_de_funciones/ft_lstnew.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_isdigit</td>
 			<td><a href="readmes_de_funciones/ft_isdigit.md">README</a></td>
 			<td>ft_strjoin</td>
 			<td><a href="readmes_de_funciones/ft_strjoin.md">README</a></td>
+			<td>ft_lstadd_front</td>
+			<td><a href="readmes_de_funciones/ft_lstadd_front.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_isalnum</td>
 			<td><a href="readmes_de_funciones/ft_isalnum.md">README</a></td>
 			<td>ft_strtrim</td>
 			<td><a href="readmes_de_funciones/ft_strtrim.md">README</a></td>
+			<td>ft_lstsize</td>
+			<td><a href="readmes_de_funciones/ft_lstsize.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_isascii</td>
 			<td><a href="readmes_de_funciones/ft_isascii.md">README</a></td>
 			<td>ft_split</td>
 			<td><a href="readmes_de_funciones/ft_split.md">README</a></td>
+			<td>ft_lstlast</td>
+			<td><a href="readmes_de_funciones/ft_lstlast.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_isprint</td>
 			<td><a href="readmes_de_funciones/ft_isprint.md">README</a></td>
 			<td>ft_itoa</td>
 			<td><a href="readmes_de_funciones/ft_itoa.md">README</a></td>
+			<td>ft_lstadd_back</td>
+			<td><a href="readmes_de_funciones/ft_lstadd_back.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_strlen</td>
 			<td><a href="readmes_de_funciones/ft_istrlen.md">README</a></td>
 			<td>ft_strmapi</td>
 			<td><a href="readmes_de_funciones/ft_strmapi.md">README</a></td>
+			<td>ft_lstdelone</td>
+			<td><a href="readmes_de_funciones/ft_lstdelone.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_memset</td>
 			<td><a href="readmes_de_funciones/ft_memset.md">README</a></td>
 			<td>ft_striteri</td>
 			<td><a href="readmes_de_funciones/ft_striteri.md">README</a></td>
+			<td>ft_lstclear</td>
+			<td><a href="readmes_de_funciones/ft_lstclear.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_bzero</td>
 			<td><a href="readmes_de_funciones/ft_bzero.md">README</a></td>
 			<td>ft_putchar_fd</td>
 			<td><a href="readmes_de_funciones/ft_putchar_fd.md">README</a></td>
+			<td>ft_lstiter</td>
+			<td><a href="readmes_de_funciones/ft_lstiter.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_memcpy</td>
 			<td><a href="readmes_de_funciones/ft_memcpy.md">README</a></td>
 			<td>ft_putstr_fd</td>
 			<td><a href="readmes_de_funciones/ft_putstr_fd.md">README</a></td>
+			<td>ft_lstmap</td>
+			<td><a href="readmes_de_funciones/ft_lstmap.md">README</a></td>
 		</tr>
 		<tr>
 			<td>ft_memmove</td>
 			<td><a href="readmes_de_funciones/ft_memmove.md">README</a></td>
 			<td>ft_putendl_fd</td>
 			<td><a href="readmes_de_funciones/ft_putendl_fd.md">README</a></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_strlcpy</td>
 			<td><a href="readmes_de_funciones/ft_strlcpy.md">README</a></td>
 			<td>ft_putnbr_fd</td>
 			<td><a href="readmes_de_funciones/ft_putnbr_fd.md">README</a></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_strlcat</td>
 			<td><a href="readmes_de_funciones/ft_strlcat.md">README</a></td>
+			<td></td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -135,10 +162,14 @@ make fclean
 			<td><a href="readmes_de_funciones/ft_tolower.md">README</a></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_strchr</td>
 			<td><a href="readmes_de_funciones/ft_strchr.md">README</a></td>
+			<td></td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -147,10 +178,14 @@ make fclean
 			<td><a href="readmes_de_funciones/ft_strrchr.md">README</a></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_strncmp</td>
 			<td><a href="readmes_de_funciones/ft_strncmp.md">README</a></td>
+			<td></td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -159,10 +194,14 @@ make fclean
 			<td><a href="readmes_de_funciones/ft_memchr.md">README</a></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_memcmp</td>
 			<td><a href="readmes_de_funciones/ft_memcmp.md">README</a></td>
+			<td></td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -171,10 +210,14 @@ make fclean
 			<td><a href="readmes_de_funciones/ft_strnstr.md">README</a></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_atoi</td>
 			<td><a href="readmes_de_funciones/ft_atoi.md">README</a></td>
+			<td></td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
@@ -183,10 +226,14 @@ make fclean
 			<td><a href="readmes_de_funciones/ft_calloc.md">README</a></td>
 			<td></td>
 			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>ft_strdup</td>
 			<td><a href="readmes_de_funciones/ft_strdup.md">README</a></td>
+			<td></td>
+			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
