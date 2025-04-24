@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:00:56 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/23 18:28:58 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/24 19:29:50 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <string.h>
+# include <limits.h>
 
 typedef struct s_list
 {

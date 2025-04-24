@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   lib.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 19:10:11 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/24 18:49:53 by adriescr         ###   ########.fr       */
+/*   Created: 2025/04/24 18:50:02 by adriescr          #+#    #+#             */
+/*   Updated: 2025/04/24 18:50:30 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#ifndef LIB_H
+# define LIB_H
 
-int	ft_printf(const char *format, ...)
-{
-	
-	return (0);
-}
+# include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
+
+#endif
