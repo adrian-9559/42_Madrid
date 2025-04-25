@@ -5,6 +5,12 @@ AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror
 
 MY_SOURCES = \
+	ft_printf.c \
+	ft_putchar.c \
+	ft_putstr.c \
+	ft_putnbr.c \
+	ft_putnbr_base.c \
+	ft_putptr.c \
 
 $(NAME): $(MY_OBJECTS)
 

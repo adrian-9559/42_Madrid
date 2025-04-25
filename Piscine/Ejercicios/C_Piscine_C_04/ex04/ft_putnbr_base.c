@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 21:02:12 by adriescr          #+#    #+#             */
-/*   Updated: 2025/03/07 21:02:22 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/25 19:46:00 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void	ft_putnbr_base(int nbr, char *base)
 	ft_putstr(rev_digits, i);
 }
 
+/*
 int main(int argc, char **argv)
 {
 	if (argc == 3)
@@ -103,7 +104,7 @@ int main(int argc, char **argv)
 	write(1, "\n", 1);
 	return (0);
 }
-
+*/
 /*
 
 	check_base: Comprueba que la base sea correcta.

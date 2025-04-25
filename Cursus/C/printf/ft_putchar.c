@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib.h                                              :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/24 18:50:02 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/24 18:50:30 by adriescr         ###   ########.fr       */
+/*   Created: 2025/04/25 17:46:32 by adriescr          #+#    #+#             */
+/*   Updated: 2025/04/25 23:38:29 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIB_H
-# define LIB_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-
-#endif
+int	ft_putchar(char c)
+{
+	return (write(1, &c, 1));
+}
