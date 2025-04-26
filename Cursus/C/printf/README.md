@@ -71,13 +71,13 @@ La librería `ft_printf` soporta las siguientes conversiones de formato:
 # Funciones utilizadas
 | Función         		| Descripción                                                          	 | Enlace al README de la función		                    	|
 |-----------------------|------------------------------------------------------------------------|--------------------------------------------------------------|
-| `ft_printf`     		| Función principal que gestiona las conversiones y formatea la salida.  | [README de ft_printf](./readmes_de_funciones/ft_printf.md)      				|
-| `ft_putchar`    		| Imprime un carácter en la salida estándar.                             | [README de ft_putchar](./readmes_de_funciones/ft_putchar.md)    				|
-| `ft_putstr`     		| Imprime una cadena de caracteres en la salida estándar.                | [README de ft_putstr](./readmes_de_funciones/ft_putstr.md)      				|
-| `ft_putnbr`     		| Imprime un número entero en la salida estándar.                        | [README de ft_putnbr](./readmes_de_funciones/ft_putnbr.md)      				|
-| `ft_putnbr_unsigned`  | Imprime un número entero sin signo en la salida estándar.              | [README de ft_putnbr_unsigned](./readmes_de_funciones/ft_putnbr_unsigned.md) |
-| `ft_putnbr_base`      | Imprime un número en formato hexadecimal (minúsculas o mayúsculas).    | [README de ft_putnbr_base](./readmes_de_funciones/ft_putnbr_base.md) 		|
-| `ft_putptr`     		| Imprime un puntero en formato hexadecimal.                             | [README de ft_putptr](./readmes_de_funciones/ft_putptr.md)      				|
+| `ft_printf`     		| Función principal que gestiona las conversiones y formatea la salida.  | [README](./readmes_de_funciones/ft_printf.md)      				|
+| `ft_putchar`    		| Imprime un carácter en la salida estándar.                             | [README](./readmes_de_funciones/ft_putchar.md)    				|
+| `ft_putstr`     		| Imprime una cadena de caracteres en la salida estándar.                | [README](./readmes_de_funciones/ft_putstr.md)      				|
+| `ft_putnbr`     		| Imprime un número entero en la salida estándar.                        | [README](./readmes_de_funciones/ft_putnbr.md)      				|
+| `ft_putnbr_unsigned`  | Imprime un número entero sin signo en la salida estándar.              | [README](./readmes_de_funciones/ft_putnbr_unsigned.md) |
+| `ft_putnbr_base`      | Imprime un número en formato hexadecimal (minúsculas o mayúsculas).    | [README](./readmes_de_funciones/ft_putnbr_base.md) 		|
+| `ft_putptr`     		| Imprime un puntero en formato hexadecimal.                             | [README](./readmes_de_funciones/ft_putptr.md)      				|
 
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
