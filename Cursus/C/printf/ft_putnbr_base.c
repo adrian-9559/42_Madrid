@@ -6,18 +6,18 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 21:02:12 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/25 23:25:05 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/26 23:22:32 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(unsigned int nbr, int upper)
+int	ft_putnbr_base(unsigned long nbr, int upper)
 {
 	int		count;
 	char	*base;
 
-	if (upper)
+	if (upper == 'X')
 		base = "0123456789ABCDEF";
 	else
 		base = "0123456789abcdef";
