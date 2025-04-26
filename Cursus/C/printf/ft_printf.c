@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:01:49 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/27 00:39:14 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/27 00:59:41 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	handle_format(char specifier, va_list va)
 	return (0);
 }
 
-int	ft_printf(char const *str, ...)
+size_t	ft_printf(char const *str, ...)
 {
 	va_list	va;
 	size_t	count_chr;

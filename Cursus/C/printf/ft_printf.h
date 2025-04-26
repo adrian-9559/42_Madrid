@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 18:50:02 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/27 00:38:11 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/27 00:59:48 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <limits.h>
 
-int			ft_printf(const char *format, ...);
+size_t			ft_printf(const char *format, ...);
 // Funciones de la libreria
 int			ft_putchar(char c);
 int			ft_putstr(char *str);
