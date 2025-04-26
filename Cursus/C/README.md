@@ -12,6 +12,10 @@ Este repositorio contiene una colección de proyectos realizados como parte del 
 
 Estos proyectos no solo fortalecen las bases de la programación en C, sino que también preparan a los estudiantes para enfrentar desafíos reales en el desarrollo de software.
 
+## Ejercicios a realizar
+- [Libft](./Libft/README.md)
+- [Printf](./printf/README.md)
+
 ## Herramientas opcionales a instalar 
 
 ### Norminette
