@@ -14,9 +14,9 @@ En resumen, la Piscina no solo prepara a los participantes para los desafíos de
 
 ## 🚀 Orden de los ejercicios a realizar
 
-1. 🐚 **[C Piscine Shell 00](./C_Piscine_Shell_00/README.md)** - Introducción al shell y comandos básicos.  
+1. 🐚 **[C Piscine Shell 00](./Ejercicios/C_Piscine_Shell_00/README.md)** - Introducción al shell y comandos básicos.  
 2. 🐚 **[C Piscine Shell 01](./C_Piscine_Shell_01/README.md)** - Scripts y automatización en el shell.  
-3. 💻 **[C Piscine C 00](./C_Piscine_C_00/README.md)** - Fundamentos de C: variables, loops y funciones.  
+3. 💻 **[C Piscine C 00](.//Ejercicios/C_Piscine_C_00/README.md)** - Fundamentos de C: variables, loops y funciones.  
 4. 💻 **[C Piscine C 01](./C_Piscine_C_01/README.md)** - Arrays, punteros y manipulación de cadenas.  
 5. 💻 **[C Piscine C 02](./C_Piscine_C_02/README.md)** - Estructuras de control y manejo de errores.  
 6. 💻 **[C Piscine C 03](./C_Piscine_C_03/README.md)** - Funciones avanzadas y recursividad.  
