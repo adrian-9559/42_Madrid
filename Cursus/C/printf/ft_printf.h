@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 18:50:02 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/27 01:09:59 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:47:24 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,18 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+
+typedef struct s_flags
+{
+	int	minus;
+	int	zero;
+	int	width;
+	int	precision;
+	int	dot;
+	int	hash;
+	int	plus;
+	int	space;
+}	t_flags;
 
 size_t		ft_printf(const char *format, ...);
 // Funciones de la libreria
