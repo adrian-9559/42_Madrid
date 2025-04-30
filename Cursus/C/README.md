@@ -112,17 +112,7 @@ La **Francinette** es una herramienta de evaluación automatizada diseñada para
 
 #### Instalación
 
-1. Clonar el repositorio de Francinette:
-```bash
-git clone https://github.com/WaRtr0/francinette-image.git
-```
-
-2. Entrar en el directorio del repositorio clonado:
-```bash
-cd francinette-image
-```
-
-3. Ejecutar el script de instalación:
+1. Ejecutar el script de instalación:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/WaRtr0/francinette-image/master/install.sh)"
 ```
