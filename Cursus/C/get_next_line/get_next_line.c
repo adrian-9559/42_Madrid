@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 20:08:00 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/28 20:11:45 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/04/30 01:56:13 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 char	*get_next_line(int fd)
 {
-	
+	if (!fd)
+        return (NULL);
+    
 }
