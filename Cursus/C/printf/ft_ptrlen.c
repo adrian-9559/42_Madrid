@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_ptrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 20:13:35 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/28 20:17:47 by adriescr         ###   ########.fr       */
+/*   Created: 2025/04/30 02:45:32 by adriescr          #+#    #+#             */
+/*   Updated: 2025/04/30 02:45:35 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "ft_printf.h"
 
-size_t	ft_putstr_fd(char *str, int fd)
+int	ft_ptrlen(void *ptr)
 {
-	size_t count_char;
+	unsigned long	addr;
+	int				len;
 
-	count_char = 0;
-	if (!str)
-		return(count_char);
-	while(*str)
-		count_char += ft_putchar_fd(str, fd);
-	return(count_char);
+	addr = (unsigned long)ptr;
+	len = 2;
+	while (addr)
+	{
+		addr /= 16;
+		len++;
+	}
+	return (len);
 }

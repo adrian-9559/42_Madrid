@@ -5,50 +5,59 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/26 14:01:49 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/30 01:59:02 by adriescr         ###   ########.fr       */
+/*   Created: 2025/04/30 12:06:12 by adriescr          #+#    #+#             */
+/*   Updated: 2025/04/30 16:27:46 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	handle_format(char specifier, va_list *va)
+static int	handle_format(const char **format, va_list *va)
 {
-	size_t	count;
+	t_flags	flags;
+	int		count;
+	char	specifier;
 
 	count = 0;
-	if (specifier == 's')
-		count = ft_putstr(va_arg(*va, char *));
-	else if (specifier == 'c')
-		count = ft_putchar((char)va_arg(*va, int));
+	init_flags(&flags);
+	*format = parse_flags(*format, &flags);
+	*format = parse_width_precision(*format, &flags, va);
+	specifier = **format;
+	if (specifier == 'c')
+		count = ft_handle_char(va_arg(*va, int), flags);
+	else if (specifier == 's')
+		count = ft_handle_string(va_arg(*va, char *), flags);
 	else if (specifier == 'p')
-		count = ft_putptr(va_arg(*va, void *));
-	else if (specifier == 'i' || specifier == 'd')
-		count = ft_putnbr(va_arg(*va, int));
+		count = ft_handle_pointer(va_arg(*va, void *), flags);
+	else if (specifier == 'd' || specifier == 'i')
+		count = ft_handle_integer(va_arg(*va, int), flags);
 	else if (specifier == 'u')
-		count = ft_putnbr_unsigned(va_arg(*va, unsigned int));
+		count = ft_handle_unsigned(va_arg(*va, unsigned int), flags);
 	else if (specifier == 'x' || specifier == 'X')
-		count = ft_putnbr_base(va_arg(*va, unsigned int), specifier);
+		count = ft_handle_hex(va_arg(*va, unsigned int), specifier, flags);
 	else if (specifier == '%')
-		count = ft_putchar('%');
+		count = ft_handle_percent(flags);
 	return (count);
 }
 
-size_t	ft_printf(char const *str, ...)
+int	ft_printf(const char *format, ...)
 {
-	size_t	count_chr;
 	va_list	va;
+	int		count;
 
-	va_start(va, str);
-	count_chr = 0;
-	while (*str)
+	count = 0;
+	va_start(va, format);
+	while (*format)
 	{
-		if (*str == '%' && *(++str))
-			count_chr += handle_format(*str, &va);
+		if (*format == '%' && *(format + 1))
+		{
+			format++;
+			count += handle_format(&format, &va);
+		}
 		else
-			count_chr += ft_putchar(*str);
-		str++;
+			count += ft_putchar(*format);
+		format++;
 	}
 	va_end(va);
-	return (count_chr);
+	return (count);
 }
