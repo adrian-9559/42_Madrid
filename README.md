@@ -41,9 +41,9 @@ Sigue estos pasos para obtener una copia local del repositorio y comenzar a expl
 
 El repositorio está organizado de la siguiente manera:
 
-- **[`Piscine/`](./Piscine/README.md)**: Proyectos realizados durante la prueba de acceso (Piscina de 2025). Aquí se incluyen ejercicios básicos de programación, algoritmos y estructuras de datos.
-- **[`Cursus/`](./Cursus/README.md)**: Proyectos del programa principal de 42 Madrid, incluyendo ejercicios y desafíos avanzados que abarcan diversas áreas de la programación como:
-  - **[`C/`](./Cursus/C/README.md):** Contiene todos los proyecto de lenguaje de programación realizados.
+- **[`Piscine`](./Piscine/README.md)**: Proyectos realizados durante la prueba de acceso (Piscina de 2025). Aquí se incluyen ejercicios básicos de programación, algoritmos y estructuras de datos.
+- **[`Cursus`](./Cursus/README.md)**: Proyectos del programa principal de 42 Madrid, incluyendo ejercicios y desafíos avanzados que abarcan diversas áreas de la programación como:
+  - **[`C`](./Cursus/C/README.md):** Contiene todos los proyecto de lenguaje de programación realizados.
 
 ---
 
@@ -66,7 +66,7 @@ En 42 Madrid, el aprendizaje se basa en proyectos prácticos y la colaboración 
 
 ¡Gracias por explorar mi trabajo! Si tienes preguntas, comentarios o sugerencias, no dudes en contactarme. Puedes encontrarme en:
 
-- **Correo Electrónico:** [adrian.escribano3@gmail.com](mailto:adrian.escribano3@gmail.com)
+- **Correo Electrónico:** [adrian.escribano3@gmail.com](mailto:adrian.escribano3@gmail.com?subject=Consulta%20sobre%20repositorio%2042%20Madrid)
 - **LinkedIn:** [Adrián en LinkedIn](https://www.linkedin.com/in/adrián-escribano-pérez)
 - **GitHub:** [adrian-9559](https://github.com/adrian-9559)
 
