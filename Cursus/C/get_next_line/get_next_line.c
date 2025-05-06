@@ -18,8 +18,6 @@ char	*ft_update_remainder(char *remainder)
     int		i;
     int		j;
 
-    if (!remainder)
-        return (NULL);
     i = 0;
     while (remainder[i] && remainder[i] != '\n')
         i++;

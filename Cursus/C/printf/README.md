@@ -78,6 +78,7 @@ La librería `ft_printf` soporta las siguientes conversiones de formato:
 | `ft_putnbr_unsigned`  | Imprime un número entero sin signo en la salida estándar.              | [README](./readmes_de_funciones/ft_putnbr_unsigned.md) |
 | `ft_putnbr_base`      | Imprime un número en formato hexadecimal (minúsculas o mayúsculas).    | [README](./readmes_de_funciones/ft_putnbr_base.md) 		|
 | `ft_putptr`     		| Imprime un puntero en formato hexadecimal.                             | [README](./readmes_de_funciones/ft_putptr.md)      				|
+| `ft_handle_format`    | Gestiona el formato de las conversiones y delega a las funciones correspondientes. | [README](./readmes_de_funciones/ft_handle_format.md) |
 
 # Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.

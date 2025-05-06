@@ -6,13 +6,13 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 12:06:12 by adriescr          #+#    #+#             */
-/*   Updated: 2025/04/30 16:27:46 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/06 18:14:31 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	handle_format(const char **format, va_list *va)
+static int	ft_handle_format(const char **format, va_list *va)
 {
 	t_flags	flags;
 	int		count;
@@ -52,7 +52,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%' && *(format + 1))
 		{
 			format++;
-			count += handle_format(&format, &va);
+			count += ft_handle_format(&format, &va);
 		}
 		else
 			count += ft_putchar(*format);
