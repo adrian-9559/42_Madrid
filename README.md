@@ -41,9 +41,9 @@ Sigue estos pasos para obtener una copia local del repositorio y comenzar a expl
 
 El repositorio está organizado de la siguiente manera:
 
-- **`Piscine/`**: Proyectos realizados durante la prueba de acceso (Piscina de 2025). Aquí se incluyen ejercicios básicos de programación, algoritmos y estructuras de datos.
-- **`Cursus/`**: Proyectos del programa principal de 42 Madrid, incluyendo ejercicios y desafíos avanzados que abarcan diversas áreas de la programación como:
-  - **`./Cursus/C/`:** Contiene todos los proyecto de lenguaje de programación realizados.
+- **[`Piscine/`](./Piscine/README.md)**: Proyectos realizados durante la prueba de acceso (Piscina de 2025). Aquí se incluyen ejercicios básicos de programación, algoritmos y estructuras de datos.
+- **[`Cursus/`](./Cursus/README.md)**: Proyectos del programa principal de 42 Madrid, incluyendo ejercicios y desafíos avanzados que abarcan diversas áreas de la programación como:
+  - **[`C/`](./Cursus/C/README.md):** Contiene todos los proyecto de lenguaje de programación realizados.
 
 ---
 
