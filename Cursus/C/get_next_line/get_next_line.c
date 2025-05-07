@@ -6,13 +6,13 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 15:20:55 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/07 15:47:26 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/07 16:27:02 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*extract_line(char **reminder)
+static char	*ft_extract_line(char **reminder)
 {
 	char	*line;
 	char	*temp;
@@ -34,7 +34,7 @@ static char	*extract_line(char **reminder)
 	return (line);
 }
 
-static int	read_to_reminder(int fd, char **reminder)
+static int	ft_read_to_reminder(int fd, char **reminder)
 {
 	char	*buffer;
 	int		bytes_read;
@@ -71,12 +71,12 @@ char	*get_next_line(int fd)
 		reminder = ft_strdup("");
 	if (!reminder)
 		return (NULL);
-	bytes_read = read_to_reminder(fd, &reminder);
+	bytes_read = ft_read_to_reminder(fd, &reminder);
 	if (bytes_read < 0 || (!bytes_read && !*reminder))
 	{
 		free(reminder);
 		reminder = NULL;
 		return (NULL);
 	}
-	return (extract_line(&reminder));
+	return (ft_extract_line(&reminder));
 }
