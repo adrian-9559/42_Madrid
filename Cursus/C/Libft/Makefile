@@ -55,10 +55,6 @@ BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
 $(NAME): $(MY_OBJECTS)
 
-bonus: $(MY_OBJECTS) $(BONUS_OBJECTS)
-	$(AR) $(NAME) $(MY_OBJECTS) $(BONUS_OBJECTS)
-	chmod 755 $(NAME)
-
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 
 all: $(NAME)
@@ -68,6 +64,10 @@ all: $(NAME)
 
 $(NAME): $(MY_OBJECTS)
 	$(AR) $(NAME) $(MY_OBJECTS)
+	chmod 755 $(NAME)
+
+bonus: $(BONUS_OBJECTS)
+	$(AR) $(NAME) $(MY_OBJECTS) $(BONUS_OBJECTS)
 	chmod 755 $(NAME)
 
 clean:
