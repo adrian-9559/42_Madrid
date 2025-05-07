@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 20:09:31 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/06 17:47:00 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/07 15:26:53 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,11 @@ typedef struct s_gnl_vars
 	char	*temp;
 }			t_gnl_vars;
 
-char		*get_next_line(int fd);
-char		*ft_extract_line(char *remainder);
-char		*ft_update_remainder(char *remainder);
-char		*ft_strjoin(char *s1, char *s2);
-char		*ft_strdup(const char *s);
-size_t		ft_strlen(const char *s);
-char		*ft_strchr(const char *s, int c);
-char		*ft_strjoin_free(char *s1, char *s2);
+char			*get_next_line(int fd);
+char			*ft_strjoin(char *s1, char *s2);
+size_t			ft_strlen(const char *str);
+char			*ft_strdup(const char *s);
+char			*ft_substr(char *s, unsigned int start, size_t len);
+char			*ft_strchr(const char *s, int c);
 
 #endif
