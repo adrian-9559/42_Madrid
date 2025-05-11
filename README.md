@@ -1,5 +1,5 @@
 # 42 Madrid - Proyectos y Aprendizaje 🚀
-¡Bienvenido a mi repositorio de proyectos desarrollados durante mi formación en **42 Madrid**! 🎓✨ Este espacio es una recopilación exhaustiva de los desafíos, ejercicios y proyectos que he completado a lo largo de mi trayectoria como programador. Aquí podrás explorar mi progreso técnico 💻, mi capacidad para resolver problemas complejos 🧠 y mi experiencia trabajando en equipo 🤝 en un entorno colaborativo y desafiante.
+¡Bienvenido a mi repositorio de proyectos desarrollados durante mi formación en [**42 Madrid**](#-42-madrid)! 🎓✨ Este espacio es una recopilación exhaustiva de los desafíos, ejercicios y proyectos que he completado a lo largo de mi trayectoria como programador. Aquí podrás explorar mi progreso técnico 💻, mi capacidad para resolver problemas complejos 🧠 y mi experiencia trabajando en equipo 🤝 en un entorno colaborativo y desafiante.
 
 Cada proyecto en este repositorio incluye documentación detallada que abarca los siguientes aspectos:
 
@@ -62,7 +62,7 @@ La red de academias 42 ha sido reconocida internacionalmente por su enfoque inno
 
 <img src="Imagenes/logo_fundacion_telefonica.jpeg" alt="Logo Fundación Telefónica" align="right" width="200">
 
-La **Fundación Telefónica** es una institución líder en el ámbito de la innovación, la educación y el desarrollo social, comprometida con la transformación digital y el progreso de la sociedad. A través de iniciativas como [**42 Madrid**](#-sobre-42-madrid), la Fundación Telefónica busca fomentar el talento digital, capacitar a las personas para enfrentar los desafíos del futuro y reducir la brecha digital mediante programas inclusivos y accesibles.
+La **Fundación Telefónica** es una institución líder en el ámbito de la innovación, la educación y el desarrollo social, comprometida con la transformación digital y el progreso de la sociedad. A través de iniciativas como [**42 Madrid**](#-42-madrid), la Fundación Telefónica busca fomentar el talento digital, capacitar a las personas para enfrentar los desafíos del futuro y reducir la brecha digital mediante programas inclusivos y accesibles.
 
 #### 🚀 Misión y Visión
 
@@ -79,7 +79,7 @@ La Fundación Telefónica trabaja en diversas áreas clave para maximizar su imp
 
 #### 🛠️ Iniciativas Destacadas
 
-Entre las iniciativas más destacadas de la Fundación Telefónica se encuentra **42 Madrid**, una academia de programación disruptiva que forma parte de la red global de academias 42. Este modelo educativo innovador elimina las clases tradicionales y los profesores, ofreciendo un entorno de aprendizaje basado en proyectos y colaboración entre pares. Además, la Fundación Telefónica lidera otros programas como:
+Entre las iniciativas más destacadas de la Fundación Telefónica se encuentra [**42 Madrid**](#-42-madrid), una academia de programación disruptiva que forma parte de la red global de academias [42 Network](#-42-network). Este modelo educativo innovador elimina las clases tradicionales y los profesores, ofreciendo un entorno de aprendizaje basado en proyectos y colaboración entre pares. Además, la Fundación Telefónica lidera otros programas como:
 
 - **Conecta Empleo:** Formación en competencias digitales para mejorar la empleabilidad.  
 - **Voluntarios Telefónica:** Iniciativas solidarias que involucran a empleados de Telefónica en proyectos sociales y educativos.  
@@ -92,6 +92,34 @@ La Fundación Telefónica no solo se enfoca en el presente, sino que también tr
 Con su enfoque en la inclusión, la accesibilidad y la innovación, la Fundación Telefónica se posiciona como un pilar fundamental en la construcción de una sociedad más justa, equitativa y tecnológicamente avanzada. Su labor es un ejemplo de cómo la tecnología puede ser una herramienta poderosa para transformar vidas y construir un futuro mejor para todos.  
 
 ---
+
+## 🌐 42 Network
+
+<img src="Imagenes/logo_42_network.jpeg" alt="Logo 42 Network" align="right" width="200">
+
+La [**42 Network**](https://www.42network.org) es una red global de academias de programación innovadoras 🌍, presente en más de 20 países y con más de 40 campus en todo el mundo. Este modelo educativo disruptivo, sin clases tradicionales ni profesores, se basa en el aprendizaje autodirigido, la colaboración entre pares y la resolución de problemas a través de proyectos prácticos.  
+
+### 🚀 Misión y Visión
+
+La misión de la 42 Network es democratizar el acceso a la educación tecnológica y formar a la próxima generación de profesionales altamente capacitados en el ámbito de la programación y la tecnología. Su visión es ser un referente global en la formación de talento digital, promoviendo la inclusión, la creatividad y la innovación.
+
+### 🌟 Características Clave
+
+- **📚 Aprendizaje Basado en Proyectos:** Los estudiantes desarrollan habilidades técnicas y blandas al trabajar en proyectos prácticos que simulan desafíos del mundo real.  
+- **🤝 Colaboración entre Pares:** El modelo educativo fomenta el trabajo en equipo, el intercambio de conocimientos y la resolución conjunta de problemas.  
+- **🔍 Autonomía:** Los estudiantes son responsables de su propio aprendizaje, lo que fortalece su capacidad para adaptarse y aprender de manera continua.  
+- **🌐 Red Global:** La 42 Network conecta a estudiantes de todo el mundo, creando una comunidad internacional de programadores y profesionales tecnológicos.  
+
+### 🌍 Impacto Global
+
+Desde su creación, la 42 Network ha formado a miles de estudiantes que ahora trabajan en empresas líderes en tecnología, startups innovadoras y proyectos de impacto social. Su enfoque inclusivo y accesible ha permitido que personas de diferentes edades, géneros y contextos socioeconómicos encuentren una oportunidad para desarrollar sus habilidades y construir una carrera en el sector tecnológico.
+
+
+### 🛠️ Proyectos y Colaboraciones
+
+La 42 Network colabora con empresas, instituciones educativas y organizaciones sin fines de lucro para desarrollar programas que aborden los desafíos actuales de la industria tecnológica. Además, fomenta la innovación y el emprendimiento a través de hackatones, talleres y eventos internacionales.
+
+Con su enfoque único y su compromiso con la excelencia, la 42 Network continúa transformando vidas y redefiniendo la educación tecnológica en todo el mundo. 
 
 ---
 
