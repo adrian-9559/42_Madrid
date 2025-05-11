@@ -62,7 +62,7 @@ La red de academias 42 ha sido reconocida internacionalmente por su enfoque inno
 
 <img src="Imagenes/logo_fundacion_telefonica.jpeg" alt="Logo Fundación Telefónica" align="right" width="200">
 
-La **Fundación Telefónica** es una institución líder en el ámbito de la innovación, la educación y el desarrollo social, comprometida con la transformación digital y el progreso de la sociedad. A través de iniciativas como [**42 Madrid**](#-42-madrid), la Fundación Telefónica busca fomentar el talento digital, capacitar a las personas para enfrentar los desafíos del futuro y reducir la brecha digital mediante programas inclusivos y accesibles.
+La [**Fundación Telefónica**](https://www.fundaciontelefonica.com) es una institución líder en el ámbito de la innovación, la educación y el desarrollo social, comprometida con la transformación digital y el progreso de la sociedad. A través de iniciativas como [**42 Madrid**](#-42-madrid), la Fundación Telefónica busca fomentar el talento digital, capacitar a las personas para enfrentar los desafíos del futuro y reducir la brecha digital mediante programas inclusivos y accesibles.
 
 #### 🚀 Misión y Visión
 
