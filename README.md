@@ -52,7 +52,7 @@ El enfoque educativo de 42 Madrid está diseñado para preparar a los estudiante
 
 ### 🌍 Impacto Global
 
-La red de academias 42 ha sido reconocida internacionalmente por su enfoque innovador y su capacidad para formar profesionales altamente capacitados. Los graduados de 42 Madrid no solo adquieren habilidades técnicas avanzadas, sino también una mentalidad resiliente y adaptable que los prepara para liderar en la industria tecnológica.
+La red de academias [**42**](#-42-network) ha sido reconocida internacionalmente por su enfoque innovador y su capacidad para formar profesionales altamente capacitados. Los graduados de 42 Madrid no solo adquieren habilidades técnicas avanzadas, sino también una mentalidad resiliente y adaptable que los prepara para liderar en la industria tecnológica.
 
 ---
 
