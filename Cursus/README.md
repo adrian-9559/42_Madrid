@@ -47,3 +47,5 @@ Recuerda que el aprendizaje en 42 Madrid es colaborativo. Aprovecha la comunidad
 
 2. **Segundo anillo**
     - [Printf](./C/printf/README.md)
+    - [Get Next Line](./C/get_next_line/README.md)
+    - [Born2beroot](./Sistemas/Born2beroot/README.md)

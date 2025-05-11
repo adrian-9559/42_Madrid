@@ -15,6 +15,7 @@ Estos proyectos no solo fortalecen las bases de la programación en C, sino que 
 ## Ejercicios a realizar
 - [Libft](./Libft/README.md)
 - [Printf](./printf/README.md)
+- [Get Next Line](./get_next_line/README.md)
 
 ## Herramientas opcionales a instalar 
 
