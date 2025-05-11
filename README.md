@@ -56,9 +56,7 @@ La red de academias 42 ha sido reconocida internacionalmente por su enfoque inno
 
 ---
 
-## Fundación Telefónica
-
-### 🌟 Fundación Telefónica
+## 🌟 Fundación Telefónica
 
 <img src="Imagenes/logo_fundacion_telefonica.jpeg" alt="Logo Fundación Telefónica" align="right" width="200">
 
