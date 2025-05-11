@@ -44,6 +44,7 @@ El repositorio está organizado de la siguiente manera:
 - **[`Piscine`](./Piscine/README.md)**: Proyectos realizados durante la prueba de acceso (Piscina de 2025). Aquí se incluyen ejercicios básicos de programación, algoritmos y estructuras de datos.
 - **[`Cursus`](./Cursus/README.md)**: Proyectos del programa principal de 42 Madrid, incluyendo ejercicios y desafíos avanzados que abarcan diversas áreas de la programación como:
   - **[`C`](./Cursus/C/README.md):** Contiene todos los proyecto de lenguaje de programación realizados.
+  - **[`Sistemas`](./Cursus/Sistemas/README.md):** Contiene todos los proyectos que se realizan a lo largo del curso sobre sistemas y servicios.
 
 ---
 
