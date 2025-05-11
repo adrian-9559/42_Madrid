@@ -1,10 +1,9 @@
 # Introducción
+La función `printf()` es una de las herramientas más poderosas y versátiles del lenguaje C. 🌟 Este proyecto te brinda la oportunidad de profundizar en su funcionamiento interno, desafiándote a implementar tu propia versión: `ft_printf`. 🛠️ A través de este ejercicio, no solo mejorarás tus habilidades de programación, sino que también aprenderás a trabajar con funciones variádicas, un concepto clave en C que permite manejar un número variable de argumentos. 📚
 
-Vas a descubrir una función de C muy famosa y versátil: printf(). Este ejercicio es
-una grán oportunidad para mejorar tus habilidades de programación. Es un ejercicio de
-dificultad moderada.
-También descubrirás las funciones variádicas en C.
-La clave para superar ft_printf es tener un código bien estructurado y extensible.
+El desarrollo de `ft_printf` requiere un enfoque estructurado y modular, ya que deberás gestionar múltiples conversiones de formato y garantizar un comportamiento robusto y eficiente. 🚀 Este proyecto es una excelente manera de consolidar tus conocimientos sobre la gestión de memoria, el manejo de cadenas y la manipulación de datos en bajo nivel. 🧠
+
+Además, `ft_printf` es un ejercicio de dificultad moderada que te preparará para enfrentar desafíos más complejos en el futuro. 🔑 La clave para el éxito radica en diseñar un código limpio, extensible y conforme a la Norma de 42. 🧹 ¡Prepárate para explorar el fascinante mundo de las funciones variádicas y llevar tus habilidades de programación al siguiente nivel! 💻✨
 
 ## Instrucciones generales
 
