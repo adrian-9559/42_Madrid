@@ -13,30 +13,6 @@ Este repositorio no solo es un reflejo de mi evolución como programador, sino t
 
 ---
 
-## 🚀 Cómo Clonar y Explorar este Repositorio
-
-Si deseas explorar este repositorio y experimentar con los proyectos incluidos, sigue estos pasos para obtener una copia local y comenzar a trabajar con ella:  
-
-1. **📥 Clonar el repositorio:**  
-    Abre tu terminal y ejecuta el siguiente comando para clonar el repositorio:  
-    ```bash
-    git clone https://github.com/adrian-9559/42_Madrid.git
-    ```
-
-2. **📂 Acceder al directorio clonado:**  
-    Una vez clonado, navega al directorio del repositorio con el siguiente comando:  
-    ```bash
-    cd 42_Madrid
-    ```
-
-3. **🔍 Explorar y aprender:**  
-    Examina los diferentes proyectos, consulta la documentación detallada y experimenta con el código fuente. Cada proyecto está diseñado para ofrecer una experiencia de aprendizaje única. ¡Disfruta el proceso! 💻✨  
-
-4. **▶️ Ejecutar proyectos:**  
-    Algunos proyectos incluyen instrucciones específicas para ejecutarlos. Asegúrate de revisar los archivos `README.md` dentro de cada directorio para obtener detalles sobre cómo configurarlos y ejecutarlos correctamente.  
-
----
-
 ## 📂 Estructura del Repositorio
 
 El repositorio está organizado de manera lógica para facilitar la navegación y el acceso a los diferentes proyectos. A continuación, se detalla la estructura principal:  
@@ -51,6 +27,8 @@ Cada directorio contiene su propia documentación detallada para facilitar la co
 ---
 
 ## 🌟 42 Madrid
+
+<img src="Imagenes/logo_42_Madrid.jpg" alt="Logo 42 Madrid" align="right" width="200">
 
 [42 Madrid](https://www.42madrid.com/) es una academia de programación innovadora que forma parte de la red global de academias 42 🌍, presente en más de 20 países 🌎 y respaldada por instituciones de renombre como [Fundación Telefónica](#fundación-telefónica) 📞. Este modelo educativo disruptivo se basa en un enfoque pedagógico único que elimina las clases tradicionales y los profesores, reemplazándolos por un aprendizaje basado en proyectos 🛠️ y la colaboración entre pares 🤝.  
 
@@ -112,6 +90,32 @@ Entre las iniciativas más destacadas de la Fundación Telefónica se encuentra 
 La Fundación Telefónica no solo se enfoca en el presente, sino que también trabaja para anticiparse a las necesidades del futuro. A través de la investigación, la colaboración con instituciones educativas y la implementación de tecnologías emergentes, busca preparar a las nuevas generaciones para un mundo laboral dinámico y en constante cambio.
 
 Con su enfoque en la inclusión, la accesibilidad y la innovación, la Fundación Telefónica se posiciona como un pilar fundamental en la construcción de una sociedad más justa, equitativa y tecnológicamente avanzada. Su labor es un ejemplo de cómo la tecnología puede ser una herramienta poderosa para transformar vidas y construir un futuro mejor para todos.  
+
+---
+
+---
+
+## 🚀 Cómo Clonar y Explorar este Repositorio
+
+Si deseas explorar este repositorio y experimentar con los proyectos incluidos, sigue estos pasos para obtener una copia local y comenzar a trabajar con ella:  
+
+1. **📥 Clonar el repositorio:**  
+    Abre tu terminal y ejecuta el siguiente comando para clonar el repositorio:  
+    ```bash
+    git clone https://github.com/adrian-9559/42_Madrid.git
+    ```
+
+2. **📂 Acceder al directorio clonado:**  
+    Una vez clonado, navega al directorio del repositorio con el siguiente comando:  
+    ```bash
+    cd 42_Madrid
+    ```
+
+3. **🔍 Explorar y aprender:**  
+    Examina los diferentes proyectos, consulta la documentación detallada y experimenta con el código fuente. Cada proyecto está diseñado para ofrecer una experiencia de aprendizaje única. ¡Disfruta el proceso! 💻✨  
+
+4. **▶️ Ejecutar proyectos:**  
+    Algunos proyectos incluyen instrucciones específicas para ejecutarlos. Asegúrate de revisar los archivos `README.md` dentro de cada directorio para obtener detalles sobre cómo configurarlos y ejecutarlos correctamente.  
 
 ---
 
