@@ -129,7 +129,8 @@ Con su enfoque único y su compromiso con la excelencia, la 42 Network continúa
 
 ### 🌐 Sitio Web Oficial
 
-Para obtener más información sobre la red global de academias 42 y explorar sus iniciativas, visita el sitio web oficial: [**42 Network Official Website**](https://www.42network.org).  
+Para obtener más información sobre la red global de academias 42 y explorar sus iniciativas, visita el sitio web oficial: [**42 Network Official Website**](https://www.42network.org).
+
 ---
 
 ## 🚀 Cómo Clonar y Explorar este Repositorio
