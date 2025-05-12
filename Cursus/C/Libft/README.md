@@ -243,6 +243,13 @@ Programar en C puede ser aburrido cuando uno no tiene acceso a las funciones com
 	</tbody>
 </table>
 
+# 📝 **Nota de la corrección**  
+🎯 **Puntuación obtenida:** **100** / 125  
+
+🔍 **Consejo:** Revisa los puntos donde perdiste puntuación para aprender de ellos y evitar errores similares en el futuro. 🚀  
+
+✨ ¡Sigue adelante y no te rindas! 🌈
+
 # 🛠️ Herramientas recomendadas
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
 

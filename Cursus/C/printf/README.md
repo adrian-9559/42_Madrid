@@ -95,6 +95,67 @@ La librería `ft_printf` soporta las siguientes conversiones de formato:
 
 ---
 
+# BONUS
+
+## 🚀 Funcionalidades adicionales
+
+La librería `ft_printf` se ha enriquecido con las siguientes funcionalidades adicionales como parte del apartado BONUS, ampliando su versatilidad y alineándola aún más con la función estándar `printf` de C:
+
+### 🛠️ Nuevas conversiones soportadas
+
+| Conversión | Descripción                                                                 |
+|------------|-----------------------------------------------------------------------------|
+| `%f`       | Imprime números de punto flotante en notación decimal.                     |
+| `%e`       | Imprime números de punto flotante en notación científica (minúsculas).     |
+| `%E`       | Imprime números de punto flotante en notación científica (mayúsculas).     |
+| `%g`       | Imprime números de punto flotante en notación decimal o científica (la más corta). |
+| `%G`       | Similar a `%g`, pero utiliza mayúsculas para la notación científica.       |
+| `%n`       | Almacena el número de caracteres impresos hasta el momento en un puntero proporcionado. |
+
+### ✨ Mejoras avanzadas
+
+- **Gestión avanzada de flags**: 
+    - Soporte para flags como:
+        - `+`: Muestra siempre el signo de los números (positivo o negativo).
+        - ` ` (espacio): Inserta un espacio antes de números positivos.
+        - `#`: Aplica un formato alternativo (por ejemplo, añade `0x` para hexadecimales).
+        - `0`: Rellena con ceros en lugar de espacios para el ancho especificado.
+        - `-`: Alinea el texto a la izquierda dentro del ancho especificado.
+    
+- **Ancho y precisión configurables**:
+    - Especificación del ancho mínimo del campo y la precisión de las conversiones.
+    - Ejemplo: `%10.2f` imprime un número flotante con un ancho mínimo de 10 caracteres y 2 decimales.
+
+- **Ancho dinámico**:
+    - Permite definir el ancho y la precisión mediante argumentos adicionales en tiempo de ejecución.
+    - Ejemplo: `%*.*f` donde los valores del ancho y la precisión se pasan como argumentos.
+
+- **Soporte para modificadores de longitud**:
+    - Manejo de modificadores como:
+        - `l` y `ll`: Para longitudes largas (por ejemplo, `long` y `long long`).
+        - `h` y `hh`: Para longitudes cortas (por ejemplo, `short` y `char`).
+
+### 🛠️ Nuevas reglas de Makefile
+
+- **Regla `bonus`**:
+    - La regla `bonus` compila las funcionalidades adicionales descritas en esta sección. Asegúrate de que todos los archivos relacionados con los bonus estén correctamente nombrados con el sufijo `_bonus.{c/h}`.
+    - Ejemplo de uso:
+        ```bash
+        make bonus
+        ```
+
+- **Regla `fclean` mejorada**:
+    - La regla `fclean` ahora elimina todos los archivos generados, incluyendo los relacionados con los bonus y cualquier archivo binario o librería creada.
+    - Ejemplo de uso:
+        ```bash
+        make fclean
+        ```
+
+Estas funcionalidades adicionales no solo mejoran la flexibilidad de `ft_printf`, sino que también lo convierten en una herramienta poderosa para formatear y mostrar datos de manera precisa y personalizada. ¡Explora estas características para llevar tus proyectos al siguiente nivel! 🚀
+
+# 📝 **Nota de la corrección**
+(Por corregir aún)
+
 # 🛠️ Herramientas recomendadas
 
 En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.

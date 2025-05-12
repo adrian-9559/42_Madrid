@@ -2,7 +2,7 @@
 
 ## Introducción 🌟
 
-El **Cursus** de 42 Madrid es un programa educativo revolucionario que desafía las normas tradicionales de enseñanza y aprendizaje. 🌍✨ Diseñado para formar a los futuros líderes en programación y tecnología, este modelo innovador se basa en un enfoque pedagógico único que prioriza la autonomía, la colaboración y el aprendizaje práctico. 💻📚
+El **Cursus** de [42 Madrid](../README.md#-42-madrid) es un programa educativo revolucionario que desafía las normas tradicionales de enseñanza y aprendizaje. 🌍✨ Diseñado para formar a los futuros líderes en programación y tecnología, este modelo innovador se basa en un enfoque pedagógico único que prioriza la autonomía, la colaboración y el aprendizaje práctico. 💻📚
 
 ### ¿Qué hace único al Cursus? 🌟
 
@@ -12,9 +12,21 @@ El programa está diseñado para ser inclusivo y accesible, permitiendo que pers
 
 ### Metodología innovadora 📚💡
 
-El modelo pedagógico de 42 Madrid se basa en el aprendizaje por proyectos y la gamificación. 🎮 Cada estudiante avanza a su propio ritmo, completando proyectos que aumentan en complejidad a medida que progresan. Los proyectos están diseñados para desarrollar habilidades técnicas avanzadas, como programación en C, administración de sistemas, desarrollo web y más. 🛠️💻
+El modelo pedagógico de [42 Madrid](../README.md#-42-madrid) se basa en el aprendizaje por proyectos y la gamificación. 🎮 Cada estudiante avanza a su propio ritmo, completando proyectos que aumentan en complejidad a medida que progresan. Los proyectos están diseñados para desarrollar habilidades técnicas avanzadas, como programación en C, administración de sistemas, desarrollo web y más. 🛠️💻
 
 Además, el programa pone un fuerte énfasis en las habilidades blandas, como la comunicación, el liderazgo y la gestión del tiempo. 🗣️⏳ Estas competencias son esenciales en el mundo laboral actual y complementan las habilidades técnicas adquiridas. 🌐✨
+
+### Un entorno de aprendizaje único 🌟
+
+El campus de [42 Madrid](../README.md#-42-madrid) está diseñado para inspirar creatividad y colaboración. 🏢✨ Equipado con tecnología de última generación, espacios abiertos y áreas de trabajo colaborativo, el entorno fomenta la interacción entre estudiantes y el intercambio de ideas. 💡🤝
+
+Además, el programa no tiene costo alguno para los estudiantes, eliminando barreras económicas y asegurando que el acceso esté basado únicamente en el mérito y la motivación. 💸❌ Esto refuerza el compromiso de 42 Madrid con la igualdad de oportunidades y la inclusión. 🌍🌈
+
+### Reconocimiento global 🌐
+
+El modelo educativo de [42](../README.md#-42-network) ha sido reconocido internacionalmente como una de las iniciativas más innovadoras en el ámbito de la educación tecnológica. 🏆🌟 Con campus en más de 20 países, [la red global de 42](../README.md#-42-network) conecta a estudiantes y profesionales de todo el mundo, creando una comunidad diversa y enriquecedora. 🌍✨
+
+Los estudiantes del Cursus son altamente valorados por las empresas debido a su capacidad para resolver problemas complejos, trabajar en equipo y adaptarse rápidamente a nuevas tecnologías. 🚀💼 Esto convierte al programa en una puerta de entrada a oportunidades profesionales excepcionales. 🌟💻
 
 ---
 
@@ -46,13 +58,21 @@ El progreso en el Cursus se mide mediante niveles y anillos. 💡 Cada anillo re
 
 ## Anillos 🔵🔴🟢
 
-1. **Primer anillo** 🟢
-    - [Libft](./C/Libft/README.md) 📘: Aprende a crear una biblioteca personalizada en C, implementando funciones estándar y gestionando memoria de manera eficiente. 🛠️✨
+## Anillos 🔵🔴🟢
 
-2. **Segundo anillo** 🔵
-    - [Printf](./C/printf/README.md) 🖨️: Desarrolla tu propia versión de la función `printf`, profundizando en el manejo de cadenas, formatos y argumentos variables. 💡📜
-    - [Get Next Line](./C/get_next_line/README.md) 📜: Implementa una función para leer líneas de un archivo, optimizando el uso de memoria y trabajando con buffers. 🧵📂
-    - [Born2beroot](./Sistemas/Born2beroot/README.md) 🛡️: Sumérgete en la administración de sistemas, configurando una máquina virtual segura y aprendiendo sobre permisos, usuarios y servicios. 🔐💻
+### Primer anillo 🟢
+
+| Proyecto       | Descripción                                                                                     | Nota |
+|----------------|-------------------------------------------------------------------------------------------------|------|
+| [Libft](./C/Libft/README.md) 📘 | Aprende a crear una biblioteca personalizada en C, implementando funciones estándar y gestionando memoria de manera eficiente. 🛠️✨ | 100  |
+
+### Segundo anillo 🔵
+
+| Proyecto           | Descripción                                                                                     | Nota |
+|--------------------|-------------------------------------------------------------------------------------------------|------|
+| [Printf](./C/printf/README.md) 🖨️ | Desarrolla tu propia versión de la función `printf`, profundizando en el manejo de cadenas, formatos y argumentos variables. 💡📜 | N/A  |
+| [Get Next Line](./C/get_next_line/README.md) 📜 | Implementa una función para leer líneas de un archivo, optimizando el uso de memoria y trabajando con buffers. 🧵📂 | N/A  |
+| [Born2beroot](./Sistemas/Born2beroot/README.md) 🛡️ | Sumérgete en la administración de sistemas, configurando una máquina virtual segura y aprendiendo sobre permisos, usuarios y servicios. 🔐💻 | N/A  |
 
 ---
 
