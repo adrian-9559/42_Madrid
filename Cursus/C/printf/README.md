@@ -23,9 +23,32 @@ Además, `ft_printf` es un ejercicio de dificultad moderada que te preparará pa
 
 ---
 
-# 📄 Enunciado original
+# 📄 Enunciado
 
-[📎 Enunciado en Español](es.subject.pdf)
+El objetivo de este proyecto es implementar una función personalizada llamada `ft_printf`, que imite el comportamiento de la función estándar `printf` de la biblioteca estándar de C. Tu implementación deberá manejar una variedad de conversiones de formato y proporcionar una salida formateada basada en los argumentos proporcionados.
+
+### Requisitos principales:
+1. **Nombre de la función**: La función debe llamarse `ft_printf` y tener la siguiente firma:
+    ```c
+    int ft_printf(const char *format, ...);
+    ```
+2. **Comportamiento esperado**:
+    - La función debe analizar la cadena de formato proporcionada y procesar las conversiones especificadas.
+    - Debe manejar conversiones obligatorias como `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X` y `%%`.
+    - La función debe devolver el número total de caracteres impresos.
+
+3. **Restricciones**:
+    - No se permite el uso de la función estándar `printf` ni de funciones relacionadas como `sprintf` o `snprintf`.
+    - Puedes usar funciones de la biblioteca estándar como `write`, pero deberás implementar tus propias funciones auxiliares para manejar conversiones y formateos.
+
+4. **Gestión de errores**:
+    - Si se encuentra un formato inválido, la función debe manejarlo de manera robusta sin causar errores inesperados.
+
+5. **Estructura del proyecto**:
+    - El código debe estar modularizado, con funciones separadas para cada conversión y funcionalidad.
+    - Debes incluir un Makefile que compile tu proyecto con las flags requeridas.
+
+Este proyecto te permitirá profundizar en conceptos clave como el manejo de funciones variádicas, la gestión de memoria y la manipulación de cadenas, mientras desarrollas una herramienta esencial para formatear y mostrar datos en C. ¡Buena suerte! 🚀
 
 ---
 

@@ -18,9 +18,31 @@ Este proyecto es de dificultad moderada y te preparará para enfrentar desafíos
 - 🧪 Te recomendamos crear programas de prueba para tu proyecto, aunque este trabajo no será entregado ni evaluado. Te dará la oportunidad de verificar que tu programa funciona correctamente durante tu evaluación y la de otros compañeros. Y sí, tienes permitido utilizar estas pruebas durante tu evaluación o la de otros compañeros.
 - 📂 Entrega tu trabajo en tu repositorio Git asignado. Solo el trabajo de tu repositorio Git será evaluado. Si Deepthought evalúa tu trabajo, lo hará después de tus compañeros. Si se encuentra un error durante la evaluación de Deepthought, esta habrá terminado.
 
-# 📄 Enunciado original
+# 📄 Enunciado
 
-[📘 Enunciado en Español](es.subject.pdf)
+El objetivo del proyecto `get_next_line` es implementar una función en C que permita leer una línea completa desde un descriptor de archivo, independientemente de cómo esté segmentada en las lecturas. Esta función debe cumplir con las siguientes especificaciones:
+
+1. **Prototipo de la función**:
+    ```c
+    char *get_next_line(int fd);
+    ```
+    - `fd`: Descriptor de archivo desde el cual se leerá la línea.
+
+2. **Comportamiento esperado**:
+    - La función debe devolver una línea terminada en un salto de línea (`\n`), excepto si el archivo no termina con un salto de línea.
+    - Si no hay más líneas por leer, debe devolver `NULL`.
+    - La función debe manejar correctamente errores en el descriptor de archivo o en la lectura.
+
+3. **Restricciones**:
+    - No se permite el uso de funciones estándar de la biblioteca como `malloc`, `free`y `read` fuera de las especificaciones del proyecto.
+    - La función debe ser capaz de manejar múltiples descriptores de archivo simultáneamente (requisito obligatorio para el bonus).
+    - El tamaño del búfer utilizado para la lectura será definido por la macro `BUFFER_SIZE`.
+
+4. **Consideraciones adicionales**:
+    - La memoria asignada dinámicamente debe ser liberada adecuadamente para evitar fugas.
+    - El código debe cumplir con la Norma de 42.
+
+Este ejercicio te permitirá desarrollar habilidades clave en la gestión de memoria dinámica, el manejo de archivos y la escritura de código modular y eficiente. ¡Buena suerte! 🚀
 
 # 🛠️ Instrucciones de uso de la librería
 

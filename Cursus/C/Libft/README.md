@@ -16,9 +16,39 @@ Programar en C puede ser aburrido cuando uno no tiene acceso a las funciones com
 - 🧪 Te recomendamos crear programas de prueba para tu proyecto, aunque este trabajo no será entregado ni evaluado. Te dará la oportunidad de verificar que tu programa funciona correctamente durante tu evaluación y la de otros compañeros.  
 	✅ **Nota:** Puedes utilizar estas pruebas durante tu evaluación o la de otros compañeros.
 - 📤 Entrega tu trabajo en tu repositorio **Git** asignado. Solo el trabajo de tu repositorio Git será evaluado. Si **Deepthought** evalúa tu trabajo, lo hará después de tus compañeros. Si se encuentra un error durante la evaluación de Deepthought, esta habrá terminado.
+# 📄 Enunciado
 
-# 📄 Enunciado original
-[📎 Enunciado en Español](es.subject.pdf)
+## 📝 Descripción del proyecto
+
+El objetivo de este proyecto es implementar una librería en C llamada **libft**, que contenga un conjunto de funciones estándar de la biblioteca de C, funciones adicionales útiles y funciones relacionadas con listas enlazadas. Estas funciones serán implementadas desde cero, respetando las especificaciones de cada una, y estarán disponibles para ser utilizadas en futuros proyectos del cursus.
+
+### 🧩 Partes del proyecto
+
+1. **Funciones de la librería estándar (Libc):**  
+	Implementarás funciones comunes como `strlen`, `memset`, `strchr`, entre otras, que replican el comportamiento de las funciones estándar de la biblioteca de C.
+
+2. **Funciones adicionales:**  
+	Crearás funciones útiles que no están incluidas en la biblioteca estándar, como `ft_substr`, `ft_strjoin`, `ft_split`, entre otras.
+
+3. **Funciones bonus:**  
+	Implementarás funciones relacionadas con listas enlazadas, como `ft_lstnew`, `ft_lstadd_front`, `ft_lstiter`, entre otras. Estas funciones son opcionales y se evalúan por separado.
+
+### 🎯 Objetivos principales
+
+- Comprender cómo funcionan las funciones estándar de la biblioteca de C.
+- Mejorar tus habilidades de programación en C mediante la implementación de funciones desde cero.
+- Crear una librería reutilizable que será útil en futuros proyectos.
+
+### 📌 Requisitos
+
+- Implementar todas las funciones respetando las especificaciones del enunciado.
+- Asegurarte de que tu código cumple con la Norma de 42.
+- Proveer un Makefile funcional que permita compilar la librería y gestionar las reglas de compilación y limpieza.
+- Utilizar el comando `ar` para generar la librería. El uso de `libtool` queda prohibido.
+
+### 🚀 Resultado esperado
+
+Al finalizar este proyecto, tendrás una librería funcional que podrás utilizar como base en otros proyectos del cursus. Además, habrás adquirido una comprensión más profunda de las funciones estándar de C y de cómo implementarlas eficientemente.
 
 # 🛠️ Instrucciones de uso de la librería
 ## 🚀 Instrucciones de ejecución
