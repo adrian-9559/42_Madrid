@@ -1,16 +1,16 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/07 15:20:55 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/12 18:11:21 by adriescr         ###   ########.fr       */
-/*                                                                            */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   get_next_line_bonus.c							  :+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: adriescr <adriescr@student.42madrid.com	+#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2025/05/07 15:20:55 by adriescr		  #+#	#+#			 */
+/*   Updated: 2025/05/12 18:14:44 by adriescr		 ###   ########.fr	   */
+/*																			*/
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*ft_extract_line(char **reminder)
 {
@@ -62,21 +62,21 @@ static int	ft_read_to_reminder(int fd, char **reminder)
 
 char	*get_next_line(int fd)
 {
-	static char	*reminder;
+	static char	*reminder[2048];
 	int			bytes_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!reminder)
-		reminder = ft_strdup("");
-	if (!reminder)
+	if (!reminder[fd])
+		reminder[fd] = ft_strdup("");
+	if (!reminder[fd])
 		return (NULL);
-	bytes_read = ft_read_to_reminder(fd, &reminder);
-	if (bytes_read < 0 || (!bytes_read && !*reminder))
+	bytes_read = ft_read_to_reminder(fd, &reminder[fd]);
+	if (bytes_read < 0 || (!bytes_read && !*reminder[fd]))
 	{
-		free(reminder);
-		reminder = NULL;
+		free(reminder[fd]);
+		reminder[fd] = NULL;
 		return (NULL);
 	}
-	return (ft_extract_line(&reminder));
+	return (ft_extract_line(&reminder[fd]));
 }
