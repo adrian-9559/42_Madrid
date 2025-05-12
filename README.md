@@ -165,6 +165,6 @@ Si deseas explorar este repositorio y experimentar con los proyectos incluidos, 
 - **📬 Correo Electrónico:** [adrian.escribano3@gmail.com](mailto:adrian.escribano3@gmail.com?subject=Consulta%20sobre%20repositorio%2042%20Madrid)  
 - **🔗 LinkedIn:** [Adrián en LinkedIn](https://www.linkedin.com/in/adrián-escribano-pérez)  
 - **🐙 GitHub:** [adrian-9559](https://github.com/adrian-9559)
-- **Usuario en 42:**: [adriescr](https://profile.intra.42.fr/users/adriescr)
+- **Usuario en 42:** [adriescr](https://profile.intra.42.fr/users/adriescr)
 
 Espero que disfrutes explorando este repositorio tanto como yo disfruté creándolo. Si encuentras algo interesante o tienes alguna sugerencia, no dudes en compartirla. ¡Buena suerte en tu propio viaje de aprendizaje y desarrollo profesional! 🚀🌟  
