@@ -69,7 +69,7 @@ El progreso en el Cursus se mide mediante niveles y anillos. 💡 Cada anillo re
 | Proyecto           | Descripción                                                                                     | Nota |
 |--------------------|-------------------------------------------------------------------------------------------------|------|
 | [Printf](./C/printf/README.md) 🖨️ | Desarrolla tu propia versión de la función `printf`, profundizando en el manejo de cadenas, formatos y argumentos variables. 💡📜 | N/A  |
-| [Get Next Line](./C/get_next_line/README.md) 📜 | Implementa una función para leer líneas de un archivo, optimizando el uso de memoria y trabajando con buffers. 🧵📂 | N/A  |
+| [Get_Next_Line](./C/get_next_line/README.md) 📜 | Implementa una función para leer líneas de un archivo, optimizando el uso de memoria y trabajando con buffers. 🧵📂 | N/A  |
 | [Born2beroot](./Sistemas/Born2beroot/README.md) 🛡️ | Sumérgete en la administración de sistemas, configurando una máquina virtual segura y aprendiendo sobre permisos, usuarios y servicios. 🔐💻 | N/A  |
 
 ---
