@@ -58,8 +58,6 @@ El progreso en el Cursus se mide mediante niveles y anillos. 💡 Cada anillo re
 
 ## Anillos 🔵🔴🟢
 
-## Anillos 🔵🔴🟢
-
 ### Primer anillo 🟢
 
 | Proyecto       | Descripción                                                                                     | Nota |
