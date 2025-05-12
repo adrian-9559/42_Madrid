@@ -54,6 +54,10 @@ El enfoque educativo de 42 Madrid está diseñado para preparar a los estudiante
 
 La red de academias [**42**](#-42-network) ha sido reconocida internacionalmente por su enfoque innovador y su capacidad para formar profesionales altamente capacitados. Los graduados de 42 Madrid no solo adquieren habilidades técnicas avanzadas, sino también una mentalidad resiliente y adaptable que los prepara para liderar en la industria tecnológica.
 
+### 🌐 Sitio Web Oficial
+
+Para obtener más información sobre la academia 42 Madrid y explorar sus iniciativas, visita el sitio web oficial: [**42 Madrid Official Website**](https://www.42madrid.com).   
+
 ---
 
 ## 🌟 Fundación Telefónica
@@ -89,6 +93,10 @@ La Fundación Telefónica no solo se enfoca en el presente, sino que también tr
 
 Con su enfoque en la inclusión, la accesibilidad y la innovación, la Fundación Telefónica se posiciona como un pilar fundamental en la construcción de una sociedad más justa, equitativa y tecnológicamente avanzada. Su labor es un ejemplo de cómo la tecnología puede ser una herramienta poderosa para transformar vidas y construir un futuro mejor para todos.  
 
+### 🌐 Sitio Web Oficial
+
+Para obtener más información sobre la Fundación Telefónica y explorar sus iniciativas, visita el sitio web oficial: [**Fundación Telefónica Website**](https://www.fundaciontelefonica.com).  
+
 ---
 
 ## 🌐 42 Network
@@ -119,6 +127,9 @@ La 42 Network colabora con empresas, instituciones educativas y organizaciones s
 
 Con su enfoque único y su compromiso con la excelencia, la 42 Network continúa transformando vidas y redefiniendo la educación tecnológica en todo el mundo. 
 
+### 🌐 Sitio Web Oficial
+
+Para obtener más información sobre la red global de academias 42 y explorar sus iniciativas, visita el sitio web oficial: [**42 Network Official Website**](https://www.42network.org).  
 ---
 
 ## 🚀 Cómo Clonar y Explorar este Repositorio
@@ -149,7 +160,8 @@ Si deseas explorar este repositorio y experimentar con los proyectos incluidos, 
 
 ¡Gracias por explorar mi trabajo y por interesarte en mi trayectoria como programador! 😊 Si tienes preguntas, comentarios o sugerencias, no dudes en ponerte en contacto conmigo. Estoy disponible a través de los siguientes canales:  
 
-- **📧 Correo Electrónico:** [adrian.escribano3@gmail.com](mailto:adrian.escribano3@gmail.com?subject=Consulta%20sobre%20repositorio%2042%20Madrid)  
+- **🌐 Sitio Web Oficial:** [adrian9559.site](https://adrian9559.site)  
+- **📬 Correo Electrónico:** [adrian.escribano3@gmail.com](mailto:adrian.escribano3@gmail.com?subject=Consulta%20sobre%20repositorio%2042%20Madrid)  
 - **🔗 LinkedIn:** [Adrián en LinkedIn](https://www.linkedin.com/in/adrián-escribano-pérez)  
 - **🐙 GitHub:** [adrian-9559](https://github.com/adrian-9559)  
 
