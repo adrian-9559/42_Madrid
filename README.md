@@ -30,7 +30,7 @@ Cada directorio contiene su propia documentación detallada para facilitar la co
 
 <img src="Imagenes/logo_42_Madrid.jpg" alt="Logo 42 Madrid" align="right" width="200">
 
-[42 Madrid](https://www.42madrid.com/) es una academia de programación innovadora que forma parte de la red global de academias 42 🌍, presente en más de 20 países 🌎 y respaldada por instituciones de renombre como [Fundación Telefónica](#fundación-telefónica) 📞. Este modelo educativo disruptivo se basa en un enfoque pedagógico único que elimina las clases tradicionales y los profesores, reemplazándolos por un aprendizaje basado en proyectos 🛠️ y la colaboración entre pares 🤝.  
+[42 Madrid](https://www.42madrid.com/) es una academia de programación innovadora que forma parte de la red global de [academias 42](#-42-network) 🌍, presente en más de 20 países 🌎 y respaldada por instituciones de renombre como [Fundación Telefónica](#fundación-telefónica) 📞. Este modelo educativo disruptivo se basa en un enfoque pedagógico único que elimina las clases tradicionales y los profesores, reemplazándolos por un aprendizaje basado en proyectos 🛠️ y la colaboración entre pares 🤝.  
 
 En 42 Madrid, los estudiantes son los protagonistas de su propio aprendizaje 🎓. A través de proyectos prácticos y desafiantes 🚀, desarrollan habilidades técnicas avanzadas en áreas como programación 💻, algoritmos 🔢, redes 🌐, sistemas operativos 🖥️ y desarrollo de software 🛠️. Además, el entorno colaborativo fomenta el intercambio de conocimientos 📚, la resolución conjunta de problemas 🧠 y el desarrollo de habilidades interpersonales esenciales para el trabajo en equipo 🤝.  
 
@@ -38,7 +38,7 @@ El modelo educativo de 42 Madrid se centra en la autonomía 🧑‍💻, la crea
 
 Además, 42 Madrid está abierta las 24 horas del día 🕒, los 7 días de la semana 📅, lo que permite a los estudiantes organizar su tiempo de manera flexible y personalizada. Este enfoque inclusivo y accesible ha permitido que personas de diferentes edades 👩‍🦳👨‍🦱, antecedentes 🌍 y niveles de experiencia encuentren en 42 Madrid una oportunidad para reinventarse y construir una carrera en el sector tecnológico 💼.  
 
-La red global de academias 42 ha sido reconocida internacionalmente 🏆 por su capacidad para formar profesionales altamente capacitados y preparados para los desafíos del mercado laboral 💼. Los graduados de 42 Madrid no solo destacan por sus habilidades técnicas 💻, sino también por su mentalidad resiliente 💪, su capacidad para aprender de manera continua 🔄 y su enfoque innovador para resolver problemas complejos 🧠.   
+La red global de [academias 42](#-42-network) ha sido reconocida internacionalmente 🏆 por su capacidad para formar profesionales altamente capacitados y preparados para los desafíos del mercado laboral 💼. Los graduados de 42 Madrid no solo destacan por sus habilidades técnicas 💻, sino también por su mentalidad resiliente 💪, su capacidad para aprender de manera continua 🔄 y su enfoque innovador para resolver problemas complejos 🧠.   
 
 ### 🧠 Filosofía de Aprendizaje
 
