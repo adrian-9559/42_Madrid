@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 02:49:14 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 17:53:54 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/13 18:26:58 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int	ft_handle_string(char *str, t_flags flags)
 	count += ft_putstr(str);
 	if (flags.minus && flags.width > (int)ft_strlen(str))
 		count += ft_putnchar(' ', flags.width - ft_strlen(str));
+	if (flags.dot && flags.precision < (int)ft_strlen(str))
+		free(str);
 	return (count);
 }

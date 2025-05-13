@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	init_flags(t_flags *flags)
+static void	init_flags(t_flags *flags)
 {
 	flags->minus = 0;
 	flags->zero = 0;
@@ -24,25 +24,31 @@ void	init_flags(t_flags *flags)
 	flags->space = 0;
 }
 
+static void	ft_parse_flag_characters(const char **format, t_flags *flags)
+{
+	while (**format == '-' || **format == '0' || **format == '#'
+		|| **format == '+' || **format == ' ')
+	{
+		if (**format == '-')
+			flags->minus = 1;
+		else if (**format == '0')
+			flags->zero = 1;
+		else if (**format == '#')
+			flags->hash = 1;
+		else if (**format == '+')
+			flags->plus = 1;
+		else if (**format == ' ')
+			flags->space = 1;
+		(*format)++;
+	}
+}
+
 static t_flags	ft_parse_flags(const char **format)
 {
 	t_flags	flags;
 
 	init_flags(&flags);
-	while (**format == '-' || **format == '0' || **format == '#' || **format == '+' || **format == ' ')
-	{
-		if (**format == '-')
-			flags.minus += 1;
-		else if (**format == '0')
-			flags.zero += 1;
-		else if (**format == '#')
-			flags.hash += 1;
-		else if (**format == '+')
-			flags.plus += 1;
-		else if (**format == ' ')
-			flags.space += 1;
-		(*format)++;
-	}
+	ft_parse_flag_characters(format, &flags);
 	while (**format >= '0' && **format <= '9')
 		flags.width = flags.width * 10 + (*((*format)++) - '0');
 	if (**format == '.')
