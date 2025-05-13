@@ -12,9 +12,18 @@ MY_SOURCES = \
 	ft_putnbr_base.c \
 	ft_putptr.c \
 
+MY_BONUS_SOURCES = \
+	ft_putnchar_bonus.c \
+	ft_strlen_bonus.c \
+	ft_substr_bonus.c \
+	ft_strdup_bonus.c \
+
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
 
 all: $(NAME)
+
+bonus: $(MY_OBJECTS) $(MY_BONUS_SOURCES:.c=.o)
+	$(AR) $(NAME) $(MY_OBJECTS) $(MY_BONUS_SOURCES:.c=.o)
 
 $(NAME): $(MY_OBJECTS)
 	$(AR) $(NAME) $(MY_OBJECTS)
