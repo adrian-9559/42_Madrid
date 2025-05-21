@@ -19,11 +19,12 @@ MY_BONUS_SOURCES = \
 	ft_strdup_bonus.c \
 
 MY_OBJECTS = $(MY_SOURCES:.c=.o)
+MY_BONUS_OBJECTS = $(MY_BONUS_SOURCES:.c=.o)
 
 all: $(NAME)
 
-bonus: $(MY_OBJECTS) $(MY_BONUS_SOURCES:.c=.o)
-	$(AR) $(NAME) $(MY_OBJECTS) $(MY_BONUS_SOURCES:.c=.o)
+bonus: $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
+	$(AR) $(NAME) $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
 
 $(NAME): $(MY_OBJECTS)
 	$(AR) $(NAME) $(MY_OBJECTS)
@@ -32,7 +33,7 @@ $(NAME): $(MY_OBJECTS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(MY_OBJECTS)
+	rm -f $(MY_OBJECTS) $(MY_BONUS_OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
