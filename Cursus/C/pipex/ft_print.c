@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 17:46:32 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 17:29:39 by adriescr         ###   ########.fr       */
+/*   Created: 2025/05/19 17:24:01 by adriescr          #+#    #+#             */
+/*   Updated: 2025/05/19 19:38:39 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "pipex.h"
 
-int	ft_putchar(char c)
+int	ft_print_str(char *str)
 {
-	return (write(1, &c, 1));
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }
 
-int	ft_handle_char(char c, t_flags flags)
+int	ft_print_error_str(char *str)
 {
-	int	count;
+	int	i;
 
-	count = 0;
-	if (flags.width > 1 && !flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	count += ft_putchar(c);
-	if (flags.width > 1 && flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	return (count);
+	write(2, "\033[31m", 5);
+	i = 0;
+	while (str[i])
+	{
+		write(2, &str[i], 1);
+		i++;
+	}
+	write(2, "\033[0m", 4);
+	return (i);
 }

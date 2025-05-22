@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 17:46:32 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 17:29:39 by adriescr         ###   ########.fr       */
+/*   Created: 2025/05/19 20:19:40 by adriescr          #+#    #+#             */
+/*   Updated: 2025/05/19 20:40:27 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "pipex.h"
 
-int	ft_putchar(char c)
+size_t	ft_strlen(const char *s)
 {
-	return (write(1, &c, 1));
-}
+	size_t	len;
 
-int	ft_handle_char(char c, t_flags flags)
-{
-	int	count;
-
-	count = 0;
-	if (flags.width > 1 && !flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	count += ft_putchar(c);
-	if (flags.width > 1 && flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	return (count);
+	len = 0;
+	while (s && s[len])
+		len++;
+	return (len);
 }

@@ -1,43 +1,73 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/30 02:47:47 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 18:05:41 by adriescr         ###   ########.fr       */
+/*   Created: 2025/05/13 17:57:39 by adriescr          #+#    #+#             */
+/*   Updated: 2025/05/13 18:37:05 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putptr(void *ptr)
+int	ft_strlen(const char *str)
 {
 	int	count;
 
 	count = 0;
-	if (ptr == NULL)
-	{
-		count += ft_putstr("0x0");
-		return (count);
-	}
-	count += ft_putstr("0x");
-	count += ft_putnbr_base((unsigned long)ptr, 'x');
+	while (str[count] != '\0')
+		count++;
 	return (count);
 }
 
-int	ft_handle_pointer(void *ptr, t_flags flags)
+int	ft_ptrlen(unsigned long ptr)
 {
 	int	count;
-	int	len;
 
 	count = 0;
-	len = ft_ptrlen((unsigned long)ptr);
-	if (flags.width > len && !flags.minus)
-		count += ft_putnchar(' ', flags.width - len);
-	count += ft_putptr(ptr);
-	if (flags.width > len && flags.minus)
-		count += ft_putnchar(' ', flags.width - len);
+	if (ptr == 0)
+		return (1);
+	while (ptr > 0)
+	{
+		ptr /= 16;
+		count++;
+	}
+	return (count);
+}
+
+int	ft_numlen(int n)
+{
+	int	count;
+
+	count = 0;
+	if (n < 0)
+	{
+		count++;
+		n = -n;
+	}
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
+int	ft_numlen_unsigned(unsigned int n)
+{
+	int	count;
+
+	count = 0;
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n /= 10;
+		count++;
+	}
 	return (count);
 }

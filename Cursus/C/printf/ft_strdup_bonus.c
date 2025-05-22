@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strdp_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 17:46:32 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 17:29:39 by adriescr         ###   ########.fr       */
+/*   Created: 2025/05/13 18:07:48 by adriescr          #+#    #+#             */
+/*   Updated: 2025/05/13 18:08:16 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+char	*ft_strdup(const char *s1)
 {
-	return (write(1, &c, 1));
-}
+	char	*dup;
+	size_t	len;
+	size_t	i;
 
-int	ft_handle_char(char c, t_flags flags)
-{
-	int	count;
-
-	count = 0;
-	if (flags.width > 1 && !flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	count += ft_putchar(c);
-	if (flags.width > 1 && flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	return (count);
+	len = ft_strlen(s1);
+	dup = (char *)malloc(sizeof(char) * (len + 1));
+	if (!dup)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		dup[i] = s1[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
 }

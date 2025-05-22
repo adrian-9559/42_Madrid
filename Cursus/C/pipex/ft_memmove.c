@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/25 17:46:32 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 17:29:39 by adriescr         ###   ########.fr       */
+/*   Created: 2025/05/19 20:33:26 by adriescr          #+#    #+#             */
+/*   Updated: 2025/05/19 20:43:02 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "pipex.h"
 
-int	ft_putchar(char c)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	return (write(1, &c, 1));
-}
+	unsigned char		*d;
+	const unsigned char	*s;
 
-int	ft_handle_char(char c, t_flags flags)
-{
-	int	count;
-
-	count = 0;
-	if (flags.width > 1 && !flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	count += ft_putchar(c);
-	if (flags.width > 1 && flags.minus)
-		count += ft_putnchar(' ', flags.width - 1);
-	return (count);
+	if (!dst && !src)
+		return (NULL);
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	if (d < s)
+	{
+		while (len--)
+			*d++ = *s++;
+	}
+	else if (d > s)
+	{
+		d += len;
+		s += len;
+		while (len--)
+			*(--d) = *(--s);
+	}
+	return (dst);
 }
