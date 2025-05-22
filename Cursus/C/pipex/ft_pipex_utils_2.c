@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 20:46:10 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/21 17:37:31 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/21 18:43:32 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_unescape_quotes(char *arg)
 	int	i;
 	int	j;
 
+	if (!arg)
+		return;
 	i = 0;
 	j = 0;
 	while (arg[i])
