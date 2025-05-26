@@ -187,5 +187,45 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
 
 - **🛡️ Valgrind**: Para detectar fugas de memoria y errores relacionados con la gestión de memoria.
 - **📏 Norminette**: Una herramienta para verificar que tu código cumple con la Norma de 42.
-- **🧪 Printf Tester**: Herramientas externas para probar la funcionalidad de tu `ft_printf`.
+- **🧪 PrintfTester**: Es una herramienta que comprueba todas las comprobaciones de [Francinette Image](./../README.md#-francinette) pero solo de **Printf**.
+
+## Instalaciones de herramientas especificas
+
+### 🧪 PrintfTester
+
+`PrintfTester` es una herramienta desarrollada por la comunidad para comparar el comportamiento de tu `ft_printf` con el de la función estándar `printf`. Es muy útil para validar la precisión y robustez de tu implementación.
+
+#### Pasos para instalar y usar PrintfTester:
+
+1. **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/Tripuille/printfTester.git
+    ```
+
+2. **Accede al directorio del tester:**
+    ```bash
+    cd printfTester
+    ```
+
+#### Comandos de ejecución
+
+1. Para ejecutar los tests básicos:
+    ```bash
+    make m
+    ```
+2. Para ejecutar los tests al bonus:
+    ```bash
+    make b
+    ```
+
+3. Para ejecutar todos los tests, incluidos los bonus:
+    ```bash
+    make a
+    ```
+4. Para limpiar los archivos generados por el tester:
+    ```bash
+    make fclean
+    ```
+
+Consulta la documentación del repositorio para más detalles y opciones de testeo.
 

@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 17:27:05 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/21 18:26:10 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/22 16:36:56 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <fcntl.h>
+# include <errno.h>
 
 typedef struct s_pipex_ctx
 {
