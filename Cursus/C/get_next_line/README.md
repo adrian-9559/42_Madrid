@@ -158,7 +158,6 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
     ```bash
     make fclean
     ```
-    ---
 
 #### ⚠️ Importante
 
@@ -169,7 +168,5 @@ Si durante alguna de las pruebas del tester aparece un **TIMEOUT** ⏰, debes a�
     ```
 
 Esto ayudará a evitar que las pruebas se detengan prematuramente por exceder el tiempo límite. ¡No olvides guardar los cambios antes de volver a ejecutar los tests! 🛠️🚦
-
-    ---
 
 > Consulta la [documentación oficial](https://github.com/Tripouille/gnlTester) para más detalles, opciones avanzadas y resolución de problemas.
