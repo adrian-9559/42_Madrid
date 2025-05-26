@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 02:47:47 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/13 18:05:41 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/05/26 12:52:12 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_putptr(void *ptr)
 	count = 0;
 	if (ptr == NULL)
 	{
-		count += ft_putstr("0x0");
+		count += ft_putstr("(nil)");
 		return (count);
 	}
 	count += ft_putstr("0x");
