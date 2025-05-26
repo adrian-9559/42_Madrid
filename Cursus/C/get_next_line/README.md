@@ -162,13 +162,13 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
 
 #### ⚠️ Importante
 
-    Si durante alguna de las pruebas del tester aparece un **TIMEOUT** ⏰, debes añadir la siguiente línea en el **Makefile** del tester para aumentar el tiempo de espera:
+Si durante alguna de las pruebas del tester aparece un **TIMEOUT** ⏰, debes añadir la siguiente línea en el **Makefile** del tester para aumentar el tiempo de espera:
 
     ```makefile
     TIMEOUT_US = 150000
     ```
 
-    Esto ayudará a evitar que las pruebas se detengan prematuramente por exceder el tiempo límite. ¡No olvides guardar los cambios antes de volver a ejecutar los tests! 🛠️🚦
+Esto ayudará a evitar que las pruebas se detengan prematuramente por exceder el tiempo límite. ¡No olvides guardar los cambios antes de volver a ejecutar los tests! 🛠️🚦
 
     ---
 
