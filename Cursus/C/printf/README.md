@@ -217,7 +217,6 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
     ```bash
     make b
     ```
-
 3. Para ejecutar todos los tests, incluidos los bonus:
     ```bash
     make a
