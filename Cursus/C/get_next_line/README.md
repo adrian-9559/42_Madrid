@@ -120,4 +120,43 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
 
 - **🛡️ Valgrind**: Para detectar fugas de memoria y errores relacionados con la gestión de memoria.
 - **📏 Norminette**: Una herramienta para verificar que tu código cumple con la Norma de 42.
-- **🧪 GNL Tester**: Herramientas externas para probar la funcionalidad de tu `get_next_line`.  
+- **🧪 gnlTester**: Es una herramienta que comprueba todas las comprobaciones de [Francinette Image](./../README.md#-francinette) pero solo de **get next line**.
+
+## Instalación y uso de herramientas específicas
+
+### 🧪 gnlTester
+
+`gnlTester` es una herramienta comunitaria diseñada para comparar el comportamiento de tu función `get_next_line` con el comportamiento esperado. Es especialmente útil para validar la precisión, robustez y compatibilidad de tu implementación en diferentes escenarios y con múltiples descriptores de archivo.
+
+#### Instalación
+
+1. **Clona el repositorio:**
+    ```bash
+    git clone https://github.com/Tripouille/gnlTester.git
+    ```
+
+2. **Accede al directorio del tester:**
+    ```bash
+    cd gnlTester
+    ```
+
+#### Ejecución de pruebas
+
+- **Tests obligatorios:**
+    ```bash
+    make m
+    ```
+- **Tests de bonus:**
+    ```bash
+    make b
+    ```
+- **Todos los tests (obligatorios + bonus):**
+    ```bash
+    make a
+    ```
+- **Limpiar archivos generados:**
+    ```bash
+    make fclean
+    ```
+
+> Consulta la [documentación oficial](https://github.com/Tripouille/gnlTester) para más detalles, opciones avanzadas y resolución de problemas.

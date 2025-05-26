@@ -189,17 +189,17 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
 - **📏 Norminette**: Una herramienta para verificar que tu código cumple con la Norma de 42.
 - **🧪 PrintfTester**: Es una herramienta que comprueba todas las comprobaciones de [Francinette Image](./../README.md#-francinette) pero solo de **Printf**.
 
-## Instalaciones de herramientas especificas
+## Instalación y uso de herramientas específicas
 
 ### 🧪 PrintfTester
 
-`PrintfTester` es una herramienta desarrollada por la comunidad para comparar el comportamiento de tu `ft_printf` con el de la función estándar `printf`. Es muy útil para validar la precisión y robustez de tu implementación.
+`PrintfTester` es una herramienta comunitaria diseñada para comparar el comportamiento de tu `ft_printf` con el de la función estándar `printf`. Es especialmente útil para validar la precisión, robustez y compatibilidad de tu implementación.
 
-#### Pasos para instalar y usar PrintfTester:
+#### Instalación
 
 1. **Clona el repositorio:**
     ```bash
-    git clone https://github.com/Tripuille/printfTester.git
+    git clone https://github.com/Tripouille/printfTester.git
     ```
 
 2. **Accede al directorio del tester:**
@@ -207,24 +207,24 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
     cd printfTester
     ```
 
-#### Comandos de ejecución
+#### Ejecución de pruebas
 
-1. Para ejecutar los tests básicos:
+- **Tests obligatorios:**
     ```bash
     make m
     ```
-2. Para ejecutar los tests al bonus:
+- **Tests de bonus:**
     ```bash
     make b
     ```
-3. Para ejecutar todos los tests, incluidos los bonus:
+- **Todos los tests (obligatorios + bonus):**
     ```bash
     make a
     ```
-4. Para limpiar los archivos generados por el tester:
+- **Limpiar archivos generados:**
     ```bash
     make fclean
     ```
 
-Consulta la documentación del repositorio para más detalles y opciones de testeo.
+> Consulta la [documentación oficial](https://github.com/Tripouille/printfTester) para más detalles, opciones avanzadas y resolución de problemas.
 
