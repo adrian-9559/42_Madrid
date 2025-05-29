@@ -16,8 +16,9 @@ Estos proyectos no solo fortalecen las bases de la programación en C, sino que 
 - [📂 Libft](./Libft/README.md)
 - [🖨️ Printf](./printf/README.md)
 - [📜 Get Next Line](./get_next_line/README.md)
+- [🔗 Pipex](./pipex/README.md)
 
-## 🛠️ Herramientas opcionales a instalar 
+## 🛠️ Herramientas opcionales a instalar
 
 ### 🧹 Norminette
 
@@ -131,36 +132,3 @@ Sigue los mismos pasos descritos en la sección de **Norminette** para añadir l
 #### 📖 Documentación original
 
 Consulta la [documentación oficial](https://github.com/xicodomingues/francinette/tree/master#readme) para más detalles.
-
-### 🧪 LibftTester
-
-El **LibftTester** es una herramienta automatizada diseñada para probar la biblioteca **Libft**, uno de los proyectos fundamentales en 42. Este tester verifica la funcionalidad y el cumplimiento de los requisitos de las funciones implementadas en el proyecto.
-
-#### 🛠️ Instalación
-
-1. Clonar el repositorio de LibftTester dentro de la carpeta del proyecto de Libft:
-```bash
-git clone https://github.com/Tripouille/libftTester.git
-```
-
-2. Entrar en el directorio del repositorio clonado:
-```bash
-cd libftTester
-```
-
-#### ▶️ Ejecución
-
-Para ejecutar el tester, asegúrate de que el archivo `Makefile` de tu proyecto **Libft** esté en el mismo directorio que el tester. Luego, utiliza:
-```bash
-make a
-```
-
-Si solo deseas ejecutar las pruebas para las funciones obligatorias:
-```bash
-make m
-```
-
-#### 📖 Documentación original
-
-Consulta la [documentación oficial](https://github.com/Tripouille/libftTester#readme) para más detalles.
-

@@ -287,4 +287,36 @@ En esta sección encontrarás una lista de herramientas que te serán útiles du
 
 - **🛡️ Valgrind**: Para detectar fugas de memoria y errores relacionados con la gestión de memoria.
 - **📏 Norminette**: Una herramienta para verificar que tu código cumple con la Norma de 42.
+- **🧪 LibftTester**: Es una herramienta que comprueba todas las funciones requeridas en el proyecto **Libft**, verificando su correcto funcionamiento y cumplimiento de las especificaciones.
 
+## 🧪 LibftTester
+
+El **LibftTester** es una herramienta automatizada diseñada para probar la biblioteca **Libft**, uno de los proyectos fundamentales en 42. Este tester verifica la funcionalidad y el cumplimiento de los requisitos de las funciones implementadas en el proyecto.
+
+### 🛠️ Instalación
+
+1. Clonar el repositorio de LibftTester dentro de la carpeta del proyecto de Libft:
+```bash
+git clone https://github.com/Tripouille/libftTester.git
+```
+
+2. Entrar en el directorio del repositorio clonado:
+```bash
+cd libftTester
+```
+
+### ▶️ Ejecución
+
+Para ejecutar el tester, asegúrate de que el archivo `Makefile` de tu proyecto **Libft** esté en el mismo directorio que el tester. Luego, utiliza:
+```bash
+make a
+```
+
+Si solo deseas ejecutar las pruebas para las funciones obligatorias:
+```bash
+make m
+```
+
+### 📖 Documentación original
+
+Consulta la [documentación oficial](https://github.com/Tripouille/libftTester#readme) para más detalles.
