@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 02:47:47 by adriescr          #+#    #+#             */
-/*   Updated: 2025/05/26 12:52:12 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/06/03 15:05:04 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_putptr(void *ptr)
 	count = 0;
 	if (ptr == NULL)
 	{
-		count += ft_putstr("(nil)");
+		count += ft_putstr("0x0"); // Cambiar a "(nil)" si se desea ejecutar en linux, en mi caso lo dejo como "0x0" para mantener la consistencia con el formato de puntero en MacOS.
 		return (count);
 	}
 	count += ft_putstr("0x");
