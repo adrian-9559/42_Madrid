@@ -11,34 +11,10 @@ Además, **Born2beroot** es un desafío que fomenta la autonomía y la resoluci�
 - El uso de VirtualBox es obligatorio (o UTM en caso de que VirtualBox no funcione en tu máquina).
 - Solo debes entregar un archivo llamado signature.txt en la raíz de tu repositorio. Debes pegar en él la firma del disco virtual de tu máquina. Ve a Entrega y evaluación para más información.
 
-# Enunciado original
-[Enunciado en Español](es.subject.pdf)
+# Intrucciones para realizar el proyecto
 
-# Instrucciones de configuración
-<span style="color:red;">(Provisional, aun en desarrollo)</span>
-## Configuración inicial
-
-1. Instala VirtualBox o UTM en tu máquina.
-2. Descarga la imagen ISO del sistema operativo elegido.
-3. Crea una nueva máquina virtual y configura los recursos asignados (CPU, RAM, disco).
-
-## Configuración del sistema operativo
-
-1. Instala el sistema operativo siguiendo las instrucciones del instalador.
-2. Configura las particiones del disco según los requisitos del proyecto.
-3. Instala y configura un firewall para proteger tu servidor.
-
-## Gestión de usuarios y permisos
-
-1. Crea usuarios con permisos específicos.
-2. Configura políticas de contraseñas seguras.
-3. Asegúrate de que los usuarios tengan acceso limitado según sus roles.
-
-## Configuración de servicios
-
-1. Instala y configura el servicio SSH.
-2. Asegúrate de que el servicio esté protegido contra accesos no autorizados.
-3. Configura otros servicios según los requisitos del proyecto.
+## Selección de ISO
+En mi caso he seleccionado la ISO de Debian
 
 # Herramientas recomendadas
 
