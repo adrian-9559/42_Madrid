@@ -52,7 +52,7 @@ Este proyecto te permitirá profundizar en conceptos clave como el manejo de fun
 
 ---
 
-# 🛠️ Instrucciones de uso de la librería
+# 🛠️ Instrucciones de uso
 
 ## 🚀 Instrucciones de ejecución
 

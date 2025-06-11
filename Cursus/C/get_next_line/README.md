@@ -44,7 +44,7 @@ El objetivo del proyecto `get_next_line` es implementar una función en C que pe
 
 Este ejercicio te permitirá desarrollar habilidades clave en la gestión de memoria dinámica, el manejo de archivos y la escritura de código modular y eficiente. ¡Buena suerte! 🚀
 
-# 🛠️ Instrucciones de uso de la librería
+# 🛠️ Instrucciones de uso
 
 ## 🚀 Instrucciones de ejecución
 
