@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 18:12:12 by adriescr          #+#    #+#             */
-/*   Updated: 2025/06/10 17:31:57 by adriescr         ###   ########.fr       */
+/*   Updated: 2025/06/11 13:39:03 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_exect_cmd(char *cmd, char **envp)
 	ft_print_error_str(cmd);
 	ft_print_error_str(": command not found\n");
 	ft_free_split(argv_exec);
-	exit(126);
+	exit(127);
 }
 
 static void	ft_pipex_cleanup(t_pipex_ctx *ctx)
