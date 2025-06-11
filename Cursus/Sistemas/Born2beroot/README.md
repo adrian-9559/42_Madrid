@@ -76,3 +76,5 @@ La elección entre Debian y Rocky Linux dependerá de tus necesidades: si buscas
 - **SSH**: Para la gestión remota del servidor.
 
 ¡Buena suerte con tu proyecto Born2beroot! 🚀
+
+https://prod.liveshare.vsengsaas.visualstudio.com/join?DD70E0A446C3F59BF373578232210EA91B6E
