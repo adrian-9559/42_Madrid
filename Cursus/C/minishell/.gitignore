@@ -1,0 +1,31 @@
+# Program
+minishell
+
+.vscode/
+
+# Compiled Object Files
+*.o
+objs/
+
+# Static Libraries
+*.a
+
+# DS_Store
+.DS_Store/
+
+# Executables
+minishell
+minishell_bonus
+
+assets/welcome.txt
+
+# Logs
+logs/
+*.log
+touch/
+
+# Tester
+minishell_tester/
+.minitest/
+test/
+tests/
