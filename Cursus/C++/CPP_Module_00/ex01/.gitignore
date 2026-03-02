@@ -1,0 +1,5 @@
+# Program file
+megaphone
+
+# Object files
+objs/*.o

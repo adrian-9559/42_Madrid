@@ -1,9 +1,20 @@
-*.git
-.git
+# System files
 .DS_Store
-Cursus/C/Libft/libftTester
 .vscode
-a.out
+
+# Compiled files
 *.o
-*.m
+*.a
+a.out
+
+# Git
+.git
+*.git
+.dir
+
+# Project-specific
+Cursus/C/Libft/libftTester
 libftprintf.a
+
+# Object files
+*.m

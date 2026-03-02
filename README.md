@@ -20,6 +20,7 @@ El repositorio está organizado de manera lógica para facilitar la navegación 
 - **[`Piscine`](./Piscine/README.md)**: 🌊 Proyectos realizados durante la prueba de acceso conocida como "Piscina". Aquí se incluyen ejercicios básicos de programación, algoritmos y estructuras de datos que sentaron las bases de mi aprendizaje.
 - **[`Cursus`](./Cursus/README.md)**: 📘 Proyectos del programa principal de 42 Madrid. Estos proyectos abarcan una amplia gama de temas avanzados en programación, incluyendo:
   - **[`C`](./Cursus/C/README.md):** Proyectos desarrollados en lenguaje C, que incluyen conceptos fundamentales como punteros, memoria dinámica, estructuras de datos y algoritmos.
+    - **[`C++`](./Cursus/C++/README.md):** Módulos de C++ centrados en programación orientada a objetos, templates y la STL.
   - **[`Sistemas`](./Cursus/Sistemas/README.md):** Proyectos enfocados en sistemas operativos, redes y servicios, diseñados para desarrollar habilidades en administración de sistemas y programación a bajo nivel.
 
 Cada directorio contiene su propia documentación detallada para facilitar la comprensión y el uso de los proyectos.

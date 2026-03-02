@@ -13,12 +13,24 @@ Este repositorio contiene una colección de proyectos realizados como parte del 
 Estos proyectos no solo fortalecen las bases de la programación en C, sino que también preparan a los estudiantes para enfrentar desafíos reales en el desarrollo de software.
 
 ## 📚 Ejercicios a realizar
-- [📂 Libft](./Libft/README.md)
-- [🖨️ Printf](./printf/README.md)
-- [📜 Get Next Line](./get_next_line/README.md)
-- [🔗 Pipex](./pipex/README.md)
-- [🔄 Push Swap](./push_swap/README.md)
-- [🎮 So_long](./so_long/README.md)
+
+### Anillos / Proyectos
+
+- **Primer anillo 🟢**
+    - [📂 Libft](./Libft/README.md)
+
+- **Segundo anillo 🔵**
+    - [🖨️ Printf](./printf/README.md)
+    - [📜 Get Next Line](./get_next_line/README.md)
+
+- **Tercer anillo 🔴**
+    - [🔗 Pipex](./pipex/README.md)
+    - [🔄 Push Swap](./push_swap/README.md)
+    - [🎮 So_long](./so_long/README.md)
+
+-**Cuarto anillo 🟣**
+    - [🐚 Minishell](./minishell/README.md)
+    - [🧠 Philosophers](./philosophers/README.md)
 
 ## 🛠️ Herramientas opcionales a instalar
 
@@ -66,7 +78,7 @@ zsh: command not found: norminette
 
 Sigue estos pasos:
 
-1. **🔍 Verifica la ruta del ejecutable de Norminette**  
+1. **🔍 Verifica la ruta del ejecutable de Norminette**
     Ejecuta:
     ```bash
     python3 -m site --user-base
@@ -76,25 +88,25 @@ Sigue estos pasos:
     /Users/adrian_9559/Library/Python/3.9
     ```
 
-2. **📂 Accede al directorio del ejecutable**  
+2. **📂 Accede al directorio del ejecutable**
     Cambia al directorio correspondiente:
     ```bash
     cd /Users/adrian_9559/Library/Python/3.9/bin
     ```
 
-3. **🛠️ Añade la ruta al archivo PATH**  
+3. **🛠️ Añade la ruta al archivo PATH**
     Agrega la ruta al archivo de configuración de tu terminal (`~/.zshrc` o `~/.zprofile`):
     ```bash
     echo 'export PATH=$PATH:/Users/adrian_9559/Library/Python/3.9/bin' >> ~/.zshrc
     ```
 
-4. **🔄 Aplica los cambios**  
+4. **🔄 Aplica los cambios**
     Recarga la configuración de tu terminal:
     ```bash
     source ~/.zshrc
     ```
 
-5. **✅ Verifica la instalación**  
+5. **✅ Verifica la instalación**
     Comprueba que **Norminette** está correctamente instalado:
     ```bash
     norminette --version

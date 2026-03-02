@@ -82,6 +82,23 @@ El progreso en el Cursus se mide mediante niveles y anillos. 💡 Cada anillo re
 | [Push_swap](./C/push_swap/README.md) 🔄 | Desarrolla un programa que ordena una pila de números utilizando un conjunto limitado de operaciones, optimizando la eficiencia y el número de movimientos. 📊🛠️ | 98  |
 | [So_long](./C/so_long/README.md) 🎮 | Desarrolla un pequeño juego en 2D utilizando gráficos simples, gestionando mapas, movimientos y eventos para mejorar tus habilidades en programación y lógica. 🕹️🗺️ | 100  |
 
+### Cuarto anillo 🟣 ###
+
+| Proyecto           | Descripción                                                                                     | Nota |
+|--------------------|-------------------------------------------------------------------------------------------------|------|
+| [Minishell](./C/minishell/README.md) 🐚 | Implementa una shell básica que interpreta comandos, maneja procesos y redirecciones, y gestiona señales, acercando a la programación de sistemas y procesos. 🔁🔧 | 100 |
+| [Philosophers](./C/philosophers/README.md) 🧠 | Implementa la solución al problema de los filósofos comensales usando sincronización entre procesos/hilos y control de condiciones de carrera. 🍽️🔒 | 100 |
+
+
+### Quinto anillo 🟣 ###
+| Proyecto           | Descripción                                                                                     | Nota |
+|--------------------|-------------------------------------------------------------------------------------------------|------|
+| [Cub3D](./C/cub3d/README.md) 🕹️ | Desarrolla un juego de laberinto en 3D utilizando raycasting, gestionando gráficos, colisiones y eventos para crear una experiencia inmersiva. 🎮🔍 | 100 |
+| [CPP_Module_00](./C++/CPP_Module_00/README.md) | Fundamentos de C++ y entorno (compilador, flags, pequeñas utilidades). 🧩💻 | NULL |
+| [CPP_Module_01](./C++/CPP_Module_01/README.md) | Programación orientada a objetos básica — clases, constructores, herencia y polimorfismo. 🧩💻 | NULL |
+| [CPP_Module_02](./C++/CPP_Module_02/README.md) | Recursos avanzados — templates, contenedores de la STL, manejo fino de memoria y buenas prácticas. 🧩💻 | NULL |
+
+
 ---
 
 ## Comunidad y soporte 🤝🌟
@@ -89,3 +106,5 @@ El progreso en el Cursus se mide mediante niveles y anillos. 💡 Cada anillo re
 El Cursus no es solo un programa educativo, sino una comunidad global. 🌍✨ Los estudiantes colaboran en proyectos, comparten conocimientos y se apoyan mutuamente para superar desafíos. 🌈💬 Además, la red global de 42 conecta a estudiantes y profesionales de todo el mundo, creando oportunidades únicas para el desarrollo personal y profesional. 🌟🤗
 
 ¡Únete al Cursus de 42 Madrid y da el primer paso hacia un futuro lleno de posibilidades! 🚀🌟
+
+---
