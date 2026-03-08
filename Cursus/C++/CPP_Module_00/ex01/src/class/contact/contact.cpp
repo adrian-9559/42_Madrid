@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:44:35 by adriescr          #+#    #+#             */
-/*   Updated: 2026/01/26 17:38:40 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/06 16:36:07 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Contact::Contact(
 	setNickname(nickname);
 	setPhoneNumber(phoneNumber);
 	setDarkestSecret(darkestSecret);
-	setDateOfCreation(std::chrono::system_clock::now());
 }
 
 Contact::~Contact() {}
@@ -51,10 +50,6 @@ void Contact::setDarkestSecret(const std::string& darkestSecret) {
 	this->darkestSecret = darkestSecret;
 }
 
-void Contact::setDateOfCreation(const std::chrono::system_clock::time_point& date) {
-	this->dateOfCreation = date;
-}
-
 std::string Contact::getFirstName() const {
 	return (this->firstName);
 }
@@ -75,26 +70,10 @@ std::string Contact::getDarkestSecret() const {
 	return (this->darkestSecret);
 }
 
-std::chrono::system_clock::time_point Contact::getDateOfCreation() const {
-	return (this->dateOfCreation);
-}
-
-std::string Contact::getDateOfCreationAsString() const {
-	std::time_t t = std::chrono::system_clock::to_time_t(this->dateOfCreation);
-	std::tm* tm_ptr = std::localtime(&t);
-	std::ostringstream oss;
-	if (tm_ptr)
-		oss << std::put_time(tm_ptr, "%F %T");
-	else
-		oss << std::asctime(std::localtime(&t));
-	return (oss.str());
-}
-
 std::string Contact::getFullInfo() const {
 	return ("First Name: " + getFirstName() + "\n" +
 			"Last Name: " + getLastName() + "\n" +
 			"Nickname: " + getNickname() + "\n" +
 			"Phone Number: " + getPhoneNumber() + "\n" +
-			"Darkest Secret: " + getDarkestSecret() + "\n" +
-			"Date of Creation: " + getDateOfCreationAsString());
+			"Darkest Secret: " + getDarkestSecret() + "\n");
 }

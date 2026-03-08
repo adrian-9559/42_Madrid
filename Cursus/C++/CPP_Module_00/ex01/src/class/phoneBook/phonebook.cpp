@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 14:59:43 by adriescr          #+#    #+#             */
-/*   Updated: 2026/02/26 18:40:45 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/06 16:53:43 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ void PhoneBook::addContact(const Contact& contact)
 {
 	Contact c = contact;
 
-	c.setDateOfCreation(std::chrono::system_clock::now());
 	contacts[nextIndex] = c;
 	nextIndex = (nextIndex + 1) % MAX_CONTACTS;
 	if (count < MAX_CONTACTS)
@@ -158,19 +157,19 @@ int PhoneBook::allContacts()
 	bool any;
 
 	std::cout << CONTACTS_LIST_HEADER;
-	std::cout << "[··········|··········|··········|··········]" << std::endl;
-	std::cout << "[     index|first name| last name|  nickname]" << std::endl;
-	std::cout << "[··········|··········|··········|··········]" << std::endl;
+	std::cout << "|··········|··········|··········|··········|" << std::endl;
+	std::cout << "|     index|first name| last name|  nickname|" << std::endl;
+	std::cout << "|··········|··········|··········|··········|" << std::endl;
 	any = false;
 	for (int i = 0; i < 8; ++i)
 	{
 		if (contacts[i].getFirstName().empty())
 			continue;
-		std::cout << "[" << std::setw(10) << std::right << (i + 1) << "|";
+		std::cout << "|" << std::setw(10) << std::right << (i + 1) << "|";
 		std::cout << truncateField(contacts[i].getFirstName()) << "|";
 		std::cout << truncateField(contacts[i].getLastName()) << "|";
-		std::cout << truncateField(contacts[i].getNickname()) << "]";
-		std::cout << "\n[··········|··········|··········|··········]" << std::endl;
+		std::cout << truncateField(contacts[i].getNickname()) << "|";
+		std::cout << "\n|··········|··········|··········|··········|" << std::endl;
 		any = true;
 	}
 	if (!any)
@@ -188,9 +187,9 @@ void PhoneBook::searchContact()
 	if (const_cast<PhoneBook*>(this)->allContacts() == 0)
 		return;
 	std::cout << SEARCH_CONTACT_MESSAGE;
-	std::string indexStr;
-	std::getline(std::cin, indexStr);
-	index = std::stoi(indexStr) - 1;
+	std::cin >> index;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	index -= 1;
 	if (index < 0 || index >= MAX_CONTACTS || contacts[index].getFirstName().empty())
 	{
 		std::cerr << INVALID_OPTION_MESSAGE << std::endl;
@@ -207,9 +206,9 @@ void PhoneBook::deleteContact()
 	if (const_cast<PhoneBook*>(this)->allContacts() == 0)
 		return;
 	std::cout << DELETE_CONTACT_MESSAGE;
-	std::string indexStr;
-	std::getline(std::cin, indexStr);
-	index = std::stoi(indexStr) - 1;
+	std::cin >> index;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	index -= 1;
 	if (index < 0 || index >= MAX_CONTACTS || contacts[index].getFirstName().empty())
 	{
 		std::cerr << INVALID_OPTION_MESSAGE << std::endl;

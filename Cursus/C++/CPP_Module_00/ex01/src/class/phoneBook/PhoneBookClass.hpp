@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBookClass.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 13:50:04 by adriescr          #+#    #+#             */
-/*   Updated: 2026/02/24 18:10:00 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/06 16:47:42 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 		#include <iostream>
 		#include <string>
+		#include <limits>
 		#include <vector>
-		#include <chrono>
 
 		#define MAX_CONTACTS 8
 
