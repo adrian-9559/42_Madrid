@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 17:53:41 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/23 16:18:30 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/26 15:53:06 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
 		Animal& operator=(const Animal& other);
 
 		std::string getType() const;
-		virtual void makeSound() const = 0;
+		virtual void makeSound() const;
 };
 
 #endif

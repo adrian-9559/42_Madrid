@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cat.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 17:56:30 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/17 17:57:14 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/26 16:03:25 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal()
+Cat::Cat(void) : Animal(), brain(new Brain())
 {
 	type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+Cat::Cat(const Cat& other) : Animal(other), brain(new Brain(*other.brain))
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat::~Cat()
 {
+	delete brain;
 	std::cout << "Cat destructor called" << std::endl;
 }
 
@@ -34,6 +35,8 @@ Cat& Cat::operator=(const Cat& other)
 	if (this != &other)
 	{
 		Animal::operator=(other);
+		delete brain;
+		brain = new Brain(*other.brain);
 	}
 	return *this;
 }

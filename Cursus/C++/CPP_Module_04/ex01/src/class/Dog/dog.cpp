@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dog.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 17:58:19 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/17 17:58:33 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/26 16:03:25 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(void) : Animal()
+Dog::Dog(void) : Animal(), brain(new Brain())
 {
 	type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& other) : Animal(other)
+Dog::Dog(const Dog& other) : Animal(other), brain(new Brain(*other.brain))
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog::~Dog()
 {
+	delete brain;
 	std::cout << "Dog destructor called" << std::endl;
 }
 
@@ -34,6 +35,8 @@ Dog& Dog::operator=(const Dog& other)
 	if (this != &other)
 	{
 		Animal::operator=(other);
+		delete brain;
+		brain = new Brain(*other.brain);
 	}
 	return *this;
 }
