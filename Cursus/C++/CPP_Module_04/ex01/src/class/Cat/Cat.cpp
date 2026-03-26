@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 17:56:30 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/26 16:03:25 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/26 17:25:52 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,14 @@ Cat& Cat::operator=(const Cat& other)
 void Cat::makeSound() const
 {
 	std::cout << "Meow" << std::endl;
+}
+
+void Cat::setIdea(int index, const std::string& idea)
+{
+	brain->setIdea(index, idea);
+}
+
+std::string Cat::getIdea(int index) const
+{
+	return brain->getIdea(index);
 }

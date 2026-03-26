@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 17:57:27 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/17 18:06:13 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/26 17:25:52 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Dog : public Animal
 		Dog& operator=(const Dog& other);
 
 		virtual void makeSound() const;
+		void setIdea(int index, const std::string& idea);
+		std::string getIdea(int index) const;
 };
 
 #endif
