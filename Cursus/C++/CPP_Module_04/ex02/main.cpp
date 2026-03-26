@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: adriescr <adriescr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 15:43:00 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/26 16:00:21 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/03/26 16:19:20 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ int main()
 	const AAnimal* meta = new Dog();
 	const AAnimal* j = new Dog();
 	const AAnimal* i = new Cat();
+
+
+	const AAnimal* a = new AAnimal()
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
