@@ -6,7 +6,7 @@
 /*   By: adriescr <adriescr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 15:43:00 by adriescr          #+#    #+#             */
-/*   Updated: 2026/03/26 17:27:20 by adriescr         ###   ########.fr       */
+/*   Updated: 2026/05/05 15:52:49 by adriescr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ int main()
 	std::cout << wrongI->getType() << " " << std::endl;
 	wrongI->makeSound();
 	wrongMeta->makeSound();
-
-
 
 	delete meta;
 	delete j;
