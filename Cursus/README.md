@@ -82,22 +82,27 @@ El progreso en el Cursus se mide mediante niveles y anillos. 💡 Cada anillo re
 | [Push_swap](./C/push_swap/README.md) 🔄 | Desarrolla un programa que ordena una pila de números utilizando un conjunto limitado de operaciones, optimizando la eficiencia y el número de movimientos. 📊🛠️ | 98  |
 | [So_long](./C/so_long/README.md) 🎮 | Desarrolla un pequeño juego en 2D utilizando gráficos simples, gestionando mapas, movimientos y eventos para mejorar tus habilidades en programación y lógica. 🕹️🗺️ | 100  |
 
-### Cuarto anillo 🟣 ###
+### Cuarto anillo 🟣
 
-| Proyecto           | Descripción                                                                                     | Nota |
-|--------------------|-------------------------------------------------------------------------------------------------|------|
-| [Minishell](./C/minishell/README.md) 🐚 | Implementa una shell básica que interpreta comandos, maneja procesos y redirecciones, y gestiona señales, acercando a la programación de sistemas y procesos. 🔁🔧 | 100 |
-| [Philosophers](./C/philosophers/README.md) 🧠 | Implementa la solución al problema de los filósofos comensales usando sincronización entre procesos/hilos y control de condiciones de carrera. 🍽️🔒 | 100 |
+| Proyecto | Descripción | Nota |
+|---|---|---|
+| [Minishell](./C/minishell/README.md) 🐚 | Shell básica con pipes, redirecciones, builtins y señales. | 100 |
+| [Philosophers](./C/philosophers/README.md) 🧠 | Problema de los filósofos comensales con threads y mutexes. | 100 |
 
+### Quinto anillo 🔷 — C++ Modules
 
-### Quinto anillo 🟣 ###
-| Proyecto           | Descripción                                                                                     | Nota |
-|--------------------|-------------------------------------------------------------------------------------------------|------|
-| [Cub3D](./C/cub3d/README.md) 🕹️ | Desarrolla un juego de laberinto en 3D utilizando raycasting, gestionando gráficos, colisiones y eventos para crear una experiencia inmersiva. 🎮🔍 | 100 |
-| [CPP_Module_00](./C++/CPP_Module_00/README.md) | Fundamentos de C++ y entorno (compilador, flags, pequeñas utilidades). 🧩💻 | NULL |
-| [CPP_Module_01](./C++/CPP_Module_01/README.md) | Programación orientada a objetos básica — clases, constructores, herencia y polimorfismo. 🧩💻 | NULL |
-| [CPP_Module_02](./C++/CPP_Module_02/README.md) | Recursos avanzados — templates, contenedores de la STL, manejo fino de memoria y buenas prácticas. 🧩💻 | NULL |
-
+| Proyecto | Descripción | Nota |
+|---|---|---|
+| [CPP_Module_00](./C++/CPP_Module_00/README.md) | C++ basics — namespaces, classes, member functions, stdio streams. | — |
+| [CPP_Module_01](./C++/CPP_Module_01/README.md) | Dynamic memory, references, pointers, file manipulation. | — |
+| [CPP_Module_02](./C++/CPP_Module_02/README.md) | Ad-hoc polymorphism, operator overloading, Orthodox Canonical Form. | — |
+| [CPP_Module_03](./C++/CPP_Module_03/README.md) | Inheritance, constructor/destructor chaining (ClapTrap hierarchy). | — |
+| [CPP_Module_04](./C++/CPP_Module_04/README.md) | Subtype polymorphism, virtual methods, deep copy, abstract classes. | — |
+| [CPP_Module_05](./C++/CPP_Module_05/README.md) | Exception handling, Bureaucrat/Form/Intern hierarchy. | — |
+| [CPP_Module_06](./C++/CPP_Module_06/README.md) | C++ casts — static_cast, reinterpret_cast, dynamic_cast. | — |
+| [CPP_Module_07](./C++/CPP_Module_07/README.md) | Function and class templates (swap, iter, Array). | — |
+| [CPP_Module_08](./C++/CPP_Module_08/README.md) | STL containers and iterators (easyfind, Span, MutantStack). | — |
+| [CPP_Module_09](./C++/CPP_Module_09/README.md) | STL algorithm efficiency — BitcoinExchange, RPN, PmergeMe. | — |
 
 ---
 

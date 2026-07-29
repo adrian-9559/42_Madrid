@@ -6,11 +6,18 @@ Este directorio agrupa los módulos formativos de C++ del `Cursus` en 42 Madrid.
 
 Además de los proyectos en C y Sistemas, el `Cursus` incluye una sección de **C++** orientada a introducir programación orientada a objetos y técnicas modernas del lenguaje. Los módulos están organizados por carpetas en `Cursus/C++/` y cubren desde fundamentos hasta templates y la STL.
 
-## Estructura
+## Estructura
 
-- `CPP_Module_00`: Fundamentos de C++ y entorno (compilador, flags, pequeñas utilidades).
-- `CPP_Module_01`: Programación orientada a objetos básica — clases, constructores, herencia y polimorfismo.
-- `CPP_Module_02`: Recursos avanzados — templates, contenedores de la STL, manejo fino de memoria y buenas prácticas.
+- `CPP_Module_00`: C++ basics — namespaces, classes, member functions, stdio streams.
+- `CPP_Module_01`: Dynamic memory, references, pointers, file manipulation.
+- `CPP_Module_02`: Ad-hoc polymorphism, operator overloading, Orthodox Canonical Form.
+- `CPP_Module_03`: Inheritance, constructor/destructor chaining (ClapTrap hierarchy).
+- `CPP_Module_04`: Subtype polymorphism, virtual methods, deep copy, abstract classes.
+- `CPP_Module_05`: Exception handling, try-catch, Bureaucrat/Form/Intern hierarchy.
+- `CPP_Module_06`: C++ casts — static_cast, reinterpret_cast, dynamic_cast.
+- `CPP_Module_07`: Function and class templates (swap, iter, Array).
+- `CPP_Module_08`: STL containers and iterators (easyfind, Span, MutantStack).
+- `CPP_Module_09`: STL algorithm efficiency — BitcoinExchange, RPN, PmergeMe.
 
 ## Objetivos generales
 
@@ -46,6 +53,13 @@ Si añades ejemplos, tests o soluciones, por favor mantén un README por módulo
 - [CPP_Module_00](./CPP_Module_00/README.md)
 - [CPP_Module_01](./CPP_Module_01/README.md)
 - [CPP_Module_02](./CPP_Module_02/README.md)
+- [CPP_Module_03](./CPP_Module_03/README.md)
+- [CPP_Module_04](./CPP_Module_04/README.md)
+- [CPP_Module_05](./CPP_Module_05/README.md)
+- [CPP_Module_06](./CPP_Module_06/README.md)
+- [CPP_Module_07](./CPP_Module_07/README.md)
+- [CPP_Module_08](./CPP_Module_08/README.md)
+- [CPP_Module_09](./CPP_Module_09/README.md)
 
 ## Instrucciones generales para proyectos C++
 
