@@ -1,96 +1,142 @@
-# 🌟 Introducción
-El proyecto `push_swap` es una parte fundamental del currículo de 42 que te desafía a implementar un algoritmo eficiente para ordenar una pila de números utilizando un conjunto limitado de operaciones. 🔄 A través de este reto, aprenderás a diseñar y optimizar algoritmos, gestionar estructuras de datos como stacks y trabajar con restricciones específicas en C. 🛠️
+# 🎮 push_swap — Algoritmo de ordenación con dos stacks
 
-Durante el desarrollo de `push_swap`, profundizarás en conceptos clave como la manipulación de listas enlazadas, la gestión de memoria dinámica y la minimización de la complejidad algorítmica. 🚀 Este ejercicio es ideal para fortalecer tus habilidades en lógica, análisis de eficiencia y escritura de código limpio y modular. 🧠
+[![Nota](https://img.shields.io/badge/⭐_Nota-98/125-2ea44f)](./)
+[![Anillo](https://img.shields.io/badge/🔵_Anillo-3º_Círculo-1f6feb)](../)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-La dificultad de este proyecto es intermedia y te prepara para afrontar desafíos más avanzados en programación algorítmica y estructuración de proyectos. 🔑 El éxito depende de entender a fondo las operaciones permitidas y de aplicar estrategias inteligentes para reducir el número de movimientos. 🧹 ¡Prepárate para mejorar tu pensamiento algorítmico y llevar tus habilidades de programación al siguiente nivel! 💻✨
+---
 
-## 📋 Instrucciones generales
+## 🧭 Índice
 
-- Tu proyecto deberá estar escrito en C.
-- Tu proyecto debe estar escrito siguiendo la Norma. Si tienes archivos o funciones adicionales, estas están incluidas en la verificación de la Norma y tendrás un 0 si hay algún error de norma en cualquiera de ellos.
-- Tus funciones no deben terminar de forma inesperada (segfault, bus error, double free, etc) excepto en el caso de comportamientos indefinidos. Si esto sucede, tu proyecto será considerado no funcional y recibirás un 0 durante la evaluación.
-- Toda la memoria asignada en el heap deberá liberarse adecuadamente cuando sea necesario. No se permitirán leaks de memoria.
-- Si el enunciado lo requiere, deberás entregar un Makefile que compilará tus archivos fuente al output requerido con las flags -Wall, -Werror y -Wextra, utilizar cc y por supuesto tu Makefile no debe hacer relink.
-- Tu Makefile debe contener al menos las normas $(NAME), all, clean, fclean y re.
-- Para entregar los bonus de tu proyecto deberás incluir una regla bonus en tu Makefile, en la que añadirás todos los headers, librerías o funciones que estén prohibidas en la parte principal del proyecto. Los bonus deben estar en archivos distintos _bonus.{c/h}. La parte obligatoria y los bonus se evalúan por separado.
-- Si tu proyecto permite el uso de la libft, deberás copiar su fuente y sus Makefile asociados en un directorio libft con su correspondiente Makefile. El Makefile de tu proyecto debe compilar primero la librería utilizando su Makefile, y después compilar el proyecto.
-- Te recomendamos crear programas de prueba para tu proyecto, aunque este trabajo no será entregado ni evaluado. Te dará la oportunidad de verificar que tu programa funciona correctamente durante tu evaluación y la de otros compañeros.
-- Y sí, tienes permitido utilizar estas pruebas durante tu evaluación o la de otros compañeros.
-- Entrega tu trabajo en tu repositorio Git asignado. Solo el trabajo de tu repositorio Git será evaluado. Si Deepthought evalúa tu trabajo, lo hará después de tus compañeros. Si se encuentra un error durante la evaluación de Deepthought, esta habrá terminado.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Enunciado](#-enunciado)
+4. [🎮 Operaciones disponibles](#-operaciones-disponibles)
+5. [🏗️ Estructura](#️-estructura)
+6. [🛠️ Compilación](#️-compilación)
+7. [🚀 Uso y ejemplos](#-uso-y-ejemplos)
+8. [🧪 Testers y verificación](#-testers-y-verificación)
+9. [✅ Nota](#-nota)
+10. [📚 Recursos](#-recursos)
+
+---
+
+## 🌟 Introducción
+
+**push_swap** es un proyecto de **algoritmo y optimización**: tienes dos stacks (`a` y `b`) y un conjunto fijo de operaciones; debes ordenar los números con el **mínimo número de movimientos posible**. 🧠
+
+No es solo "ordenar": es diseñar estrategias (turkey sort, radix, costo-beneficio) y afinar constantes para que el corrector no falle. Es de los proyectos que más **pensamiento previo** exigen de todo el Cursus.
+
+## 🎯 Objetivos
+
+- 🧮 Elegir y justificar un **algoritmo** eficiente para N elementos.
+- 🔁 Reducir al máximo el número de **operaciones**.
+- 🧱 Trabajar con una **lista simplemente enlazada** como estructura de datos.
+- ✅ Validar la entrada con parseo estricto (dup, límites de `int`…).
+- 🧊 Mantener invariantes: una operación = una rotación mínima de datos.
 
 ## 📄 Enunciado
 
-✍️ Escribir un algoritmo de ordenamiento es un paso crucial en el viaje de un desarrollador. Normalmente es el primer encuentro con el concepto de complejidad.  
-🧩 Los algoritmos de ordenamiento y su complejidad suponen una parte importante de las preguntas realizadas durante las entrevistas laborales.  
-⏳ Es posiblemente un buen momento para echar un vistazo a estos conceptos ya que tendrás que enfrentarte a ellos en algún momento de tu vida.  
-🎯 Los objetivos de aprendizaje de este proyecto son rigor, uso de C, y el uso de algoritmos básicos... haciendo especial hincapié en su complejidad.  
-🔢 Ordenar valores es simple.  
-⚡ Ordenarlos de forma rápida es menos simple, especialmente porque de una configuración de enteros a otra, la solución más eficiente para ordenar puede diferir.
+Crea dos programas:
 
-# 📚 Reglas
+- **`push_swap`**: recibe los números como argumentos y escribe en stdout la **lista de operaciones** que los ordena.
+- **`checker`** (bonus → `checker_Mac` / `checker_linux`): lee la lista de operaciones de stdin y verifica si de verdad ordenan.
 
-Tienes **2 stacks**, llamados `a` y `b`.
+Límites recomendados del subject:
 
-- **Para empezar:**
-    - El stack `a` contiene una cantidad aleatoria de números positivos y/o negativos.
-    - El stack `b` está vacío.
+| Nº elementos | Movs. objetivo |
+|---|---|
+| 3 | ≤ 3 |
+| 5 | ≤ 12 |
+| 100 | ≤ 700 |
+| 500 | ≤ 5500 |
 
-- **Objetivo:**  
-    Ordenar los números del stack `a` en orden ascendente utilizando solo las siguientes operaciones:
+## 🎮 Operaciones disponibles
 
-| Operación | Descripción |
-|-----------|-------------|
-| `sa`      | Intercambia los dos primeros elementos del stack `a`. No hace nada si hay uno o menos elementos. |
-| `sb`      | Intercambia los dos primeros elementos del stack `b`. No hace nada si hay uno o menos elementos. |
-| `ss`      | Realiza `sa` y `sb` al mismo tiempo. |
-| `pa`      | Toma el primer elemento del stack `b` y lo pone el primero en el stack `a`. No hace nada si `b` está vacío. |
-| `pb`      | Toma el primer elemento del stack `a` y lo pone el primero en el stack `b`. No hace nada si `a` está vacío. |
-| `ra`      | Desplaza hacia arriba todos los elementos del stack `a` una posición; el primer elemento se convierte en el último. |
-| `rb`      | Desplaza hacia arriba todos los elementos del stack `b` una posición; el primer elemento se convierte en el último. |
-| `rr`      | Realiza `ra` y `rb` al mismo tiempo. |
-| `rra`     | Desplaza hacia abajo todos los elementos del stack `a` una posición; el último elemento se convierte en el primero. |
-| `rrb`     | Desplaza hacia abajo todos los elementos del stack `b` una posición; el último elemento se convierte en el primero. |
-| `rrr`     | Realiza `rra` y `rrb` al mismo tiempo. |
+| Opción | Efecto |
+|---|---|
+| `sa` `sb` `ss` | Intercambia los dos primeros elementos de `a`/`b`/ambos |
+| `pa` `pb` | Push: mueve el primer elemento de `a`→`b` o `b`→`a` |
+| `ra` `rb` `rr` | Rotar (sube) el stack |
+| `rra` `rrb` `rrr` | Rotar hacia abajo |
 
-# 🚀 Uso del programa
+## 🏗️ Estructura
 
-Para ejecutar el programa, proporciona una lista de números como argumentos. El programa mostrará la secuencia de operaciones necesarias para ordenar los números.
-
-```bash
-ARG="3 2 1"; ./push_swap $ARG
+```
+push_swap/
+├── Makefile                # Reglas: all, bonus, clean, fclean, re
+├── push_swap.h             # Prototipos y struct t_stack
+├── main.c                  # main de push_swap
+├── push_swap.c             # Lógica principal del algoritmo
+├── sort_functions.c        # Estrategia de ordenación
+├── push_swap_utils.c       # Utilidades (parseo, validación)
+├── ft_stack.c / ft_stack_utils.c   # Lista enlazada
+├── ft_checker.c            # main del checker
+├── ft_checker_stack.c      # Lectura a aplicar las operaciones
+└── lib/                    # 🧪 Testers y utilidades externas
+    ├── checker_Mac / checker_linux   # Binarios oficiales de 42
+    └── lib_operations/
 ```
 
-Puedes contar el número de movimientos realizados usando:
+## 🛠️ Compilación
 
 ```bash
-ARG="3 2 1"; ./push_swap $ARG | wc -l
+make          # Compila push_swap
+make bonus    # Compila también el checker (./checker)
+make fclean   # Limpia el proyecto
 ```
 
-1. **Prototipo del programa**:
-    ```bash
-    ARG="(NUMEROS A METER)"; ./push_swap $ARG | wc -l
-    ```
+## 🚀 Uso y ejemplos
 
-# ✅ Validación del proyecto
+```bash
+# Ordenar un conjunto pequeño
+./push_swap 3 2 1 0
+# Salida: una lista de operaciones (ra, pb, sa...)
 
-Para validar este proyecto, deberás realizar ciertas pruebas con un número mínimo de operaciones.
+# Contar las operaciones con el checker
+ARG="4 67 3 87 23"; ./push_swap $ARG | wc -l
 
-- Para una validación mínima del proyecto (nota mínima de 80), deberás ser capaz de ordenar **100 números aleatorios en menos de 700 operaciones**.
-- Para una validación máxima del proyecto y poder obtener los bonus, además del paso anterior, deberás ordenar **500 números aleatorios en menos de 5500 operaciones**.
+# Verificar con el checker oficial
+ARG="4 67 3 87 23"
+./push_swap $ARG | ./checker_Mac $ARG
+# → "OK"
 
-# 📝 **Nota de la corrección**  
-🎯 **Puntuación obtenida:** 98 / 125  
+# Generar args aleatorios y medir
+ARG=$(jot -r 100 0 1000 | tr '\n' ' ')
+./push_swap $ARG | ./checker_Mac $ARG
+./push_swap $ARG | wc -l            # debe ser ≤ 700
+```
 
-🔍 **Consejo:** Revisa los puntos donde perdiste puntuación para aprender de ellos y evitar errores similares en el futuro. 🚀  
+## 🧪 Testers y verificación
 
-✨ ¡Sigue adelante y no te rindas! 🌈
+| Herramienta | Instalación | Comandos |
+|---|---|---|
+| **checker oficial** | traer `checker_Mac` (macOS) o `checker_linux` de la intra de 42 | `./push_swap $ARG \| ./checker_Mac $ARG` |
+| **push_swap_visualizer** (o-reo) | `git clone https://github.com/o-reo/push_swap_visualizer.git` | `cmake . && make && ./bin/visualizer` |
+| **norminette** | `pip install norminette` | `norminette *.c *.h` |
 
-# 🛠️ Herramientas recomendadas
+💡 Medir rendimiento (objetivos):
 
-En esta sección encontrarás una lista de herramientas que te serán útiles durante el desarrollo de este proyecto. Estas herramientas están diseñadas para facilitar la depuración, la escritura de código y la gestión de tu proyecto.
+```bash
+for i in $(seq 1 10); do
+  ARG=$(jot -r 500 0 1000 | tr '\n' ' ')
+  ./push_swap $ARG | wc -l
+done   # objetivo: promedio ≤ 5500 en 500 elementos
+```
 
-## 🧰 Lista de herramientas recomendadas
+🛠️ Extras que uso a menudo:
+- **Valgrand**: `valgrind ./push_swap 5 1 4 2 3` → sin leaks.
+- **Edge cases**: `./push_swap ""`, `./push_swap 1 2 2` (error), `./push_swap 2147483648` (fuera de rango), argumentos con espacios.
 
-- **🛡️ Valgrind**: Para detectar fugas de memoria y errores relacionados con la gestión de memoria.
-- **📏 Norminette**: Una herramienta para verificar que tu código cumple con la Norma de 42.
+## ✅ Nota
+
+| Resultado | Detalle |
+|---|---|
+| ⭐ **98/125** | 100 elementos ≈ 700 movs · 500 elementos ≈ 5500 movs |
+
+## 📚 Recursos
+
+- [Subject oficial](https://cdn.intra.42.fr/pdf/pdf/60267/fr.subject.pdf)
+- [Cursus C — Índice](../README.md)
+- [o-reo · push_swap_visualizer](https://github.com/o-reo/push_swap_visualizer)
+- [Visualizador interactivo (push_swap_visualizer)](https://github.com/o-reo/push_swap_visualizer)

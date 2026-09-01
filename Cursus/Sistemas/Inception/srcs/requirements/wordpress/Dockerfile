@@ -1,0 +1,33 @@
+FROM alpine:3.18
+
+RUN apk update && apk add --no-cache \
+	php82 \
+	php82-fpm \
+	php82-mysqlnd \
+	php82-mbstring \
+	php82-xml \
+	php82-gd \
+	php82-zip \
+	php82-curl \
+	php82-phar \
+	php82-opcache \
+	curl \
+	tar \
+	gzip
+
+# Install WP-CLI
+RUN curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+	&& chmod +x /usr/local/bin/wp
+
+# Create wordpress directory
+RUN mkdir -p /var/www/html
+
+COPY conf/www.conf /etc/php82/php-fpm.d/www.conf
+COPY tools/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+WORKDIR /var/www/html
+
+EXPOSE 9000
+
+ENTRYPOINT ["/entrypoint.sh"]

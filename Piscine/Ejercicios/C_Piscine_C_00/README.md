@@ -1,53 +1,61 @@
-# C Piscine - C 00
+# 🎮 C Piscine · C 00 — Fundamentos de C
 
-## Introducción
-En este ejercicio, te adentrarás en los fundamentos del lenguaje de programación C. Aprenderás a trabajar con conceptos básicos como variables, tipos de datos, operadores y estructuras de control. Estos conocimientos son esenciales para construir una base sólida en programación y te permitirán abordar problemas más complejos en el futuro. Asegúrate de seguir las instrucciones cuidadosamente y prestar atención a los detalles, ya que la precisión es clave en este módulo introductorio. ¡Buena suerte y disfruta del proceso de aprendizaje!
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_C_00-Primera_semana-1f6feb)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Intrucciones
+---
 
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, se extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en sus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrán un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+## 🧭 Índice
 
-## Enunciado principal
-[Enunciado en Español](./es.subject.pdf)
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Ejercicios](#-ejercicios)
+4. [🧪 Verificación](#-verificación)
+5. [📚 Recursos](#-recursos)
 
-## Ejercicios
+---
 
-### [ex00: ft_putchar](./ex00/README.md)
-Escribe una función que imprima un solo carácter en la salida estándar.
+## 🌟 Introducción
 
-### [ex01: ft_print_alphabet](./ex01/README.md)
-Crea una función que imprima el alfabeto en minúsculas en orden ascendente.
+Primer contacto con el lenguaje C. 📗 Este módulo trabaja los **fundamentos**: variables, tipos de datos, bucles, la función `write` y la salida estándar.
 
-### [ex02: ft_print_reverse_alphabet](./ex02/README.md)
-Desarrolla una función que imprima el alfabeto en minúsculas en orden descendente.
+Es el "¡hola, mundo!" oficial de la piscina: a partir de aquí, **La Norma** y `cc -Wall -Wextra -Werror` te van a acompañar todo el día. 🛡️
 
-### [ex03: ft_print_numbers](./ex03/README.md)
-Implementa una función que imprima todos los dígitos del 0 al 9 en orden ascendente.
+## 🎯 Objetivos
 
-### [ex04: ft_is_negative](./ex04/README.md)
-Escribe una función que determine si un número es negativo e imprima el resultado correspondiente.
+- 🖨️ Usar `write()` para imprimir a stdout.
+- 🔁 Dominar bucles (`while`) e iteración de caracteres.
+- 🧠 Entender `char` como tipo numérico (`'a' + 1 = 'b'`).
+- ✍️ Respetar **La Norma** desde el primer ejercicio.
 
-### [ex05: ft_print_comb](./ex05/README.md)
-Crea una función que imprima todas las combinaciones posibles de tres dígitos en orden ascendente.
+## 📄 Ejercicios
 
-### [ex06: ft_print_comb2](./ex06/README.md)
-Desarrolla una función que imprima todas las combinaciones posibles de dos números de dos dígitos.
+| # | Ejercicio | Enlace |
+|---|---|---|
+| ex00 | `ft_putchar` · imprime un carácter | [ver](./ex00/README.md) |
+| ex01 | `ft_print_alphabet` · alfabeto en minúsculas | [ver](./ex01/README.md) |
+| ex02 | `ft_print_reverse_alphabet` · alfabeto inverso | [ver](./ex02/README.md) |
+| ex03 | `ft_print_numbers` · dígitos del 0 al 9 | [ver](./ex03/README.md) |
+| ex04 | `ft_is_negative` · ¿negativo? (N/P) | [ver](./ex04/README.md) |
+| ex05 | `ft_print_comb` · combinaciones de 3 dígitos | [ver](./ex05/README.md) |
+| ex06 | `ft_print_comb2` · combinaciones de 2 números de 2 dígitos | [ver](./ex06/README.md) |
+| ex07 | `ft_putnbr` · imprime cualquier entero | [ver](./ex07/README.md) |
 
-### [ex07: ft_putnbr](./ex07/README.md)
-Escribe una función que imprima cualquier número entero, positivo o negativo, en la salida estándar.
+📄 Enunciado en español: [es.subject.pdf](./es.subject.pdf)
 
+## 🧪 Verificación
 
+| Herramienta | Comandos |
+|---|---|
+| **Moulinette + peers** | Corrección automática y entre compañeros |
+| **norminette** | `norminette *.c` → 0 errores o nota 0 |
+| **Compilación** | `cc -Wall -Wextra -Werror` con un `main` de prueba |
+
+💡 VIP: como los ejercicios son **funciones**, en el `main` de prueba se comparan bytes exactos: `ft_print_numbers` debe imprimir exactamente `0123456789`. Y `ft_putnbr(-2147483648)` es el caso borde clásico.
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [man write(2)](https://man7.org/linux/man-pages/man2/write.2.html)
+- [La Norma de 42](https://github.com/42Paris/norminette)

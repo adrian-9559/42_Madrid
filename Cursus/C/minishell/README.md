@@ -1,133 +1,132 @@
-# minishell
+# 🎮 minishell — Una shell mínima desde cero
+
+[![Nota](https://img.shields.io/badge/⭐_Nota-100/100-2ea44f)](./)
+[![Anillo](https://img.shields.io/badge/🔵_Anillo-4º_Círculo-1f6feb)](../)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
+
+---
+
+## 🧭 Índice
+
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Enunciado](#-enunciado)
+4. [🏗️ Estructura](#️-estructura)
+5. [🛠️ Compilación](#️-compilación)
+6. [🚀 Uso y ejemplos](#-uso-y-ejemplos)
+7. [🧪 Testers y verificación](#-testers-y-verificación)
+8. [✅ Nota](#-nota)
+9. [📚 Recursos](#-recursos)
+
+---
 
 ## 🌟 Introducción
 
-El proyecto `minishell` consiste en implementar una shell mínima en C que soporte ejecución de comandos, redirecciones, pipes y builtins básicos. Es un ejercicio práctico para comprender procesos, descriptores y la interacción entre programas y el sistema operativo.
+**minishell** es el proyecto más completo hasta el momento: crearás una **shell funcional** que interprete y ejecute comandos, como una versión reducida de `bash`. 🐚
 
-Trabajar en este proyecto mejora tu capacidad para diseñar código modular, manejar errores y garantizar un comportamiento robusto ante casos reales.
+Parte de TinyShell (de Aníbal Ibaceta 🐚), escribe el bucle **leer → parsear → ejecutar** y gestiona procesos, redirecciones y variables de entorno. Es el proyecto donde **reutilizas todo lo aprendido**: memoria, procesos, tokens, libc… integrado en un solo binario.
 
-## Índice
+## 🎯 Objetivos
 
-- [Instrucciones generales](#-instrucciones-generales)
-- [Enunciado](#-enunciado)
-- [Reglas y restricciones](#-reglas-y-restricciones)
-- [Uso y ejemplos](#-uso-del-programa)
-- [Tester incluido](#-tester-incluido)
-- [Estructura del código](#-estructura-del-código)
-- [Herramientas recomendadas](#-herramientas-recomendadas)
-- [Entrega](#-entrega)
-
-## 📋 Instrucciones generales
-
-- El proyecto debe ser escrito en C.
-- Compila con `cc` y flags `-Wall -Wextra -Werror`.
-- Sigue la Norma (norminette); las infracciones pueden invalidar la entrega.
-- El `Makefile` debe contener: `all`, `$(NAME)`, `clean`, `fclean`, `re`. Evita relink innecesario.
-- No debe haber fugas de memoria (valgrind / ASan recomendados).
-- Si incluyes `libft`, ponla en `libft/` y compílala antes del proyecto.
+- ⌨️ Leer e interpretar la entrada del usuario en un **intérprete interactivo**.
+- 🧠 Construir un **parser/tokenizador** de comandos y operadores.
+- 🔀 Lanzar procesos con `fork()`, `execve()` y gestionar `$PATH`.
+- 📤 Redirecciones y **pipes** (`>`, `>>`, `<`, `<<`, `|`).
+- 🌡️ Variables de entorno y `$?` (último status).
+- 🔢 Builtins sin fork: `cd`, `export`, `unset`, `env`, `echo`, `pwd`, `exit`.
 
 ## 📄 Enunciado
 
-Implementa una shell interactiva `minishell` que soporte:
+Tu shell debe gestionar:
 
-- Ejecución de comandos externos con `execve` y búsqueda en `$PATH`.
-- Redirecciones: `<`, `>`, `>>`.
-- Tuberías encadenadas (`|`).
-- Builtins: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.
-- Manejo correcto del código de salida (`$?`).
-- Gestión de `SIGINT` y `SIGQUIT` en modo interactivo.
+- 🔡 **Prompt** propio y bucle lector.
+- #️⃣ Comandos con **argumentos** (path absoluto o relativo vía `$PATH`).
+- 📌 **Quoting**: manejar comillas simples `'…'`, dobles `"…"`, y caracteres especiales (`\`, `;`, `$`).
+- 💭 **`$`** para expandir variables de entorno (`$USER`).
+- 🧵 **Signals**: `Ctrl-C`, `Ctrl-D`, `Ctrl-\` con el comportamiento de `bash`.
+- 🔴 Redirecciones: `> >> < <<` (heredoc).
+- 🚰 **Pipes** `|` que encadenen comandos.
+- ⚙️ **`$?`** para conocer el código de salida del último comando.
+- ⛔ Builtins (sin fork): `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.
 
-### Objetivos de aprendizaje
+## 🏗️ Estructura
 
-- Entender creación y sincronización de procesos (`fork`, `execve`, `wait`).
-- Gestionar redirecciones y pipes manipulando descriptores.
-- Implementar un parser con soporte de comillas, escapes y expansión de variables.
+```
+minishell/
+├── Makefile                # all, clean, fclean, re (entrega obligatorio)
+├── minishell.h             # Cabecera principal
+├── src/
+│   ├── main.c              # Bucle principal: leer → parsear → ejecutar
+│   ├── read.c              # Lectura de la línea con readline()
+│   ├── parse.c             # Tokenización y construcción de comandos
+│   ├── exec.c              # Ejecución: fork, pipes, redirecciones
+│   ├── env.c               # Gestión de variables de entorno
+│   ├── builtins.c          # Implementación de los builtins
+│   └── ...                 # Señales, expander, utils…
+└── tests/                  # 🧪 Pruebas manuales del autor
+```
 
-## 📚 Reglas y restricciones
-
-- No usar funciones prohibidas por la evaluación.
-- No debe provocar segfaults en condiciones normales.
-- Liberar correctamente la memoria.
-
-Comportamientos avanzados como `&&`, `||` o globbing completo son opcionales y se consideran bonus.
-
-## 🚀 Uso del programa
-
-Compila y ejecuta:
+## 🛠️ Compilación
 
 ```bash
-make
+make          # Compila ./minishell
+make fclean   # Limpia el proyecto
+```
+
+Requiere la librería **readline** para el prompt (`-lreadline`).
+
+## 🚀 Uso y ejemplos
+
+```bash
 ./minishell
-```
 
-Ejemplos:
-
-```bash
-minishell$ echo hello
-hello
-minishell$ printf 'one\ntwo\n' | wc -l
-2
-minishell$ export X=42
-minishell$ echo $X
+# Dentro de tu shell:
+$ echo hola mundo
+hola mundo
+$ cd /tmp && pwd
+/tmp
+$ export MY_VAR=42
+$ echo $MY_VAR
 42
-minishell$ cat <<EOF
-heredoc-line
+$ ls -la | grep minishell | wc -l
+3
+$ cat << EOF
+hola
 EOF
-heredoc-line
+$ echo $?
+0
+$ exit
 ```
 
-## ✅ Criterios de evaluación
+- ⚠️ El **comando `export` sin argumentos** imprime las variables «declare».
+- 🔌 `Ctrl-D` en prompt vacío sale igual que `bash`.
 
-- Compila sin warnings (warnings tratados como errores).
-- Ejecuta correctamente comandos, redirecciones y pipes.
-- Implementa los builtins obligatorios.
-- No falla en escenarios normales (robustez).
-- Gestión de memoria adecuada (sin leaks).
+## 🧪 Testers y verificación
 
-## 🧪 Tester incluido
+| Herramienta | Instalación | Comandos |
+|---|---|---|
+| **minishell_tester** (LucasKuhn) | `git clone https://github.com/LucasKuhn/minishell_tester.git` | `cd minishell_tester && ./tester` |
+| **minitester** (mcombeau) | `git clone https://github.com/mcombeau/minitester-minishell-tester.git` | `cd minitester-minishell-tester && ./minitester` |
+| **tests/ casero** | 📁 dentro del repo | `bash tests/run.sh` |
+| **norminette** | `pip install norminette` | `norminette src/` |
+| **valgrind** | parte del sistema | `valgrind --leak-check=full ./minishell` |
 
-La carpeta `tests/` contiene un tester que ejecuta la `minishell` en un PTY y compara la salida con las expectativas definidas en `tests/test_cases.txt`.
+💡 Consejos de evaluación:
+- Pascua de **quotes/expansión**: `$USER`, `"$USER"`, `'$USER'`.
+- **`$?`** justo después de un error y de `Ctrl-C`.
+- Redirecciones con permisos **sudo** / archivos inexistentes.
+- pipes con `stdin/stdout` intercambiados (ej: `cat | cat | ls`).
 
-- Runner: `tests/run_tests.sh`.
-- Casos: `tests/test_cases.txt` (bloques `---test---` con `name`, `input`, `output`).
-- Artefactos: `tests/.minitest/` (temporal) y `tests/logs/run_<timestamp>.log`.
+## ✅ Nota
 
-Ejecuta el tester:
+| Resultado | Detalle |
+|---|---|
+| ⭐ **100/100** | Perfecto |
 
-```bash
-make
-TEST_PROMPT_TIMEOUT=4.0 ./tests/run_tests.sh --verbose
-```
+## 📚 Recursos
 
-Consulta `tests/README.md` para detalles del formato y variables disponibles.
-
-## 🏗️ Estructura del código
-
-Ejemplo de organización recomendada:
-
-- `src/` — código fuente (parser, executor, builtins, redirections, utils).
-- `include/` — cabeceras internas.
-- `libft/` — (opcional) biblioteca propia si la usas.
-- `tests/` — runner, casos y logs.
-
-Sugerencia de módulos:
-
-- `src/parser/`: tokenización, manejo de comillas, here-docs.
-- `src/exec/`: fork/exec, pipes, redirecciones.
-- `src/builtins/`: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`.
-- `src/signals/`: manejo de señales.
-
-## 🛠️ Herramientas recomendadas
-
-- Valgrind / AddressSanitizer — detectar fugas y errores de memoria.
-- Norminette — comprobar estilo y conformidad con la Norma.
-- GDB / lldb — depuración.
-
-## 📦 Entrega
-
-- Sube el repo a tu cuenta de Git.
-- Asegúrate de que `make` produce `minishell` en la raíz.
-- Incluye este `README.md` y notas de diseño si procede.
-
----
-Consejo: documenta diferencias de comportamiento respecto a `bash` (por ejemplo `echo`).
+- [Subject oficial](https://cdn.intra.42.fr/pdf/pdf/62809/fr.subject.pdf)
+- [Cursus C — Índice](../README.md)
+- [LucasKuhn · minishell_tester](https://github.com/LucasKuhn/minishell_tester)
+- [mcombeau · minitester](https://github.com/mcombeau/minitester-minishell-tester)
+- [TinyShell · proyecto base (Aníbal Ibaceta)](https://github.com/Frikardo/TinyShell)

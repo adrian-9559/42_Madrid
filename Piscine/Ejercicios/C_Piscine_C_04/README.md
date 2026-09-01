@@ -1,41 +1,59 @@
-# C Piscine - C 04
+# 🎮 C Piscine · C 04 — Atoi y bases numéricas
 
-## Introducción
-Este módulo introduce conceptos más avanzados de C: conversión de cadenas a enteros, impresión con bases numéricas arbitrarias, y la implementación de las primeras funciones de parseo. Aprenderás a procesar entrada de usuario y a representar números en diferentes sistemas (binario, hexadecimal, etc.).
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_C_04-Parseo-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en tus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrás un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex00: ft_strlen](./ex00/ft_strlen.c)
-Escribe una función que devuelva la longitud de una cadena.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Ejercicios](#-ejercicios)
+4. [🧪 Verificación](#-verificación)
+5. [📚 Recursos](#-recursos)
 
-### [ex01: ft_putstr](./ex01/ft_putstr.c)
-Escribe una función que imprima una cadena en la salida estándar.
+---
 
-### [ex02: ft_putnbr](./ex02/ft_putnbr.c)
-Escribe una función que imprima un número entero en la salida estándar.
+## 🌟 Introducción
 
-### [ex03: ft_atoi](./ex03/ft_atoi.c)
-Escribe una función que convierta una cadena a entero (ignorando espacios y gestionando signos).
+Este módulo introduce **parseo** y **bases numéricas**: convertir cadenas a enteros, imprimir con bases arbitrarias (binario, hex…) y gestionar entradas del usuario. 🔢
 
-### [ex04: ft_putnbr_base](./ex04/ft_putnbr_base.c)
-Escribe una función que imprima un número en una base dada.
+Es la antesala de `ft_atoi_base`/`ft_putnbr_base`, funciones que verás de nuevo en `ft_printf` y la Libft.
 
-### [ex05: ft_atoi_base](./ex05/ft_atoi_base.c)
-Escribe una función que convierta una cadena a entero interpretándola en una base dada.
+## 🎯 Objetivos
+
+- ✅ Convertir string → int (`ft_atoi`) ignorando espacios y signos.
+- 🔢 Imprimir/converter en **cualquier base** (`ft_putnbr_base`, `ft_atoi_base`).
+- 🧮 Reimplementar `strlen`, `putstr`, `putnbr` desde cero (otra vez, ahora más fino).
+
+## 📄 Ejercicios
+
+| # | Ejercicio | Enlace |
+|---|---|---|
+| ex00 | `ft_strlen` · longitud de cadena | [ver](./ex00/ft_strlen.c) |
+| ex01 | `ft_putstr` · imprime cadena | [ver](./ex01/ft_putstr.c) |
+| ex02 | `ft_putnbr` · imprime entero | [ver](./ex02/ft_putnbr.c) |
+| ex03 | `ft_atoi` · string → entero | [ver](./ex03/ft_atoi.c) |
+| ex04 | `ft_putnbr_base` · imprime en la base dada | [ver](./ex04/ft_putnbr_base.c) |
+| ex05 | `ft_atoi_base` · string en base dada → entero | [ver](./ex05/ft_atoi_base.c) |
+
+## 🧪 Verificación
+
+| Herramienta | Comandos |
+|---|---|
+| **Moulinette + peers** | Corrección automática y entre compañeros |
+| **norminette** | `norminette *.c` |
+| **Compilación** | `cc -Wall -Wextra -Werror` |
+
+💡 VIP:
+- ⌨️ `ft_atoi` debe gestionar **`\t\n\v\f\r `** como espacios en blanco y el signo `-`.
+- 🔢 `ft_putnbr_base`/`ft_atoi_base` deben devolver/**no hacer nada** si la base no es válida (menos de 2 caracteres, **duplicados** o contienen `+`/`-`).
+- 🎯 `ft_putnbr` con `INT_MIN` → el caso que rompe el algoritmo si haces `n = -n`.
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [Problema INT_MIN (desbordamiento)](https://www.geeksforgeeks.org/why-negative-numbers-uint-min/)
+- [La Norma de 42](https://github.com/42Paris/norminette)

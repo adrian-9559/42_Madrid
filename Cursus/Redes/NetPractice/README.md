@@ -1,112 +1,81 @@
-*This project was created as part of the 42 curriculum by <adriescr>.*
+# 🎮 NetPractice — Redes (10 niveles de configuración)
 
-# NetPractice
+[![Nota](https://img.shields.io/badge/⭐_Nota-Aprobado-2ea44f)](./)
+[![Bloque](https://img.shields.io/badge/🔵_Redes-1/1-1f6feb)](../)
+[![Tipo](https://img.shields.io/badge/🛠️_Simulador-Web-6f42c1)](./)
 
-## Short description
-NetPractice is a repository of network exercises and labs to learn and test basic and advanced concepts (TCP/UDP sockets, ARP, ICMP, capture/pcap, sniffing, injection and packet handling, etc.). The goal is to provide self-contained exercises, utilities and technical notes to practice in a controlled environment and document results.
+---
 
-## Description
-- Objective: enable hands-on learning of networking concepts via incremental exercises and small projects.
-- Scope: exercises in C/C++ and Python, automation scripts, example pcap captures, and technical documentation.
-- Audience: 42 students, classmates, reviewers and anyone interested in networking.
+## 🧭 Índice
 
-## Instructions
-1. Clone the repository:
-	git clone <repo-url>
-	cd NetPractice
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Enunciado](#-enunciado)
+4. [🗂️ Estructura](#️-estructura)
+5. [🚀 Uso práctico](#-uso-práctico)
+6. [🧪 Verificación](#-verificación)
+7. [📚 Recursos](#-recursos)
 
-2. Build and install dependencies (Debian/Ubuntu):
-	sudo apt update
-	sudo apt install build-essential python3 python3-pip libpcap-dev tcpdump wireshark
-	pip3 install scapy
+---
 
-3. Build exercises with Make:
-	make -C ejercicios/<exercise>
+## 🌟 Introducción
 
-4. Run exercises:
-	- C/C++ programs:
-	  sudo ./ejercicios/tcp_server/bin/server
-	- Python scripts (sniffer example):
-	  sudo python3 ejercicios/sniffer/sniffer.py --interface eth0
+**NetPractice** es un proyecto "teórico-práctico" **sin código**: se resuelve en un **simulador web** de la intra de 42 e incluye **10 niveles** de configuración de redes (TCP/IP addressing, máscaras de subred, routing y switches). 🌐
 
-5. Training interface
-	- The project includes an interface to practice levels (if present in ejercicios/training).
-	- Run:
-	  ./run.sh
-	  or (if the script is in ejercicios/training):
-	  cd ejercicios/training
-	  ./run.sh
-	- Typical parameters:
-	  ./run.sh --level N        # start level N
-	  ./run.sh --list-levels    # list available levels
+Este repositorio guarda la **configuración final resuelta de cada nivel** en archivos `levelN.json` exportados desde el simulador, listos para mostrarse en evaluación.
 
-6. Export configurations
-	- Each level provides an option/utility to export the final configuration to a file (JSON/YAML/pcap).
-	- Generic example:
-	  ./export_config.sh --level N --output config_levelN.json
-	  or from the interface:
-	  ./run.sh --export --level N --out ../config_levelN.json
-	- Exported files must be placed at the repository root for submission.
+## 🎯 Objetivos
 
-## Requirements & submission
-- Recommended system: Linux.
-- Tools: gcc/g++, make, python3, libpcap, tcpdump, scapy, wireshark.
-- Privileges: some exercises require root access for capture/injection of packets.
-- Submission requirement: place 10 exported configuration files (one per level) in the repository root. Filenames should be descriptive, for example:
-  config_level01.json config_level02.json ... config_level10.json
-- Ensure each exercise includes a README with reproducible steps and evidence (screenshots, logs, pcap).
+- 🧮 Calcular **máscaras de subred**, direcciones de red, broadcast y rangos útiles.
+- 🚦 Configurar **rutas estáticas** y **default gateways**.
+- 🧩 Entender **switches** (segmentación por VLAN) y **routers** (encaminamiento entre redes).
+- ❌ Saber **por qué falla** una comunicación (lookup table, IP fuera de rango, ruta inexistente).
 
-## Typical structure
-- README.md — this root file (42 style).
-- ejercicios/ — subfolders per exercise (tcp_server, udp_chat, arp_spoof, pcap_capture…).
-- scripts/ — utilities and helpers (run.sh, export_config.sh, setup.sh).
-- docs/ — notes and references.
-- tests/ — automated tests (if applicable).
-- config_levelXX.* — exported configuration files (must be placed in the root for submission).
+## 📄 Enunciado
 
-## Best practices
-- Run tests in controlled environments (VMs or lab networks).
-- Do not interfere with third-party networks without permission.
-- Version changes and document each exercise.
-- Include clear instructions to reproduce results.
+El simulador de 42 consta de **10 niveles** de dificultad creciente. Cada nivel presenta una topología (interfaces, IPs, máscaras, switches, routers) y pide que los hosts se comuniquen:
 
-## Resources
-- Classic documentation and readings:
-  - RFC 791, RFC 792 (IP and ICMP)
-  - RFC 793 (TCP), RFC 768 (UDP)
-  - Material on ARP and Ethernet (IEEE 802.3)
-  - libpcap/pcap manpages and tutorials
-  - Scapy documentation: https://scapy.net
-  - Wireshark User Guide: https://www.wireshark.org/docs/
-  - Articles and tutorials on sniffing, packet injection and network forensics
-- Network concepts covered (detailed in exercise docs):
-  - TCP/IP addressing, subnet masks and network calculations
-  - Default gateway and basic routing
-  - Link-layer and network-layer devices: switches and routers
-  - OSI layers and mapping to real protocols (Ethernet, IP, TCP/UDP, ARP, ICMP)
-  - Packet capture and analysis (pcap), BPF filtering, reconstructing streams
-- Use of AI in this project
-  - Tool: GitHub Copilot (autocomplete and snippet suggestions).
-  - How it was used: suggested README structure, example commands, helper script templates and documentation; texts were reviewed and adapted by the human author.
-  - What the AI did not produce: complete exercises were not auto-generated without review; all final code and configurations were reviewed, adapted and tested by the human author.
+- ✍️ Rellenar IPs y máscaras correctas.
+- 🚏 Añadir **rutas** donde haga falta.
+- 📡 Activar/desactivar interfaces y comprobar la conectividad con el simulador.
+- ✅ Al final, **Export** de cada nivel resuelto.
 
-## Examples
-- Build and run example TCP server:
-  make -C ejercicios/tcp_server
-  sudo ./ejercicios/tcp_server/bin/server
-- Capture traffic to a pcap and analyze with Wireshark:
-  sudo tcpdump -i eth0 -w capture.pcap
-  wireshark capture.pcap
+## 🗂️ Estructura
 
-## Contributing
-1. Fork the repository.
-2. Create a branch feature/my-exercise.
-3. Add the exercise with README, Makefile and examples.
-4. Open a pull request describing the goal and steps to reproduce.
+```
+NetPractice/
+├── README.md                  # 📘 Este documento
+├── level01.json  …  level10.json   # ✅ Configuraciones resueltas (1–10)
+└── …
+```
 
-## License
-Project licensed under MIT. Add a LICENSE file if not present.
+> 💡 La entrega oficial de 42 pide, además, **capturas de pantalla** de los niveles resueltos o demostración en vivo. Los JSON son el "estado" reproducible de cada nivel.
 
-## Contact
-- Open issues in the repository for bugs or improvements.
-- For submission review, include the 10 exported configuration files in the root and a README per exercise with verification steps.
+## 🚀 Uso práctico
+
+1. Entra en la intra de 42 → proyecto **NetPractice** → "Web Interface".
+2. Resuelve los niveles **con el simulador** (mira la leyenda del nivel: IPs de red, máscaras, gateways).
+3. Usa **`Export`** de cada nivel tras validarlo → guarda el JSON en el repo (`level01.json`… `level10.json`).
+4. Para repasar un nivel sin el simulador, revisa el JSON: contiene las IPs, máscaras y rutas tal cual las configuraste.
+
+### Consejos rápidos por nivel
+
+- 🔢 **Cálculo de rango útil**: `hosts = 2^(32-máscara) - 2`.
+- 🚏 Si quieres que `R1` alcance una red remota, R1 necesita una ruta a esa red *via* la IP del router siguiente en su propia subred.
+- 🌀 No uses una IP **dentro de una subred equivocada**: los switches solo encaminan en su propia VLAN.
+
+## 🧪 Verificación
+
+| Criterio | Detalle |
+|---|---|
+| ✅ **Simulador** | Cada nivel debe quedar "OK" en el propio simulador |
+| 📄 **Archivos** | `ls level*.json` → deben existir los 10 |
+| 🧠 **Explicación** | En evaluación te pedirán justificar cada decisión (máscara, ruta, gateway) |
+| 🖥️ **Demo en vivo** | Cargar un nivel y arreglar un fallo en directo |
+
+## 📚 Recursos
+
+- [Subject oficial NetPractice](https://cdn.intra.42.fr/pdf/pdf/65344/en.subject.pdf)
+- [Cursus 42 — Índice](../../README.md)
+- [RFC 1918 · Direccionamiento privado](https://datatracker.ietf.org/doc/html/rfc1918)
+- [Subnet Cheat Sheet](https://www.freecodecamp.org/news/subnet-cheat-sheet-24-subnet-mask-ip-adressing-and-subnetting-guide/)

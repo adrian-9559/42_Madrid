@@ -1,47 +1,61 @@
-# C Piscine - C 05
+# 🎮 C Piscine · C 05 — Matemáticas y recursividad
 
-## Introducción
-Este módulo está dedicado a las matemáticas y la recursividad en C. Implementarás funciones factoriales, potencias, la sucesión de Fibonacci, raíces cuadradas enteras y detección de números primos. Estos ejercicios desarrollan el pensamiento algorítmico y la capacidad de traducir fórmulas matemáticas a código.
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_C_05-Recursividad-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en tus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrás un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex00: ft_iterative_factorial](./ex00/ft_iterative_factorial.c)
-Escribe una función que devuelva el factorial de un número de forma iterativa.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Ejercicios](#-ejercicios)
+4. [🧪 Verificación](#-verificación)
+5. [📚 Recursos](#-recursos)
 
-### [ex01: ft_recursive_factorial](./ex01/ft_recursive_factorial.c)
-Escribe una función que devuelva el factorial de un número de forma recursiva.
+---
 
-### [ex02: ft_iterative_power](./ex02/ft_iterative_power.c)
-Escribe una función que devuelva una potencia de forma iterativa.
+## 🌟 Introducción
 
-### [ex03: ft_recursive_power](./ex03/ft_recursive_power.c)
-Escribe una función que devuelva una potencia de forma recursiva.
+Módulo de **matemáticas y recursividad**: factorials, potencias, **Fibonacci**, raíces cuadradas enteras y números primos. 🧮
 
-### [ex04: ft_fibonacci](./ex04/ft_fibonacci.c)
-Escribe una función que devuelva el n-ésimo número de Fibonacci.
+Aquí se entrena el **pensamiento algorítmico**: traducir una fórmula matemática a código, tanto **iterativo** como **recursivo**.
 
-### [ex05: ft_sqrt](./ex05/ft_sqrt.c)
-Escribe una función que devuelva la raíz cuadrada entera de un número.
+## 🎯 Objetivos
 
-### [ex06: ft_is_prime](./ex06/ft_is_prime.c)
-Escribe una función que determine si un número es primo.
+- 🔁 Implementar lo mismo de forma **iterativa y recursiva** (factorial, potencias).
+- 🔢 Series y sucesiones (Fibonacci).
+- √ Raíz cuadrada **entera** sin float.
+- 🧬 Comprobar/detectar números primos (divisibilidad).
 
-### [ex07: ft_find_next_prime](./ex07/ft_find_next_prime.c)
-Escribe una función que devuelva el siguiente número primo.
+## 📄 Ejercicios
+
+| # | Ejercicio | Enlace |
+|---|---|---|
+| ex00 | `ft_iterative_factorial` | [ver](./ex00/ft_iterative_factorial.c) |
+| ex01 | `ft_recursive_factorial` | [ver](./ex01/ft_recursive_factorial.c) |
+| ex02 | `ft_iterative_power` | [ver](./ex02/ft_iterative_power.c) |
+| ex03 | `ft_recursive_power` | [ver](./ex03/ft_recursive_power.c) |
+| ex04 | `ft_fibonacci` · n-ésimo núm. Fibonacci | [ver](./ex04/ft_fibonacci.c) |
+| ex05 | `ft_sqrt` · raíz entera | [ver](./ex05/ft_sqrt.c) |
+| ex06 | `ft_is_prime` · ¿primo? | [ver](./ex06/ft_is_prime.c) |
+| ex07 | `ft_find_next_prime` · siguiente primo | [ver](./ex07/ft_find_next_prime.c) |
+
+## 🧪 Verificación
+
+| Herramienta | Comandos |
+|---|---|
+| **Moulinette + peers** | Corrección automática y entre compañeros |
+| **norminette** | `norminette *.c` |
+| **Compilación** | `cc -Wall -Wextra -Werror` |
+
+💡 VIP:
+- ❌ Valores de retorno en casos inválidos: factorial/potencia de **negativos → 0**; `ft_fibonacci(0) = 0`, `fib(1) = 1`, **negativo → -1**; `ft_sqrt` de no cuadrado perfecto → **0**.
+- 🧠 `ft_find_next_prime` llama a `ft_is_prime` en bucle; en `INT_MAX` no hay siguiente primo → cuidado en evaluación con rangos grandes (usa `unsigned`/`long` internamente).
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [Sucesión de Fibonacci (Wikipedia)](https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci)
+- [La Norma de 42](https://github.com/42Paris/norminette)

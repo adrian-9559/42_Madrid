@@ -1,35 +1,57 @@
-# C Piscine - C 06
+# 🎮 C Piscine · C 06 — Argumentos de línea de comandos
 
-## Introducción
-Este módulo introduce los argumentos de línea de comandos en C. Aprenderás a acceder a los parámetros pasados a un programa (argc y argv), imprimirlos, invertir su orden y ordenarlos alfabéticamente. Es la puerta de entrada a programas que aceptan entrada del usuario desde el terminal.
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_C_06-argc_argv-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en tus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrás un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex00: ft_print_program_name](./ex00/ft_print_program_name.c)
-Escribe un programa que imprima su propio nombre.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Ejercicios](#-ejercicios)
+4. [🧪 Verificación](#-verificación)
+5. [📚 Recursos](#-recursos)
 
-### [ex01: ft_print_params](./ex01/ft_print_params.c)
-Escribe un programa que imprima los argumentos recibidos, uno por línea.
+---
 
-### [ex02: ft_rev_params](./ex02/ft_rev_params.c)
-Escribe un programa que imprima los argumentos en orden inverso.
+## 🌟 Introducción
 
-### [ex03: ft_sort_params](./ex03/ft_sort_params.c)
-Escribe un programa que imprima los argumentos ordenados alfabéticamente.
+Este módulo introduce los **argumentos de línea de comandos** (`argc` / `argv`): el momento en que los programas **reciben entrada del terminal**. ⌨️
+
+Ya no hay pruebas con una sola llamada: ahora tienes **`./prog arg1 arg2 …`** y hay que acceder bien al array de strings.
+
+## 🎯 Objetivos
+
+- 🧮 Entender `argc` (número de argumentos) y `argv` (array de strings).
+- 🖨️ Imprimir argumentos, en orden normal e inverso.
+- 🔤 Ordenar strings **alfabéticamente** (comparando con `ft_strcmp` del C 03).
+
+## 📄 Ejercicios
+
+| # | Ejercicio | Enlace |
+|---|---|---|
+| ex00 | `ft_print_program_name` · imprime su propio nombre | [ver](./ex00/ft_print_program_name.c) |
+| ex01 | `ft_print_params` · imprime los argumentos, uno por línea | [ver](./ex01/ft_print_params.c) |
+| ex02 | `ft_rev_params` · argumentos en orden inverso | [ver](./ex02/ft_rev_params.c) |
+| ex03 | `ft_sort_params` · argumentos ordenados alfabéticamente | [ver](./ex03/ft_sort_params.c) |
+
+## 🧪 Verificación
+
+| Herramienta | Comandos |
+|---|---|
+| **Moulinette + peers** | Corrección automática y entre compañeros |
+| **norminette** | `norminette *.c` |
+| **Compilación** | `cc -Wall -Wextra -Werror` |
+
+💡 VIP:
+- 🎯 **ex00**: imprime `argv[0]` **sin** la ruta `./` (solo el nombre). La catalogación con `./prog` imprime `prog`.
+- 🖨️ **ex01/02/03**: se usa un **bucle `while (i < argc)`** a partir de `i = 1`; cada línea acaba en `\n` (`write` + newline, ¡sin `printf`!).
+- 🔤 `ft_sort_params` usa **burbuja/inserción** con `ft_strcmp` y un **swap de punteros a char** (`char *tmp = argv[i]`).
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [C argc/argv (tutorial)](https://www.geeksforgeeks.org/command-line-arguments-in-c-cpp/)
+- [La Norma de 42](https://github.com/42Paris/norminette)
