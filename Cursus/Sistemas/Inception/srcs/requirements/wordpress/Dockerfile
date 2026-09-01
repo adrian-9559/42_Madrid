@@ -15,7 +15,10 @@ RUN apk update && apk add --no-cache \
 	curl \
 	tar \
 	gzip \
-	&& ln -s /usr/bin/php82 /usr/bin/php
+	&& ln -s /usr/bin/php82 /usr/bin/php \
+	&& ln -s /etc/php82/conf.d-available/mysqlnd.ini /etc/php82/conf.d/mysqlnd.ini \
+	&& ln -s /etc/php82/conf.d-available/mysqli.ini /etc/php82/conf.d/mysqli.ini \
+	&& ln -s /etc/php82/conf.d-available/pdo_mysql.ini /etc/php82/conf.d/pdo_mysql.ini
 
 # Set PHP CLI memory limit to 256M for wp-cli
 RUN echo "memory_limit = 256M" > /etc/php82/conf.d/99-memory-limit.ini
