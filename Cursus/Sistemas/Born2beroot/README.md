@@ -69,30 +69,18 @@ Selecciona la **versión estable** y arquitectura adecuada (`amd64`/`x86_64`).
 
 > ⚠️ Si no tienes VirtualBox: [Descarga 🔎](https://www.virtualbox.org/wiki/Downloads)
 
-1. **Crear una máquina virtual** → botón `New / Nueva`.
-    <div>
-        <img src="./imagenes/BotonNew.png">
-    </div>
+1. **Crear una máquina virtual** → botón `New / Nueva`. Pon nombre a la MV y elige el tipo de sistema operativo (**Linux / Debian 64-bit**).
 
-2. **Opciones principales** → nombre de la MV y **selección de la ISO** descargada.
-    <div>
-        <img src="./imagenes/VentanaCreacionMaquinas.png">
-    </div>
+2. **Selección de la ISO** → en la ventana de creación, adjunta la imagen **Debian** descargada en el paso anterior.
 
 3. **Hardware** → indica la **RAM** y el **número de núcleos**.
     <div>
         <img src="./imagenes/VentanaSeleccionRAMCPU.png">
     </div>
 
-4. **Disco** → formato *Virtual Hard Disk* con **10 GB** de almacenamiento.
-    <div>
-        <img src="./imagenes/VentanaSeleccionDiscoDuro.png">
-    </div>
+4. **Disco duro virtual** → crea un disco tipo **VDI**, de tamaño reservado y con al menos **10 GB** de espacio (el sujeto exige que la MV tenga esta capacidad).
 
-5. **Resumen** → revisa la información final de la máquina virtual.
-    <div>
-        <img src="./imagenes/VentanaInformacionMaquinaVirtual.png">
-    </div>
+5. **Resumen** → revisa la configuración final y pulsa **Finish** para iniciar la instalación.
 
 ### 3. Instalación del sistema operativo
 

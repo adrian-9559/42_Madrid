@@ -1,39 +1,63 @@
-# C_Piscine_Shell_01
+# 🎮 C Piscine · Shell 01 — Scripting de shell
 
-## Introducción
-En este módulo avanzarás en el shell scripting de Unix. Aprenderás a escribir scripts para imprimir grupos de usuario, buscar archivos, contar entradas en el directorio, obtener direcciones MAC, manejar nombres de archivo con caracteres especiales y procesar saltos de línea. Estos ejercicios automatizan tareas comunes del sistema.
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_Shell_01-Scripting-2ea44f)](./)
+[![Shell](https://img.shields.io/badge/🛠️_bash/sh-3E3E3E)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- Los ejercicios shell se deben ejecutar con /bin/sh.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
-- Tu manual de referencia se llama Google / man / Internet / ...
-- Lee detenidamente los ejemplos. Podrían exigir cosas que no se especifican necesariamente en los enunciados...
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex01: print_groups.sh](./ex01/print_groups.sh)
-Escribe un script que muestre los grupos de un usuario.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Ejercicios](#-ejercicios)
+4. [🧪 Verificación](#-verificación)
+5. [📚 Recursos](#-recursos)
 
-### [ex02: find_sh.sh](./ex02/find_sh.sh)
-Escribe un script que busque archivos .sh y muestre solo su nombre sin extensión.
+---
 
-### [ex03: count_files.sh](./ex03/count_files.sh)
-Escribe un script que cuente el número de archivos y directorios.
+## 🌟 Introducción
 
-### [ex04: MAC.sh](./ex04/MAC.sh)
-Escribe un script que muestre las direcciones MAC de la máquina.
+Segundo módulo de shell, ya en **modo scripting**: escribir scripts que automatizan tareas del sistema, con `$(...)`, `find`, `grep`, `cut` y manejo de **caracteres especiales** en nombres de archivo. 🐚
 
-### [ex05: `"\?$*'MaRViN'*$?\"`](./ex05/)
-Escribe un script que cree un archivo con un nombre literal que contiene caracteres especiales.
+Incluye el mítico ejercicio de crear un archivo llamado `"\?$*'MaRViN'*$?\"`. 💀
 
-### [ex06: skip.sh](./ex06/skip.sh)
-Escribe un script que muestre el output de ls -l saltando líneas pares.
+## 🎯 Objetivos
+
+- ⌨️ Escribir scripts ejecutables (`#!/bin/sh`).
+- 🔍 `find` con fusión de archivos (`-name`, `-type`).
+- 🧮 Contar y filtrar con `wc`, `grep`, `cut`.
+- 🧾 Obtener información del sistema (`id -Gn`, `ip`/`ifconfig` para MAC).
+- ✨ Manejar **caracteres especiales** en nombres de archivo (`\`, `"`, `*`, `?`, `$`).
+
+## 📄 Ejercicios
+
+| # | Ejercicio | Enlace |
+|---|---|---|
+| ex01 | `print_groups.sh` · grupos de un usuario (`id -Gn`) | [ver](./ex01/print_groups.sh) |
+| ex02 | `find_sh.sh` · nombres de `.sh` sin extensión | [ver](./ex02/find_sh.sh) |
+| ex03 | `count_files.sh` · cuenta archivos y directorios | [ver](./ex03/count_files.sh) |
+| ex04 | `MAC.sh` · direcciones MAC de la máquina | [ver](./ex04/MAC.sh) |
+| ex05 | `"\?$*'MaRViN'*$?\"` · crea un archivo con nombre literal | [ver](./ex05/) |
+| ex06 | `skip.sh` · `ls -l` saltando líneas pares | [ver](./ex06/skip.sh) |
+
+## 🧪 Verificación
+
+| Herramienta | Criterio |
+|---|---|
+| **Moulinette** | Ejecuta cada script y compara la salida exacta |
+| **Validación manual** | `./ex05/` → `ls` debe mostrar el archivo con el nombre exacto |
+| **Permisos** | Los scripts deben ser **ejecutables** (`chmod +x`) |
+| **`/bin/sh`** | Debe funcionar con `sh` (los ejercicios se hacen con `/bin/sh`) |
+
+💡 VIP:
+- 👥 **ex01**: `id -Gn $FT_USER` — los grupos separados **solo por comas sin espacios** (`$FT_USER` por variable).
+- 🌀 **ex02**: `find . -name "*.sh" -exec basename {} .sh \;` → nombres sin extensión.
+- 🎨 **ex05**: crear el archivo escapando los caracteres especiales: `touch "\"\\?\$*'MaRViN'*\$?\\\""`
+- ➖ **ex06**: `ls -l | awk 'NR%2==1'` (o `sed -n 'p;n'`) imprime la primera, tercera…
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [Guía de scripting bash](https://mywiki.wooledge.org/BashGuide)
+- [Explica comandos shell](https://explainshell.com/)

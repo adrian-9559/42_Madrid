@@ -98,7 +98,6 @@ Usa `cc -Wall -Wextra -Werror -pthread`.
 | **philosophers-visualizer** | https://nafuka11.github.io/philosophers-visualizer/ | carga tu `philo` para verlo en vivo |
 | **valgrind** | parte del sistema | `valgrind --tool=helgrind ./philo 5 800 200 200` · `valgrind --tool=drd` |
 | **norminette** | `pip install norminette` | `norminette philo/` |
-```
 
 💡 Consejos clave:
 - ⏱️ Los timestamps y "death check" deben usar **monotonic clock** (`gettimeofday` si lo pide el subject).

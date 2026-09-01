@@ -1,38 +1,90 @@
-# C_Piscine_Rush_00
+# 🎮 C Piscine · Rush 00 — Rectángulos en ASCII
 
-## Introducción
-El primer rush consiste en implementar funciones que impriman rectángulos en la consola utilizando caracteres ASCII. Cada función dibuja un rectángulo con bordes y esquinas distintas. Es un ejercicio de lógica con bucles anidados y manejo de casos especiales.
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_Rush_00-Grupal-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en tus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrás un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex00: rush00 - rush04](./ex00/)
-Escribe las funciones rush00, rush01, rush02, rush03 y rush04 que dibujen rectángulos con diferentes estilos.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Enunciado](#-enunciado)
+4. [🏗️ Estructura](#️-estructura)
+5. [🛠️ Compilación](#️-compilación)
+6. [🚀 Uso](#-uso)
+7. [🧪 Verificación](#-verificación)
+8. [📚 Recursos](#-recursos)
 
-### [ex01: rush01 individual](./ex01/)
-Función rush01 con su propio main.
+---
 
-### [ex02: rush02 individual](./ex02/)
-Función rush02 con su propio main.
+## 🌟 Introducción
 
-### [ex03: rush03 individual](./ex03/)
-Función rush03 con su propio main.
+Primer **Rush** de la piscina y primer **trabajo en equipo**. 👥 Se trata de imprimir **rectángulos** en la consola con caracteres ASCII, con esquinas, bordes y rellenos distintos según el `rush` (00–04).
 
-### [ex04: rush04 individual](./ex04/)
-Función rush04 con su propio main.
+Es un ejercicio de **bucles anidados** y **casos especiales** (dimensiones 1×1, 1×N, N×1).
+
+## 🎯 Objetivos
+
+- 🔁 Dominar **bucles anidados** (`for`/`while`) para pintar filas y columnas.
+- 🧠 Manejar los **casos esquina/lateral** con condicionales.
+- 🤝 Trabajar en **pareja/trío** y resolver un solo enunciado entre varios.
+- ✍️ Respetar la Norma y el porte (`write`).
+
+## 📄 Enunciado
+
+| Carácter | Esquina sup. izq. | Esquina sup. der. | Esq. inf. izq. | Esq. inf. der. | Lado horiz. | Lado vert. | Relleno |
+|---|---|---|---|---|---|---|---|
+| `rush00` | `o` | `o` | `o` | `o` | `-` | `|` | espacio |
+| `rush01` | `/` | `\` | `\` | `/` | `*` | `*` | espacio |
+| `rush02` | `A` | `A` | `C` | `C` | `B` | `B` | espacio |
+| `rush03` | `A` | `C` | `A` | `C` | `B` | `B` | espacio |
+| `rush04` | `A` | `C` | `C` | `A` | `B` | `B` | espacio |
+
+## 🏗️ Estructura
+
+```
+C_Piscine_Rush_00/
+├── ex00/   # rush00 – rush04 con todos los archivos
+├── ex01/   # rush01 individual con su propio main
+├── ex02/   # rush02 individual con su propio main
+├── ex03/   # rush03 individual con su propio main
+└── ex04/   # rush04 individual con su propio main
+```
+
+## 🛠️ Compilación
+
+```bash
+cd ex00
+cc -Wall -Wextra -Werror -o rush00 *.c
+```
+
+## 🚀 Uso
+
+```bash
+./rush00 5 3
+# o----o
+# |    |
+# o----o
+
+./rush01 1 1
+# /
+```
+
+## 🧪 Verificación
+
+| Herramienta | Criterio |
+|---|---|
+| **Moulinette** | Compila con `-Wall -Wextra -Werror` y compara el dibujo exacto |
+| **Casos borde** | `1x1`, `1xN`, `Nx1`, `5x3`, dimensiones negativas/0 |
+| **norminette** | `norminette *.c` — un ejercicio con fallo de norma cae entero |
+| **Entrega** | En un rush se puntúa **el trabajo del equipo**: nadie sabe quién hizo qué |
+
+💡 Consejos: pinta siempre **columna por columna** con el carácter de esquina/lateral según coincida `x` en `{0, width-1}` o `y` en `{0, height-1}`.
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [La Norma de 42](https://github.com/42Paris/norminette)
+- [Rush04 · ejemplo interactivo](https://42quebec.github.io/rush04/)

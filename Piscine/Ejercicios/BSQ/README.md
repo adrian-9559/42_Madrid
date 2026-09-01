@@ -1,51 +1,38 @@
-# BSQ
-## Introducción 🚀
+# 🎮 BSQ — Biggest Square (el cuadrado más grande)
 
-El proyecto **BSQ** (Biggest Square) es un desafío de programación diseñado para poner a prueba tus habilidades en el diseño de algoritmos eficientes, la manipulación de estructuras de datos y la optimización de código. Este ejercicio es una excelente oportunidad para mejorar tu capacidad de análisis y resolución de problemas, habilidades esenciales en el desarrollo de software. 💻✨
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_BSQ-Proyecto_final-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-El objetivo principal del proyecto es desarrollar un programa que sea capaz de analizar una matriz rectangular de caracteres y encontrar el cuadrado más grande posible que cumpla con ciertas condiciones. Este cuadrado debe estar compuesto únicamente por espacios vacíos, evitando obstáculos, y debe ser representado en la salida con un carácter específico. 🟦❌
+---
 
-El proyecto no solo evalúa tu capacidad para implementar una solución funcional, sino también tu habilidad para manejar entradas y salidas de datos, gestionar errores y optimizar el rendimiento del programa. Además, fomenta el uso de buenas prácticas de programación, como la modularidad, la legibilidad del código y la gestión eficiente de recursos. 🛠️📈
+## 🧭 Índice
 
-## Instrucciones 📋
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Enunciado](#-enunciado)
+4. [🧪 Verificación](#-verificación)
+5. [✅ Resultado](#-resultado)
+6. [📚 Recursos](#-recursos)
 
-### 1. Entrada del programa 📝
+---
 
-El programa debe recibir como entrada un archivo de texto que contenga una matriz rectangular de caracteres. Este archivo debe cumplir con el siguiente formato:
+## 🌟 Introducción
 
-- La primera línea del archivo especifica:
-    - El número total de filas de la matriz.
-    - Los caracteres utilizados para representar:
-        - Espacios vacíos.
-        - Obstáculos.
-        - El cuadrado encontrado.
-- Las líneas siguientes contienen la matriz, donde cada carácter representa una celda. Los caracteres deben ser consistentes con los especificados en la primera línea.
+**BSQ** (Biggest Square) es el **reto final de la piscina**: encontrar el **cuadrado más grande** dentro de una matriz rectangular llena de espacios vacíos y obstáculos. 📦
 
-Ejemplo de archivo de entrada:
+No solo hay que encontrar el cuadrado: hay que hacerlo **eficientemente** (el algoritmo de fuerza bruta falla con mapas grandes) y gestionar la **entrada**, los **errores** y la **memoria** con rigor.
 
-```
-9.ox
-.........
-...o.....
-....o....
-.........
-.........
-.........
-.........
-.........
-.........
-```
+## 🎯 Objetivos
 
-En este ejemplo:
-- `.` representa un espacio vacío.
-- `o` representa un obstáculo.
-- `x` se usará para marcar el cuadrado más grande encontrado.
+- 📏 Diseñar un algoritmo **O(n·m)** (programación dinámica) en vez de O(n²·m²).
+- 📄 Leer archivos de entrada y detectar formatos inválidos.
+- 💾 Gestionar memoria dinámica sin leaks.
+- 🧪 Probar con mapas enormes (hasta cientos de miles de líneas).
 
-### 2. Salida del programa 🖨️
+## 📄 Enunciado
 
-El programa debe imprimir la misma matriz recibida como entrada, pero con el cuadrado más grande posible marcado con el carácter especificado en la primera línea del archivo. Si hay múltiples cuadrados del mismo tamaño, se puede marcar cualquiera de ellos.
-
-Ejemplo de salida para el archivo anterior:
+El programa recibe la **ruta de un archivo de mapa**:
 
 ```
 9.ox
@@ -53,6 +40,21 @@ Ejemplo de salida para el archivo anterior:
 ...o.....
 ....o....
 .........
+.........
+.........
+.........
+.........
+.........
+```
+
+- Primera línea: **nº de filas**, luego los 3 caracteres para **vacío** `.`, **obstáculo** `o` y **resultado** `x`.
+- Hay que marcar el **mayor cuadrado** de vacíos con el tercer carácter y **imprimir el mapa resultante**.
+
+```
+.........
+...o.....
+....o....
+.........
 ...xxx...
 ...xxx...
 ...xxx...
@@ -60,73 +62,39 @@ Ejemplo de salida para el archivo anterior:
 .........
 ```
 
-### 3. Restricciones ⚠️
+### Restricciones
 
-Para garantizar el correcto funcionamiento del programa, se deben cumplir las siguientes restricciones:
+- 📏 El mapa debe ser **rectangular** (todas las filas con la misma longitud).
+- 🚨 Errores: archivo inexistente/inaccesible, formato incorrecto, caracteres inválidos → `map error`.
+- ⏱️ Solución lo más **eficiente** posible para matrices grandes.
 
-- **Formato válido**: La matriz debe ser rectangular, es decir, todas las filas deben tener la misma longitud.
-- **Gestión de errores**: El programa debe manejar adecuadamente los errores de entrada, como:
-    - Archivos inexistentes o inaccesibles.
-    - Formato incorrecto en el archivo.
-    - Caracteres no válidos en la matriz.
-- **Eficiencia**: La solución debe ser lo más eficiente posible, especialmente para matrices grandes. 🕒💡
+## 🧪 Verificación
 
-### 4. Ejecución del programa ▶️
+| Herramienta | Criterio / comando |
+|---|---|
+| **Makefile** | `make` → genera el ejecutable `bsq` |
+| **Ejecución** | `./bsq mapa.txt` o `./bsq mapa1 mapa2 …` (varios mapas) |
+| **Mapas de prueba** | Contrasta con generadores (+ desordenados) |
+| **Casos borde** | Sin `\n` final, mapas de 1 fila/1 columna, todos obstáculos, todo vacío |
+| **Errores** | `map error` (catcher de la Moulinette) ante cualquier inconsistencia |
+| **norminette** | `norminette *.c *.h` |
+| **valgrind** | Sin leaks |
 
-Para compilar y ejecutar el programa, es necesario contar con un archivo `Makefile` que automatice el proceso de compilación. Asegúrate de que tu entorno de desarrollo esté configurado correctamente y que todas las dependencias necesarias estén instaladas. ⚙️
+💡 Algoritmo recomendado (DP):
+1. 🧮 Recorre la matriz; `dp[i][j] = min(arriba, izquierda, diagonal↑↖) + 1` si celda vacía.
+2. 📍 Guarda el mayor valor y su posición final.
+3. 🔍 Con ese tamaño, marca el cuadrado `x`.
 
-Pasos generales para la ejecución:
+## ✅ Resultado
 
-1. Asegúrate de que el archivo `Makefile` esté en el mismo directorio que el código fuente del programa.
-2. Compila el programa ejecutando el comando `make` en la terminal. Esto generará el ejecutable según las reglas definidas en el `Makefile`.
-3. Ejecuta el programa desde la línea de comandos, proporcionando el archivo de entrada como argumento. Por ejemplo:
-    ```
-    ./bsq input_file.txt
-    ```
-4. Observa la salida en la terminal o en un archivo de salida, según lo especificado en el proyecto. 🖥️
+| Resultado | Detalle |
+|---|---|
+| 🟡 **Incompleto** | La lectura del archivo y la representación de la matriz funcionaron, pero el algoritmo de búsqueda **falló en mapas con múltiples obstáculos o tamaños irregulares**; gestión de errores y rendimiento también incompletos |
 
-El uso de un `Makefile` facilita la compilación y asegura que todos los archivos necesarios se compilen correctamente, además de permitir una limpieza sencilla de los archivos generados con el comando `make clean`. 🧹
+> 📝 Esta era la **segunda oportunidad** del proyecto: aunque no se completó, sirvió para reflexionar sobre la importancia de **planificar y probar exhaustivamente los algoritmos antes de implementarlos**, y la necesidad de **validar las entradas** antes de procesarlas. Cada error es una lección. 🌟
 
-### 5. Consejos y recomendaciones 💡
+## 📚 Recursos
 
-- **Divide y vencerás**: Divide el problema en subproblemas más pequeños y resuélvelos de manera incremental. 🧩
-- **Pruebas exhaustivas**: Crea múltiples casos de prueba, incluyendo matrices pequeñas, grandes, con muchos obstáculos y sin obstáculos. 🧪
-- **Optimización**: Considera el uso de estructuras de datos y algoritmos eficientes para reducir el tiempo de ejecución y el uso de memoria. 🚀
-- **Documentación**: Comenta tu código para facilitar su comprensión y mantenimiento. 📝
-
-¡Buena suerte y diviértete resolviendo este emocionante desafío! Recuerda que cada error es una oportunidad para aprender y mejorar. 🌟
-
-## Resultados del Proyecto 📊
-
-A pesar de los esfuerzos realizados, el proyecto **BSQ** no logró cumplir con todos los requisitos establecidos. Aunque se implementaron varias funcionalidades clave, como la lectura del archivo de entrada y la representación de la matriz, el programa no consiguió identificar correctamente el cuadrado más grande en todos los casos de prueba. ❌
-
-### Problemas Identificados 🛑
-
-1. **Errores en la lógica del algoritmo**: 
-    - La implementación del algoritmo para encontrar el cuadrado más grande no funcionó correctamente en matrices con múltiples obstáculos o tamaños irregulares.
-    - En algunos casos, el programa marcaba cuadrados incorrectos o no encontraba ninguno.
-
-2. **Gestión de errores incompleta**:
-    - No se manejaron adecuadamente ciertos errores de entrada, como archivos con formato incorrecto o caracteres no válidos.
-
-3. **Falta de optimización**:
-    - El rendimiento del programa fue insuficiente para matrices grandes, lo que resultó en tiempos de ejecución elevados. 🕒
-
-### Lecciones Aprendidas 📚
-
-Aunque el proyecto no se completó con éxito, fue una experiencia valiosa que permitió aprender y mejorar en varios aspectos:
-
-- La importancia de planificar y probar exhaustivamente los algoritmos antes de implementarlos.
-- La necesidad de manejar adecuadamente los errores y validar las entradas del programa.
-- La utilidad de dividir el problema en partes más pequeñas y abordarlas de manera incremental.
-
-### Próximos Pasos 🔜
-
-Para mejorar el proyecto en el futuro, se podrían considerar las siguientes acciones:
-
-- Revisar y depurar la lógica del algoritmo para garantizar que funcione correctamente en todos los casos.
-- Implementar pruebas unitarias y casos de prueba más variados para identificar errores antes. 🧪
-- Optimizar el código para mejorar el rendimiento en matrices grandes. 🚀
-- Solicitar retroalimentación de compañeros o mentores para identificar áreas de mejora. 🤝
-
-Aunque el proyecto no se completó con éxito, el proceso fue una oportunidad para aprender y crecer como programador. ¡El siguiente desafío será una nueva oportunidad para aplicar lo aprendido y lograr mejores resultados! 🌟
+- [Piscine 42 — Índice](../../README.md)
+- [Problema del cuadrado máximo (DP)](https://www.geeksforgeeks.org/maximum-size-square-sub-matrix-with-all-1s/)
+- [Generador de mapas (gen.pl)](https://github.com/42-piscine/docker-test/tree/master/bsq)

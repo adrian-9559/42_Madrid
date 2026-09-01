@@ -1,26 +1,91 @@
-# C_Piscine_Rush_01
+# 🎮 C Piscine · Rush 01 — Skyline (Skyscrapers)
 
-## Introducción
-El segundo rush es un desafío de lógica: implementar un solucionador del juego **Skyline** (también conocido como Skyscrapers). Dada una cuadrícula y las vistas desde los cuatro lados, debes colocar números que cumplan las restricciones de visibilidad. Este ejercicio pone a prueba tus habilidades con backtracking, recursividad y trabajo en equipo.
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_Rush_01-Algoritmia-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en tus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrás un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex00: Skyline Solver](./ex00/)
-Implementa un programa que resuelva el puzzle Skyline a partir de las vistas de entrada.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Enunciado](#-enunciado)
+4. [🏗️ Estructura](#️-estructura)
+5. [🛠️ Compilación](#️-compilación)
+6. [🚀 Uso](#-uso)
+7. [🧪 Verificación](#-verificación)
+8. [📚 Recursos](#-recursos)
+
+---
+
+## 🌟 Introducción
+
+Segundo **Rush**: un reto de lógica pura — implementar un solucionador del juego **Skyline** (rascacielos). 🏙️
+
+Dada una cuadrícula y las "vistas" (cuántos edificios se ven desde cada lado), hay que colocar los números 1..N de forma que cada fila y columna sea una permutación **y** cumpla las restricciones de visibilidad.
+
+## 🎯 Objetivos
+
+- 🧠 Diseñar un algoritmo de **backtracking** con poda.
+- 🔁 Entender **recursividad** como backtracking natural.
+- 🧩 Validar restricciones de visibilidad (N-queens-style).
+- 🤝 Trabajo en equipo y reparto de tareas (4 vistas: left/right/up/down).
+
+## 📄 Enunciado
+
+Entrada (un solo argumento), p. ej. para una cuadrícula 4×4:
+
+```
+./skyline "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2"
+```
+
+Los **16 números** se interpretan como: vistas desde `col1..colN`, luego `row1..rowN` (lado izquierdo), después vistas desde la derecha/abajo. Salida: la cuadrícula resuelta, una fila por línea.
+
+## 🏗️ Estructura
+
+```
+C_Piscine_Rush_01/
+├── ex00/
+│   ├── main.c               # parseo de argv y lanzamiento
+│   ├── *.c / *.h            # backtracking, validate, print
+│   └── ...
+└── README.md
+```
+
+## 🛠️ Compilación
+
+```bash
+cd ex00
+make            # o: cc -Wall -Wextra -Werror -o skyline *.c
+```
+
+## 🚀 Uso
+
+```bash
+./skyline "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2"
+# 1 2 3 4
+# 2 3 4 1
+# 3 4 1 2
+# 4 1 2 3
+```
+
+## 🧪 Verificación
+
+| Herramienta | Criterio |
+|---|---|
+| **Moulinette** | Ejecuta con los argumentos oficiales y compara la salida exacta |
+| **Casos borde** | Entradas mal formadas → `Error\n`; sin solución → `Error\n`; varios argumentos → `Error\n` |
+| **norminette** | `norminette *.c *.h` |
+| **Entrega** | En el rush, **todos** son responsables del código entregado |
+
+💡 Consejos:
+- 🧵 La **representación**: `argv[1]` contiene `n^2*4` números de las 4 caras.
+- ✂️ **Poda temprana**: valida cada fila/columna al colocarla (no al final).
+- ⚡ Complejidad: para 4×4 es trivial, pero con 9×9 un backtracking tonto no acaba; prioriza el orden de inserción de filas.
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [Backtracking (Wikipedia)](https://es.wikipedia.org/wiki/Vuelta_atr%C3%A1s)
+- [Reglas del juego Skycrapers](https://www.krazydad.com/skyscrapers/)

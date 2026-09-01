@@ -1,35 +1,60 @@
-# C Piscine - C 07
+# 🎮 C Piscine · C 07 — Memoria dinámica (malloc)
 
-## Introducción
-Este módulo introduce la gestión de memoria dinámica en C. Aprenderás a usar malloc para reservar memoria en tiempo de ejecución, crear rangos de enteros, y concatenar múltiples cadenas. La memoria dinámica es esencial para escribir programas flexibles que se adapten a datos de tamaño variable.
+[![Piscina](https://img.shields.io/badge/🗓️_Piscina-42-1f6feb)](../../README.md)
+[![Módulo](https://img.shields.io/badge/📦_C_07-malloc-2ea44f)](./)
+[![Lenguaje](https://img.shields.io/badge/🛠️_C-98-orange)](./)
 
-## Instrucciones
-- Esta página será la única referencia: no te fíes de los rumores.
-- ¡Ten cuidado! Los enunciados pueden cambiar en cualquier momento.
-- Los ejercicios han sido ordenados con mucha precisión, del más sencillo al más complejo. En ningún caso se tendrá en cuenta un ejercicio complejo si no se ha conseguido realizar perfectamente un ejercicio más sencillo.
-- Asegúrate de que tus directorios y archivos tienen los permisos adecuados.
-- Debes respetar el procedimiento de entrega para todos tus ejercicios.
-- Tus compañeros de piscina se encargarán de corregir tus ejercicios.
-- Además de por tus compañeros, también serán corregidos por un programa que se llama la Moulinette.
-- La Moulinette es muy estricta a la hora de evaluar. Está completamente automatizada. Es imposible discutir con ella sobre tu nota. Por lo tanto, sé extremadamente riguroso para evitar cualquier sorpresa.
-- La Moulinette no tiene una mente muy abierta. No intenta comprender el código que no respeta la Norma. La Moulinette utiliza el programa norminette para comprobar La Norma en tus archivos. Entiende entonces que es estúpido entregar un código que no pase la norminette.
-- El uso de una función prohibida se considera una trampa. Cualquier trampa será sancionada con la nota -42.
-- Solamente hay que entregar una función main() si lo que se pide es un programa.
-- La Moulinette compila con los flags -Wall -Wextra -Werror y utiliza cc.
-- Si tu programa no compila, tendrás un 0.
-- No puedes dejar en tu directorio ningún archivo que no se haya indicado de forma explícita en los enunciados de los ejercicios.
-- ¿Tienes alguna pregunta? Pregunta a tu compañero de la derecha. Si no, prueba con tu compañero de la izquierda.
+---
 
-## Ejercicios
+## 🧭 Índice
 
-### [ex00: ft_strdup](./ex00/ft_strdup.c)
-Escribe una función que duplique una cadena usando malloc.
+1. [🌟 Introducción](#-introducción)
+2. [🎯 Objetivos](#-objetivos)
+3. [📄 Ejercicios](#-ejercicios)
+4. [🧪 Verificación](#-verificación)
+5. [📚 Recursos](#-recursos)
 
-### [ex01: ft_range](./ex01/ft_range.c)
-Escribe una función que devuelva un array de enteros con todos los valores entre dos límites.
+---
 
-### [ex02: ft_ultimate_range](./ex02/ft_ultimate_range.c)
-Escribe una función que devuelva un array de enteros con un rango, usando un puntero doble.
+## 🌟 Introducción
 
-### [ex03: ft_strjoin](./ex03/ft_strjoin.c)
-Escribe una función que concatene un array de cadenas en una sola, separándolas con un separador.
+Este módulo introduce la **memoria dinámica** con `malloc`: reservar memoria en tiempo de ejecución para datos de tamaño variable. 💾
+
+Es el primer (y crucial) contacto con `free`, el heap y la correcta gestión de la memoria que te perseguirá hasta la Libft. Aquí se suele abandonar a mucha gente… 😅
+
+## 🎯 Objetivos
+
+- 💾 Reservar y liberar memoria con `malloc` / `free`.
+- 🔄 Duplicar cadenas (`ft_strdup`).
+- ➗ Crear arrays de enteros con rangos (`ft_range`, `ft_ultimate_range`).
+- ➕ Concatenar un array de cadenas con separador (`ft_strjoin`).
+
+## 📄 Ejercicios
+
+| # | Ejercicio | Enlace |
+|---|---|---|
+| ex00 | `ft_strdup` · duplica una cadena con malloc | [ver](./ex00/ft_strdup.c) |
+| ex01 | `ft_range` · array con todos los valores entre dos límites | [ver](./ex01/ft_range.c) |
+| ex02 | `ft_ultimate_range` · rango con puntero doble | [ver](./ex02/ft_ultimate_range.c) |
+| ex03 | `ft_strjoin` · concatena array de cadenas con separador | [ver](./ex03/ft_strjoin.c) |
+
+## 🧪 Verificación
+
+| Herramienta | Comandos |
+|---|---|
+| **Moulinette + peers** | Corrección automática y entre compañeros |
+| **norminette** | `norminette *.c` |
+| **Compilación** | `cc -Wall -Wextra -Werror` |
+| **memoria** | `valgrind ./a.out` → **0 leaks, 0 errores** es obligatorio para pasar bien |
+
+💡 VIP:
+- 💾 `ft_strdup` copia **incluyendo el `\0`** (`len + 1`).
+- ➗ `ft_range(-5, 3)` devuelve `{-5,-4,-3,-2,-1,0,1,2}` (excluye `max`); si `min >= max` → `NULL`.
+- 📦 `ft_ultimate_range` devuelve **1** si OK, **-1** si malloc falla, y escribe el array en el puntero doble.
+- 🧵 `ft_strjoin` necesita **calcular la longitud total** antes de reservar (doble paso) para evitar `realloc`.
+
+## 📚 Recursos
+
+- [Piscine 42 — Índice](../../README.md)
+- [malloc y gestión de memoria](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
+- [La Norma de 42](https://github.com/42Paris/norminette)

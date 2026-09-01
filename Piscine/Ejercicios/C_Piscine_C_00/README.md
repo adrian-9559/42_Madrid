@@ -33,16 +33,16 @@ Es el "¡hola, mundo!" oficial de la piscina: a partir de aquí, **La Norma** y 
 
 | # | Ejercicio | Enlace |
 |---|---|---|
-| ex00 | `ft_putchar` · imprime un carácter | [ver](./ex00/README.md) |
-| ex01 | `ft_print_alphabet` · alfabeto en minúsculas | [ver](./ex01/README.md) |
-| ex02 | `ft_print_reverse_alphabet` · alfabeto inverso | [ver](./ex02/README.md) |
-| ex03 | `ft_print_numbers` · dígitos del 0 al 9 | [ver](./ex03/README.md) |
-| ex04 | `ft_is_negative` · ¿negativo? (N/P) | [ver](./ex04/README.md) |
-| ex05 | `ft_print_comb` · combinaciones de 3 dígitos | [ver](./ex05/README.md) |
-| ex06 | `ft_print_comb2` · combinaciones de 2 números de 2 dígitos | [ver](./ex06/README.md) |
-| ex07 | `ft_putnbr` · imprime cualquier entero | [ver](./ex07/README.md) |
+| ex00 | `ft_putchar` · imprime un carácter | [ft_purchar.c](./ex00/ft_purchar.c) |
+| ex01 | `ft_print_alphabet` · alfabeto en minúsculas | [ft_print_alphabet.c](./ex01/ft_print_alphabet.c) |
+| ex02 | `ft_print_reverse_alphabet` · alfabeto inverso | [ft_print_reverse_alphabet.c](./ex02/ft_print_reverse_alphabet.c) |
+| ex03 | `ft_print_numbers` · dígitos del 0 al 9 | [ft_print_numbers.c](./ex03/ft_print_numbers.c) |
+| ex04 | `ft_is_negative` · ¿negativo? (N/P) | [ft_is_negative.c](./ex04/ft_is_negative.c) |
+| ex05 | `ft_print_comb` · combinaciones de 3 dígitos | [ft_print_comb.c](./ex05/ft_print_comb.c) |
+| ex06 | `ft_print_comb2` · combinaciones de 2 números de 2 dígitos | [ft_print_comb2.c](./ex06/ft_print_comb2.c) |
+| ex07 | `ft_putnbr` · imprime cualquier entero | [ft_putnbr.c](./ex07/ft_putnbr.c) |
 
-📄 Enunciado en español: [es.subject.pdf](./es.subject.pdf)
+📄 Documentación de cada función (en español): [readmes_de_funciones](./readmes_de_funciones/)
 
 ## 🧪 Verificación
 
