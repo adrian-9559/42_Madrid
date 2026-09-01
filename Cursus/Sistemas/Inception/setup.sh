@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-USER_NAME="$(id -un)"
+USER_NAME="adriescr"
 DOMAIN="${USER_NAME}.42.fr"
 PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ENV_FILE="$PROJECT_DIR/srcs/.env"
