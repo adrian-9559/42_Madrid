@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# Validate required environment variables
+: "${MYSQL_DATABASE:?MYSQL_DATABASE is required}"
+: "${MYSQL_USER:?MYSQL_USER is required}"
+: "${MYSQL_PASSWORD:?MYSQL_PASSWORD is required}"
+: "${MYSQL_ROOT_PASSWORD:?MYSQL_ROOT_PASSWORD is required}"
+: "${WP_ADMIN_USER:?WP_ADMIN_USER is required}"
+: "${WP_ADMIN_PASSWORD:?WP_ADMIN_PASSWORD is required}"
+
 # Create run directory for mysqld socket
 mkdir -p /run/mysqld
 chown mysql:mysql /run/mysqld
