@@ -1,9 +1,5 @@
-all: setup
+all:
 	@docker compose -f srcs/docker-compose.yml up --build -d
-
-setup:
-	@chmod +x setup.sh
-	@./setup.sh
 
 up:
 	@docker compose -f srcs/docker-compose.yml up -d
@@ -29,4 +25,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all setup up down stop logs ps clean fclean re
+.PHONY: all up down stop logs ps clean fclean re
