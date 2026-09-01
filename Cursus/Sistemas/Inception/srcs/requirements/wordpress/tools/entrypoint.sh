@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+# Set PHP memory limit for wp-cli
+export WP_CLI_PHP_ARGS="-d memory_limit=256M"
+
 # Validate required environment variables
 : "${DOMAIN_NAME:?DOMAIN_NAME is required}"
 : "${MYSQL_DATABASE:?MYSQL_DATABASE is required}"
