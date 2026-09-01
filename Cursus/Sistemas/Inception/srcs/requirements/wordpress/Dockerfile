@@ -16,9 +16,11 @@ RUN apk update && apk add --no-cache \
 	tar \
 	gzip \
 	&& ln -s /usr/bin/php82 /usr/bin/php \
-	&& ln -s /etc/php82/conf.d-available/mysqlnd.ini /etc/php82/conf.d/mysqlnd.ini \
-	&& ln -s /etc/php82/conf.d-available/mysqli.ini /etc/php82/conf.d/mysqli.ini \
-	&& ln -s /etc/php82/conf.d-available/pdo_mysql.ini /etc/php82/conf.d/pdo_mysql.ini
+	&& for ext in mysqlnd mysqli pdo_mysql; do \
+		if [ -f /etc/php82/conf.d-available/${ext}.ini ]; then \
+			ln -sf /etc/php82/conf.d-available/${ext}.ini /etc/php82/conf.d/${ext}.ini; \
+		fi; \
+	done
 
 # Set PHP CLI memory limit to 256M for wp-cli
 RUN echo "memory_limit = 256M" > /etc/php82/conf.d/99-memory-limit.ini
