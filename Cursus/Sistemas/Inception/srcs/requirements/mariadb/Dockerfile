@@ -2,7 +2,7 @@ FROM alpine:3.18
 
 RUN apk update && apk add --no-cache \
 	mariadb \
-	mari-client \
+	mariadb-client \
 	mariadb-common
 
 COPY conf/my.cnf /etc/my.cnf.d/mariadb-server.cnf
