@@ -12,7 +12,8 @@ services:
     volumes:
       - wordpress_data:/var/www/html
     depends_on:
-      - wordpress
+      wordpress:
+        condition: service_healthy
     networks:
       - inception
     restart: always
@@ -36,6 +37,12 @@ services:
       WP_USER_PASSWORD: ${WP_USER_PASSWORD}
       WP_USER_EMAIL: ${WP_USER_EMAIL}
       MYSQL_HOST: mariadb
+    healthcheck:
+      test: ["CMD", "sh", "-c", "mysqladmin ping -h mariadb -u root -p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
     depends_on:
       - mariadb
     networks:

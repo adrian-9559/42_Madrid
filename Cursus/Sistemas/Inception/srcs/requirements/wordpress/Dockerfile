@@ -11,6 +11,7 @@ RUN apk update && apk add --no-cache \
 	php82-curl \
 	php82-phar \
 	php82-opcache \
+	mariadb-client \
 	curl \
 	tar \
 	gzip
