@@ -4,6 +4,8 @@ RUN apk update && apk add --no-cache \
 	php82 \
 	php82-fpm \
 	php82-mysqlnd \
+	php82-mysqli \
+	php82-pdo_mysql \
 	php82-mbstring \
 	php82-xml \
 	php82-gd \
