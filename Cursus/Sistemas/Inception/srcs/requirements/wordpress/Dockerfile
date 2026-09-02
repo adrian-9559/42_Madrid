@@ -17,7 +17,8 @@ RUN apk update && apk add --no-cache \
 	curl \
 	tar \
 	gzip \
-	&& ln -s /usr/bin/php82 /usr/bin/php
+	&& ln -s /usr/bin/php82 /usr/bin/php \
+	&& addgroup -S www-data && adduser -S www-data -G www-data
 
 # Fix PHP extension load order: mysqlnd must load BEFORE mysqli and pdo_mysql
 # Remove any existing mysql ini files and create a single one with correct order
