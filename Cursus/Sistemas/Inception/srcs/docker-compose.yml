@@ -28,7 +28,6 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       WP_TITLE: ${WP_TITLE}
       WP_ADMIN_USER: ${WP_ADMIN_USER}
       WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD}
@@ -39,7 +38,7 @@ services:
       MYSQL_HOST: mariadb
       PHP_MEMORY_LIMIT: 256M
     healthcheck:
-      test: ["CMD", "sh", "-c", "mysqladmin ping -h mariadb -u root -p$$MYSQL_ROOT_PASSWORD"]
+      test: ["CMD", "sh", "-c", "mysqladmin ping -h mariadb -u $$MYSQL_USER -p$$MYSQL_PASSWORD"]
       interval: 5s
       timeout: 5s
       retries: 20
@@ -60,8 +59,6 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      WP_ADMIN_USER: ${WP_ADMIN_USER}
-      WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
     networks:

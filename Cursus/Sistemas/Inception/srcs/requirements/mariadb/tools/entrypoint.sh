@@ -6,8 +6,6 @@ set -e
 : "${MYSQL_USER:?MYSQL_USER is required}"
 : "${MYSQL_PASSWORD:?MYSQL_PASSWORD is required}"
 : "${MYSQL_ROOT_PASSWORD:?MYSQL_ROOT_PASSWORD is required}"
-: "${WP_ADMIN_USER:?WP_ADMIN_USER is required}"
-: "${WP_ADMIN_PASSWORD:?WP_ADMIN_PASSWORD is required}"
 
 # Create run directory for mysqld socket
 mkdir -p /run/mysqld
@@ -46,8 +44,6 @@ if [ ! -d "/var/lib/mysql/mysql" ]; then
 		CREATE DATABASE IF NOT EXISTS \`${MYSQL_DATABASE}\`;
 		CREATE USER IF NOT EXISTS '${MYSQL_USER}'@'%' IDENTIFIED BY '${MYSQL_PASSWORD}';
 		GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE}\`.* TO '${MYSQL_USER}'@'%';
-		CREATE USER IF NOT EXISTS '${WP_ADMIN_USER}'@'%' IDENTIFIED BY '${WP_ADMIN_PASSWORD}';
-		GRANT ALL PRIVILEGES ON \`${MYSQL_DATABASE}\`.* TO '${WP_ADMIN_USER}'@'%';
 		FLUSH PRIVILEGES;
 	EOSQL
 	echo "[DB] Database and users created"
