@@ -6,6 +6,12 @@
 - Docker Compose v2+
 - Virtual Machine (required by 42 subject)
 - make (optional, for Makefile)
+- User must be in `sudo` and `docker` groups:
+  ```bash
+  sudo adduser $USER sudo
+  sudo adduser $USER docker
+  newgrp docker
+  ```
 
 ## Project Structure
 
