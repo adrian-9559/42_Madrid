@@ -18,10 +18,10 @@ RUN apk update && apk add --no-cache \
 	&& ln -s /usr/bin/php82 /usr/bin/php
 
 # Fix PHP extension load order: mysqlnd must load BEFORE mysqli and pdo_mysql
-RUN cd /etc/php82/conf.d && \
-	for f in *mysqlnd*.ini; do [ -f "$f" ] && mv "$f" "10_${f#*[0-9]_}" 2>/dev/null; done && \
-	for f in *mysqli*.ini; do [ -f "$f" ] && mv "$f" "20_${f#*[0-9]_}" 2>/dev/null; done && \
-	for f in *pdo_mysql*.ini; do [ -f "$f" ] && mv "$f" "20_${f#*[0-9]_}" 2>/dev/null; done
+# Remove any existing mysql ini files and create a single one with correct order
+RUN rm -f /etc/php82/conf.d/*mysql*.ini /etc/php82/conf.d/*mysqli*.ini /etc/php82/conf.d/*pdo_mysql*.ini && \
+	printf '; MySQL extensions - load order matters\npriority=10\nextension=mysqlnd\n\npriority=20\nextension=mysqli\n\npriority=20\nextension=pdo_mysql\n' \
+	> /etc/php82/conf.d/01-mysql.ini
 
 # Set PHP CLI memory limit to 256M for wp-cli
 RUN echo "memory_limit = 256M" > /etc/php82/conf.d/99-memory-limit.ini
