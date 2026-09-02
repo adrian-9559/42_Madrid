@@ -37,6 +37,8 @@ services:
       WP_USER_EMAIL: ${WP_USER_EMAIL}
       MYSQL_HOST: mariadb
       PHP_MEMORY_LIMIT: 256M
+    volumes:
+      - wordpress_data:/var/www/html
     healthcheck:
       test: ["CMD", "sh", "-c", "mysqladmin ping -h mariadb -u $$MYSQL_USER -p$$MYSQL_PASSWORD"]
       interval: 5s
