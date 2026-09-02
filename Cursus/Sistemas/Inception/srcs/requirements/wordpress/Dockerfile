@@ -35,7 +35,7 @@ RUN curl -o /usr/local/bin/wp https://raw.githubusercontent.com/wp-cli/builds/gh
 # Create wordpress directory
 RUN mkdir -p /var/www/html
 
-RUN chown -R adriescr:adriescr /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
 COPY conf/www.conf /etc/php82/php-fpm.d/www.conf
 COPY tools/entrypoint.sh /entrypoint.sh
