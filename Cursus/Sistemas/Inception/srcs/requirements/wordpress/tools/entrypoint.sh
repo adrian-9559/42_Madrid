@@ -91,6 +91,7 @@ fi
 # Ensure correct permissions
 echo "[WP] Setting permissions..."
 chown -R www-data:www-data /var/www/html
+chmod -R 755 /var/www/html
 echo "[WP] Permissions set"
 
 # Start php-fpm in foreground (PID 1 best practice)
