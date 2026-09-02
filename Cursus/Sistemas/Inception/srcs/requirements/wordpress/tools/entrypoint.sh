@@ -90,7 +90,7 @@ fi
 
 # Ensure correct permissions
 echo "[WP] Setting permissions..."
-chown -R www:www /var/www/html
+chown -R www-data:www-data /var/www/html
 echo "[WP] Permissions set"
 
 # Start php-fpm in foreground (PID 1 best practice)
